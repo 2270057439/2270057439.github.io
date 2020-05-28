@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://2270057439.github.io/2270057439.github.io/"/>
-  <updated>2020-05-28T00:51:11.090Z</updated>
+  <updated>2020-05-28T01:14:51.115Z</updated>
   <id>https://2270057439.github.io/2270057439.github.io/</id>
   
   <author>
@@ -15,6 +15,62 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>浏览器插件汇总</title>
+    <link href="https://2270057439.github.io/2270057439.github.io/2020/05/28/liu-lan-qi-cha-jian-hui-zong/"/>
+    <id>https://2270057439.github.io/2270057439.github.io/2020/05/28/liu-lan-qi-cha-jian-hui-zong/</id>
+    <published>2020-05-28T01:14:51.000Z</published>
+    <updated>2020-05-28T01:14:51.115Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>欧陆字典制作（mdict词典）</title>
+    <link href="https://2270057439.github.io/2270057439.github.io/2020/05/28/ou-lu-zi-dian-zhi-zuo-mdict-ci-dian/"/>
+    <id>https://2270057439.github.io/2270057439.github.io/2020/05/28/ou-lu-zi-dian-zhi-zuo-mdict-ci-dian/</id>
+    <published>2020-05-28T01:14:26.000Z</published>
+    <updated>2020-05-28T01:14:26.060Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>不开放shell的ipad通过Textastic远程访问iTerm</title>
+    <link href="https://2270057439.github.io/2270057439.github.io/2020/05/28/bu-kai-fang-shell-de-ipad-tong-guo-textastic-yuan-cheng-fang-wen-iterm/"/>
+    <id>https://2270057439.github.io/2270057439.github.io/2020/05/28/bu-kai-fang-shell-de-ipad-tong-guo-textastic-yuan-cheng-fang-wen-iterm/</id>
+    <published>2020-05-28T01:12:08.000Z</published>
+    <updated>2020-05-28T01:12:08.329Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Mac平台Docker容器配合智q实现qq机器人</title>
+    <link href="https://2270057439.github.io/2270057439.github.io/2020/05/28/mac-ping-tai-docker-rong-qi-pei-he-zhi-q-shi-xian-qq-ji-qi-ren/"/>
+    <id>https://2270057439.github.io/2270057439.github.io/2020/05/28/mac-ping-tai-docker-rong-qi-pei-he-zhi-q-shi-xian-qq-ji-qi-ren/</id>
+    <published>2020-05-28T01:08:17.000Z</published>
+    <updated>2020-05-28T01:08:17.501Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>Termux操作汇总</title>
