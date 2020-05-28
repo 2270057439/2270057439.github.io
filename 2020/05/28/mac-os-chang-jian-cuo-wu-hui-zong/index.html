@@ -431,35 +431,35 @@ shell换源
 <p>pip换源。</p>
 </blockquote>
 <p><strong>1.查看根目录是否有.pip文件夹，没有就新建一个，然后在.pip 文件夹内新建一个pip.conf文件。</strong></p>
-<pre class="line-numbers language-cpp"><code class="language-cpp">ls <span class="token operator">-</span>a <span class="token comment" spellcheck="true">//查看</span>
-mkdir <span class="token punctuation">.</span>pip<span class="token comment" spellcheck="true">//新建文件夹</span>
-touch pip<span class="token punctuation">.</span>conf<span class="token comment" spellcheck="true">//新建文件</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+<pre class="line-numbers language-bash"><code class="language-bash"><span class="token function">ls</span> -a //查看
+<span class="token function">mkdir</span> .pip//新建文件夹
+<span class="token function">touch</span> pip.conf//新建文件<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
 <p><strong>2.粘贴代码到pip.conf</strong></p>
-<pre class="line-numbers language-cpp"><code class="language-cpp"><span class="token comment" spellcheck="true">//阿里</span>
+<pre class="line-numbers language-bash"><code class="language-bash">//阿里
 <span class="token punctuation">[</span>global<span class="token punctuation">]</span>
-index<span class="token operator">-</span>url <span class="token operator">=</span> http<span class="token operator">:</span><span class="token operator">/</span><span class="token operator">/</span>mirrors<span class="token punctuation">.</span>aliyun<span class="token punctuation">.</span>com<span class="token operator">/</span>pypi<span class="token operator">/</span>simple<span class="token operator">/</span>
+index-url <span class="token operator">=</span> http://mirrors.aliyun.com/pypi/simple/
 <span class="token punctuation">[</span>install<span class="token punctuation">]</span>
-trusted<span class="token operator">-</span>host<span class="token operator">=</span>mirrors<span class="token punctuation">.</span>aliyun<span class="token punctuation">.</span>com
+trusted-host<span class="token operator">=</span>mirrors.aliyun.com
 
-<span class="token comment" spellcheck="true">//豆瓣</span>
+//豆瓣
 <span class="token punctuation">[</span>global<span class="token punctuation">]</span>
-index<span class="token operator">-</span>url <span class="token operator">=</span> http<span class="token operator">:</span><span class="token operator">/</span><span class="token operator">/</span>pypi<span class="token punctuation">.</span>douban<span class="token punctuation">.</span>com<span class="token operator">/</span>simple
+index-url <span class="token operator">=</span> http://pypi.douban.com/simple
 <span class="token punctuation">[</span>install<span class="token punctuation">]</span>
-trusted<span class="token operator">-</span>host<span class="token operator">=</span>pypi<span class="token punctuation">.</span>douban<span class="token punctuation">.</span>com
+trusted-host<span class="token operator">=</span>pypi.douban.com
 
-<span class="token comment" spellcheck="true">//清华（推荐）</span>
+//清华（推荐）
 <span class="token punctuation">[</span>global<span class="token punctuation">]</span>
-index<span class="token operator">-</span>url <span class="token operator">=</span> https<span class="token operator">:</span><span class="token operator">/</span><span class="token operator">/</span>pypi<span class="token punctuation">.</span>tuna<span class="token punctuation">.</span>tsinghua<span class="token punctuation">.</span>edu<span class="token punctuation">.</span>cn<span class="token operator">/</span>simple
+index-url <span class="token operator">=</span> https://pypi.tuna.tsinghua.edu.cn/simple
 <span class="token punctuation">[</span>install<span class="token punctuation">]</span>
-trusted<span class="token operator">-</span>host<span class="token operator">=</span>pypi<span class="token punctuation">.</span>tuna<span class="token punctuation">.</span>tsinghua<span class="token punctuation">.</span>edu<span class="token punctuation">.</span>cn<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+trusted-host<span class="token operator">=</span>pypi.tuna.tsinghua.edu.cn<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <h2 id="二：报错篇"><a href="#二：报错篇" class="headerlink" title="二：报错篇"></a>二：报错篇</h2><p><strong>python3</strong><br><em>报错：</em>ModuleNotFoundError: No module named ‘PIL’<br><em>解决方法</em><br>运行安装pillow命令:</p>
-<pre class="line-numbers language-cpp"><code class="language-cpp">pip install pillow
-<span class="token comment" spellcheck="true">//如果运行时显示Requirement already satisfied: pillow in /anaconda3/lib/python3.7/site-packages (5.4.1)</span>
-<span class="token comment" spellcheck="true">//表示已经安装过了，这时可以先卸载，获取最新的pillow</span>
-<span class="token comment" spellcheck="true">//运行卸载命令: </span>
+<pre class="line-numbers language-bash"><code class="language-bash">pip <span class="token function">install</span> pillow
+//如果运行时显示Requirement already satisfied: pillow <span class="token keyword">in</span> /anaconda3/lib/python3.7/site-packages <span class="token punctuation">(</span>5.4.1<span class="token punctuation">)</span>
+//表示已经安装过了，这时可以先卸载，获取最新的pillow
+//运行卸载命令: 
 pip uninstall pillow
-<span class="token comment" spellcheck="true">//然后再次运行安装命令</span>
-pip install pillow<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+//然后再次运行安装命令
+pip <span class="token function">install</span> pillow<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
             </div>
             <hr />

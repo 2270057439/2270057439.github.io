@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://2270057439.github.io/2270057439.github.io/"/>
-  <updated>2020-05-28T01:14:51.115Z</updated>
+  <updated>2020-05-28T01:22:10.411Z</updated>
   <id>https://2270057439.github.io/2270057439.github.io/</id>
   
   <author>
@@ -15,6 +15,20 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>termux/iTerm + nginx反向穿透搭建博客</title>
+    <link href="https://2270057439.github.io/2270057439.github.io/2020/05/28/termux-iterm-nginx-fan-xiang-chuan-tou-da-jian-bo-ke/"/>
+    <id>https://2270057439.github.io/2270057439.github.io/2020/05/28/termux-iterm-nginx-fan-xiang-chuan-tou-da-jian-bo-ke/</id>
+    <published>2020-05-28T01:22:10.000Z</published>
+    <updated>2020-05-28T01:22:10.411Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>浏览器插件汇总</title>
@@ -91,7 +105,7 @@
     <link href="https://2270057439.github.io/2270057439.github.io/2020/05/28/mac-os-chang-jian-cuo-wu-hui-zong/"/>
     <id>https://2270057439.github.io/2270057439.github.io/2020/05/28/mac-os-chang-jian-cuo-wu-hui-zong/</id>
     <published>2020-05-28T00:17:26.000Z</published>
-    <updated>2020-05-28T00:49:42.932Z</updated>
+    <updated>2020-05-28T01:53:14.697Z</updated>
     
     <summary type="html">
     
