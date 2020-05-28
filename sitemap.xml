@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://pan-le.cn/about/index.html</loc>
+    
+    <lastmod>2020-05-28T23:41:56.161Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://pan-le.cn/2020/05/28/sadaidwa/</loc>
     
     <lastmod>2020-05-28T08:43:18.028Z</lastmod>
@@ -58,13 +65,6 @@
   </url>
   
   <url>
-    <loc>https://pan-le.cn/about/index.html</loc>
-    
-    <lastmod>2020-05-27T23:22:09.300Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://pan-le.cn/bbs/index.html</loc>
     
     <lastmod>2020-05-27T22:13:48.649Z</lastmod>
@@ -114,14 +114,14 @@
   </url>
   
   <url>
-    <loc>https://pan-le.cn/tags/index.html</loc>
+    <loc>https://pan-le.cn/categories/index.html</loc>
     
     <lastmod>2020-04-04T11:43:42.000Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://pan-le.cn/categories/index.html</loc>
+    <loc>https://pan-le.cn/tags/index.html</loc>
     
     <lastmod>2020-04-04T11:43:42.000Z</lastmod>
     
