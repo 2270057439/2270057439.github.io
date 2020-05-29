@@ -5,8 +5,8 @@
     
     <entry>
       <title>termux/iTerm + nginx反向穿透搭建博客</title>
-      <link href="/posts/undefined.html"/>
-      <url>/posts/undefined.html</url>
+      <link href="/2020/05/28/termux-iterm-nginx-fan-xiang-chuan-tou-da-jian-bo-ke/"/>
+      <url>/2020/05/28/termux-iterm-nginx-fan-xiang-chuan-tou-da-jian-bo-ke/</url>
       
         <content type="html"><![CDATA[]]></content>
       
@@ -18,8 +18,8 @@
     
     <entry>
       <title>浏览器插件汇总</title>
-      <link href="/posts/undefined.html"/>
-      <url>/posts/undefined.html</url>
+      <link href="/2020/05/28/liu-lan-qi-cha-jian-hui-zong/"/>
+      <url>/2020/05/28/liu-lan-qi-cha-jian-hui-zong/</url>
       
         <content type="html"><![CDATA[]]></content>
       
@@ -31,8 +31,8 @@
     
     <entry>
       <title>欧陆字典制作（mdict词典）</title>
-      <link href="/posts/undefined.html"/>
-      <url>/posts/undefined.html</url>
+      <link href="/2020/05/28/ou-lu-zi-dian-zhi-zuo-mdict-ci-dian/"/>
+      <url>/2020/05/28/ou-lu-zi-dian-zhi-zuo-mdict-ci-dian/</url>
       
         <content type="html"><![CDATA[]]></content>
       
@@ -44,8 +44,8 @@
     
     <entry>
       <title>不开放shell的ipad通过Textastic远程访问iTerm</title>
-      <link href="/posts/undefined.html"/>
-      <url>/posts/undefined.html</url>
+      <link href="/2020/05/28/bu-kai-fang-shell-de-ipad-tong-guo-textastic-yuan-cheng-fang-wen-iterm/"/>
+      <url>/2020/05/28/bu-kai-fang-shell-de-ipad-tong-guo-textastic-yuan-cheng-fang-wen-iterm/</url>
       
         <content type="html"><![CDATA[]]></content>
       
@@ -57,8 +57,8 @@
     
     <entry>
       <title>Mac平台Docker容器配合智q实现qq机器人</title>
-      <link href="/posts/undefined.html"/>
-      <url>/posts/undefined.html</url>
+      <link href="/2020/05/28/mac-ping-tai-docker-rong-qi-pei-he-zhi-q-shi-xian-qq-ji-qi-ren/"/>
+      <url>/2020/05/28/mac-ping-tai-docker-rong-qi-pei-he-zhi-q-shi-xian-qq-ji-qi-ren/</url>
       
         <content type="html"><![CDATA[]]></content>
       
@@ -70,8 +70,8 @@
     
     <entry>
       <title>Termux操作汇总</title>
-      <link href="/posts/undefined.html"/>
-      <url>/posts/undefined.html</url>
+      <link href="/2020/05/28/termux-cao-zuo-hui-zong/"/>
+      <url>/2020/05/28/termux-cao-zuo-hui-zong/</url>
       
         <content type="html"><![CDATA[]]></content>
       
@@ -83,8 +83,8 @@
     
     <entry>
       <title>Macos上iTerm常见错误汇总</title>
-      <link href="/posts/undefined.html"/>
-      <url>/posts/undefined.html</url>
+      <link href="/2020/05/28/mac-os-chang-jian-cuo-wu-hui-zong/"/>
+      <url>/2020/05/28/mac-os-chang-jian-cuo-wu-hui-zong/</url>
       
         <content type="html"><![CDATA[<h2 id="写在前面"><a href="#写在前面" class="headerlink" title="写在前面"></a>写在前面</h2><p>接触shell也有个把年了，过程中遇到了各种各样的问题，此文章慢慢更新，记录一些常见的错误以及出现问题的解决办法。</p><h2 id="一：换源篇。"><a href="#一：换源篇。" class="headerlink" title="一：换源篇。"></a>一：换源篇。</h2><blockquote><p>shell换源</p></blockquote><p>众所周知，使用shell第一步就是换源，毕竟祖国有一面伟大的墙。此篇适用于各种shell（实测zsh，bash以及arm平台的termux）</p><blockquote><p>pip换源。</p></blockquote><p><strong>1.查看根目录是否有.pip文件夹，没有就新建一个，然后在.pip 文件夹内新建一个pip.conf文件。</strong></p><pre class="line-numbers language-bash"><code class="language-bash"><span class="token function">ls</span> -a //查看<span class="token function">mkdir</span> .pip//新建文件夹<span class="token function">touch</span> pip.conf//新建文件<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre><p><strong>2.粘贴代码到pip.conf</strong></p><pre class="line-numbers language-bash"><code class="language-bash">//阿里<span class="token punctuation">[</span>global<span class="token punctuation">]</span>index-url <span class="token operator">=</span> http://mirrors.aliyun.com/pypi/simple/<span class="token punctuation">[</span>install<span class="token punctuation">]</span>trusted-host<span class="token operator">=</span>mirrors.aliyun.com//豆瓣<span class="token punctuation">[</span>global<span class="token punctuation">]</span>index-url <span class="token operator">=</span> http://pypi.douban.com/simple<span class="token punctuation">[</span>install<span class="token punctuation">]</span>trusted-host<span class="token operator">=</span>pypi.douban.com//清华（推荐）<span class="token punctuation">[</span>global<span class="token punctuation">]</span>index-url <span class="token operator">=</span> https://pypi.tuna.tsinghua.edu.cn/simple<span class="token punctuation">[</span>install<span class="token punctuation">]</span>trusted-host<span class="token operator">=</span>pypi.tuna.tsinghua.edu.cn<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><h2 id="二：报错篇"><a href="#二：报错篇" class="headerlink" title="二：报错篇"></a>二：报错篇</h2><p><strong>python3</strong><br><em>报错：</em>ModuleNotFoundError: No module named ‘PIL’<br><em>解决方法</em><br>运行安装pillow命令:</p><pre class="line-numbers language-bash"><code class="language-bash">pip <span class="token function">install</span> pillow//如果运行时显示Requirement already satisfied: pillow <span class="token keyword">in</span> /anaconda3/lib/python3.7/site-packages <span class="token punctuation">(</span>5.4.1<span class="token punctuation">)</span>//表示已经安装过了，这时可以先卸载，获取最新的pillow//运行卸载命令: pip uninstall pillow//然后再次运行安装命令pip <span class="token function">install</span> pillow<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>]]></content>
       
@@ -108,8 +108,8 @@
     
     <entry>
       <title>Hexo+github搭建博客</title>
-      <link href="/posts/undefined.html"/>
-      <url>/posts/undefined.html</url>
+      <link href="/2020/05/27/hexo-github-da-jian-bo-ke/"/>
+      <url>/2020/05/27/hexo-github-da-jian-bo-ke/</url>
       
         <content type="html"><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>第一次正式搭建个人博客，想通过它来记录一些学习过程中经常遗忘的代码和一些折腾的过程。搭建博客的方式和工具都有很多种选择，我采用的是Hexo+github的方式进行搭建。选择这种方式的原因很简单，我也考虑过采用反向穿透配合nginx的方式进行搭建，无奈服务器的价钱都不便宜。得益于github不收费，并且速度还可以，所以对于我来时是个更好的选择。</p><h2 id="本文不讲具体的每一步细节，毕竟网上这种文章太多了，只记录一些重点。"><a href="#本文不讲具体的每一步细节，毕竟网上这种文章太多了，只记录一些重点。" class="headerlink" title="本文不讲具体的每一步细节，毕竟网上这种文章太多了，只记录一些重点。"></a>本文不讲具体的每一步细节，毕竟网上这种文章太多了，只记录一些重点。</h2><blockquote><p>首先直接上我认为比较容易理解的教程.</p></blockquote><p>链接：<a href="https://www.baidu.com/s?wd=%E5%A6%82%E4%BD%95hexo%2Bgithub%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2&tn=84053098_3_dg&ie=utf-8/" title="超详细Hexo+Github博客搭建小白教程" target="_blank" rel="noopener">超详细Hexo+Github博客搭建小白教程</a> 。。</p><pre class="line-numbers language-c"><code class="language-c"><span class="token macro property">#<span class="token directive keyword">include</span><span class="token string">&lt;stdio.h></span></span><span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>    <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"学会了吗？（狗头敷衍）"</span><span class="token punctuation">)</span>。    <span class="token keyword">return</span> <span class="token number">0</span>；<span class="token punctuation">}</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>]]></content>
       
