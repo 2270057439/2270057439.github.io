@@ -100,9 +100,23 @@
       <link href="/2020/05/28/termux-cao-zuo-hui-zong/"/>
       <url>/2020/05/28/termux-cao-zuo-hui-zong/</url>
       
-        <content type="html"><![CDATA[]]></content>
+        <content type="html"><![CDATA[<h2 id="软件安装"><a href="#软件安装" class="headerlink" title="软件安装"></a>软件安装</h2><h3 id="安装clang"><a href="#安装clang" class="headerlink" title="安装clang"></a>安装clang</h3><blockquote><p>1.过程<br>升级并安装clang编译器和vi:<br><code>bashapt update;apt install clang;apt install vim</code><br>编辑c程序：<br><code>bashvim hello</code><br>编译：<br><code>bashclang hello.c//或者：gcc hello.c -o name.o</code><br>执行生成的编译文件:<br><code>name.o</code></p></blockquote><h3 id="三-增加vi中文注释支持"><a href="#三-增加vi中文注释支持" class="headerlink" title="三.增加vi中文注释支持"></a>三.增加vi中文注释支持</h3><blockquote><p>根目录下修改.vimrc文件</p><pre class="line-numbers language-bash"><code class="language-bash"><span class="token function">cd</span> ~ //切换到根vim .vimrc //编辑<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre><p>写入配置信息</p><pre class="line-numbers language-bash"><code class="language-bash"><span class="token keyword">set</span> encoding<span class="token operator">=</span>utf-8<span class="token keyword">set</span> fileencodings<span class="token operator">=</span>ucs-bom,utf-8,cp936,gb18030<span class="token keyword">set</span> termencoding<span class="token operator">=</span>utf-8<span class="token keyword">set</span> expandtab<span class="token keyword">set</span> ts<span class="token operator">=</span>4<span class="token keyword">set</span> shiftwidth<span class="token operator">=</span>4<span class="token keyword">set</span> nusyntax on<span class="token keyword">if</span> has<span class="token punctuation">(</span><span class="token string">'mouse'</span><span class="token punctuation">)</span><span class="token keyword">set</span> mouse-<span class="token operator">=</span>aendif<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></blockquote>]]></content>
       
       
+      <categories>
+          
+          <category> linux </category>
+          
+          <category> 鼓捣 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Termux </tag>
+            
+        </tags>
       
     </entry>
     
@@ -134,7 +148,7 @@
     
     
     <entry>
-      <title>Hexo+github搭建博客</title>
+      <title>Hexo+github+coding+码云搭建双路博客</title>
       <link href="/2020/05/27/hexo-github-da-jian-bo-ke/"/>
       <url>/2020/05/27/hexo-github-da-jian-bo-ke/</url>
       

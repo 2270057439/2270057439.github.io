@@ -8,7 +8,11 @@
     <meta name="baidu-site-verification" content="XGOMoOZrlG">
     <meta name="google-site-verification" content="yCy2azpds5XSuGZvis6OuA-XIGF5GuGpYRAaGfD6o48">
     <meta name="360-site-verification" content="b7c11a830ef90fd1464ad6206bb7b6e7">
-    <meta name="description" content="Termux操作汇总 | 火花">
+    <meta name="description" content="软件安装安装clang
+1.过程升级并安装clang编译器和vi:bash
+apt update;apt install clang;apt install vim编辑c程序：bash
+vim hello编译：bash
+clang hell">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -445,11 +449,28 @@
                 <div class="col s7">
                     
                     <div class="article-tag">
-                        <span class="chip bg-color">无标签</span>
+                        
+                        <a href="/tags/Termux/" target="_blank">
+                            <span class="chip bg-color">Termux</span>
+                        </a>
+                        
                     </div>
                     
                 </div>
                 <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fa fa-bookmark fa-fw icon-category"></i>
+                        
+                        <a href="/categories/linux/" class="post-category" target="_blank">
+                            linux
+                        </a>
+                        
+                        <a href="/categories/linux/鼓捣/" class="post-category" target="_blank">
+                            鼓捣
+                        </a>
+                        
+                    </div>
                     
                 </div>
             </div>
@@ -471,7 +492,7 @@
                 
                 <div class="info-break-policy">
                     <i class="fa fa-file-word-o fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    0
+                    130
                 </div>
                 
 
@@ -494,7 +515,31 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                
+                <h2 id="软件安装"><a href="#软件安装" class="headerlink" title="软件安装"></a>软件安装</h2><h3 id="安装clang"><a href="#安装clang" class="headerlink" title="安装clang"></a>安装clang</h3><blockquote>
+<p>1.过程<br>升级并安装clang编译器和vi:<br><code>bash
+apt update;apt install clang;apt install vim</code><br>编辑c程序：<br><code>bash
+vim hello</code><br>编译：<br><code>bash
+clang hello.c
+//或者：gcc hello.c -o name.o</code><br>执行生成的编译文件:<br><code>name.o</code></p>
+</blockquote>
+<h3 id="三-增加vi中文注释支持"><a href="#三-增加vi中文注释支持" class="headerlink" title="三.增加vi中文注释支持"></a>三.增加vi中文注释支持</h3><blockquote>
+<p>根目录下修改.vimrc文件</p>
+<pre class="line-numbers language-bash"><code class="language-bash"><span class="token function">cd</span> ~ //切换到根
+vim .vimrc //编辑<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<p>写入配置信息</p>
+<pre class="line-numbers language-bash"><code class="language-bash"><span class="token keyword">set</span> encoding<span class="token operator">=</span>utf-8
+<span class="token keyword">set</span> fileencodings<span class="token operator">=</span>ucs-bom,utf-8,cp936,gb18030
+<span class="token keyword">set</span> termencoding<span class="token operator">=</span>utf-8
+<span class="token keyword">set</span> expandtab
+<span class="token keyword">set</span> ts<span class="token operator">=</span>4
+<span class="token keyword">set</span> shiftwidth<span class="token operator">=</span>4
+<span class="token keyword">set</span> nu
+syntax on
+<span class="token keyword">if</span> has<span class="token punctuation">(</span><span class="token string">'mouse'</span><span class="token punctuation">)</span>
+<span class="token keyword">set</span> mouse-<span class="token operator">=</span>a
+endif<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+</blockquote>
+
             </div>
             <hr />
 
@@ -1225,7 +1270,7 @@
 
             
             &nbsp;<i class="fa fa-area-chart"></i>&nbsp;码了那么多字:&nbsp;
-            <span class="white-color">722</span>
+            <span class="white-color">852</span>
             
 
             <br>
