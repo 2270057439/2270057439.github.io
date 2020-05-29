@@ -119,7 +119,7 @@
             
             <i class="fa fa-archive"></i>
             
-            <span>归档</span>
+            <span>时间轴</span>
         </a>
     </li>
     
@@ -128,7 +128,7 @@
             
             <i class="fa fa-user-circle-o"></i>
             
-            <span>关于</span>
+            <span>关于我</span>
         </a>
     </li>
     
@@ -137,7 +137,7 @@
             
             <i class="fa fa-address-book"></i>
             
-            <span>友情链接</span>
+            <span>朋友们</span>
         </a>
     </li>
     
@@ -146,7 +146,7 @@
             
             <i class="fa fa-comments"></i>
             
-            <span>留言板</span>
+            <span>碎碎念</span>
         </a>
     </li>
     
@@ -207,7 +207,7 @@
                 
                 <i class="fa fa-fw fa-archive"></i>
                 
-                归档
+                时间轴
             </a>
         </li>
         
@@ -216,7 +216,7 @@
                 
                 <i class="fa fa-fw fa-user-circle-o"></i>
                 
-                关于
+                关于我
             </a>
         </li>
         
@@ -225,7 +225,7 @@
                 
                 <i class="fa fa-fw fa-address-book"></i>
                 
-                友情链接
+                朋友们
             </a>
         </li>
         
@@ -234,7 +234,7 @@
                 
                 <i class="fa fa-fw fa-comments"></i>
                 
-                留言板
+                碎碎念
             </a>
         </li>
         
@@ -389,17 +389,17 @@ $('.bg-cover').css('background-image', 'url(/medias/banner/' + new Date().getDay
 
             <div class="cover-btns">
                 <a href="#indexCard" class="waves-effect waves-light btn">
-                    <i class="fa fa-angle-double-down"></i>开始阅读
+                    <i class="fa fa-angle-double-down"></i>读文章
                 </a>
 
                 
-                <a href="https://github.com/2270057439" class="waves-effect waves-light btn" target="_blank">
-                    <i class="fa fa-github "></i>Fork Me
+                <a href="https://github.com/2270057439/" class="waves-effect waves-light btn" target="_blank">
+                    <i class="fa fa-github-alt"></i>Github
                 </a>
                 
             </div>
             <div class="cover-social-link">
-    <a href="https://github.com/2270057439https://github.com/2270057439" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
+    <a href="https://github.com/22700574392270057439" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
         <i class="fa fa-github"></i>
     </a>
 
@@ -411,7 +411,7 @@ $('.bg-cover').css('background-image', 'url(/medias/banner/' + new Date().getDay
 
 
 
-    <a href="https://zhihu.com/people/bang-81https://www.zhihu.com/bang-81" class="tooltipped" target="_blank" data-tooltip="访问我的知乎" data-position="top" data-delay="50">
+    <a href="https://zhihu.com/people/bang-81bang-81" class="tooltipped" target="_blank" data-tooltip="访问我的知乎" data-position="top" data-delay="50">
         <i class="fa fa-inverse">知</i>
     </a>
 
@@ -423,7 +423,7 @@ $('.bg-cover').css('background-image', 'url(/medias/banner/' + new Date().getDay
 
 
 
-    <a href="https://weibo.com/https://weibo.com/忘忧草in" class="tooltipped" target="_blank" data-tooltip="关注我的微博" data-position="top" data-delay="50">
+    <a href="https://weibo.com/忘忧草in" class="tooltipped" target="_blank" data-tooltip="关注我的微博" data-position="top" data-delay="50">
         <i class="fa fa-weibo"></i>
     </a>
 
@@ -543,6 +543,41 @@ $(function () {
                     
 
                     
+                    <link rel="stylesheet" href="/libs/dplayer/DPlayer.min.css">
+<div class="video-player">
+    
+    <div class="title center-align">
+        <i class="fa fa-video-camera"></i>&nbsp;&nbsp;占位置
+    </div>
+    
+    <div class="row">
+        <div class="col l8 offset-l2 m10 offset-m1 s12">
+            <div id="dplayer" class="dplayer-video"
+                     style="height: 200px;"></div>
+        </div>
+    </div>
+</div>
+
+<script src="/libs/dplayer/DPlayer.min.js"></script>
+<script>
+    $(function () {
+        new DPlayer({
+            container: document.getElementById('dplayer'),
+            autoplay: 'false' === 'true',
+            theme: '#42b983',
+            loop: 'true' === 'true',
+            lang: 'zh-CN' === 'zh-CN' ? 'zh-cn' : 'en',
+            preload: 'auto',
+            volume: Number('0.7'),
+            video: {
+                url: '/medias/video/1.mov',
+                pic: '',
+                thumbnails: ''
+            }
+        });
+    });
+</script>
+                    
 
                     <div id="recommend-sections" class="recommend">
                         
@@ -550,6 +585,8 @@ $(function () {
 
 
 
+
+<div class="title"><i class="fa fa-thumbs-o-up"></i>&nbsp;&nbsp;推荐文章</div>
 
 <div class="row">
 
@@ -563,11 +600,11 @@ $(function () {
                     <a href="/categories/折腾/" class="category" target="_blank">折腾</a>
                     
                 </div>
-                <a href="/2020/05/27/hexo-github-da-jian-bo-ke/" target="_blank">
+                <a href="/posts/undefined.html" target="_blank">
                     <h3 class="post-title">Hexo+github搭建博客</h3>
                 </a>
                 <p class="post-description">通过免费的githun提供的服务来配合hexo搭建博客。</p>
-                <a href="/2020/05/27/hexo-github-da-jian-bo-ke/" target="_blank"
+                <a href="/posts/undefined.html" target="_blank"
                         class="read-more btn waves-effect waves-light" style="background: linear-gradient(to right, #FF5E3A 0%, #FF2A68 100%)">
                     <i class="icon fa fa-eye fa-fw"></i>阅读更多
                 </a>
@@ -584,11 +621,11 @@ $(function () {
                     <a href="/categories/折腾/" class="category" target="_blank">折腾</a>
                     
                 </div>
-                <a href="/2020/05/28/mac-os-chang-jian-cuo-wu-hui-zong/" target="_blank">
+                <a href="/posts/undefined.html" target="_blank">
                     <h3 class="post-title">Macos上iTerm常见错误汇总</h3>
                 </a>
                 <p class="post-description">总结mac的iTerm使用过程中的出错信息。</p>
-                <a href="/2020/05/28/mac-os-chang-jian-cuo-wu-hui-zong/" target="_blank"
+                <a href="/posts/undefined.html" target="_blank"
                         class="read-more btn waves-effect waves-light" style="background: linear-gradient(to right, #EF4DB6 0%, #C643FC 100%)">
                     <i class="icon fa fa-eye fa-fw"></i>阅读更多
                 </a>
@@ -605,11 +642,11 @@ $(function () {
                     <a href="/categories/编程算法/" class="category" target="_blank">编程算法</a>
                     
                 </div>
-                <a href="/2020/02/16/sort-algorithms/" target="_blank">
+                <a href="/posts/undefined.html" target="_blank">
                     <h3 class="post-title">十大经典排序算法整理汇总（附代码）</h3>
                 </a>
                 <p class="post-description">本文整理并总结了十大经典的排序算法（冒泡排序、选择排序、插入排序、快速排序、归并排序、希尔排序、计数排序、基数排序、桶排序、堆排序）的时间复杂度、空间复杂度等性质。</p>
-                <a href="/2020/02/16/sort-algorithms/" target="_blank"
+                <a href="/posts/undefined.html" target="_blank"
                         class="read-more btn waves-effect waves-light" style="background: linear-gradient(to right, #1AD6FD 0%, #1D62F0 100%)">
                     <i class="icon fa fa-eye fa-fw"></i>阅读更多
                 </a>
@@ -636,7 +673,7 @@ $(function () {
             
             <div class="article col s12 m6 l4" data-aos="zoom-in">
                 <div class="card">
-                    <a href="/2020/05/28/sadaidwa/" target="_blank">
+                    <a href="/posts/undefined.html" target="_blank">
                         <div class="card-image">
                             
                             
@@ -668,7 +705,7 @@ $(function () {
             
             <div class="article col s12 m6 l4" data-aos="zoom-in">
                 <div class="card">
-                    <a href="/2020/05/28/termux-iterm-nginx-fan-xiang-chuan-tou-da-jian-bo-ke/" target="_blank">
+                    <a href="/posts/undefined.html" target="_blank">
                         <div class="card-image">
                             
                             
@@ -700,7 +737,7 @@ $(function () {
             
             <div class="article col s12 m6 l4" data-aos="zoom-in">
                 <div class="card">
-                    <a href="/2020/05/28/liu-lan-qi-cha-jian-hui-zong/" target="_blank">
+                    <a href="/posts/undefined.html" target="_blank">
                         <div class="card-image">
                             
                             
@@ -732,7 +769,7 @@ $(function () {
             
             <div class="article col s12 m6 l4" data-aos="zoom-in">
                 <div class="card">
-                    <a href="/2020/05/28/ou-lu-zi-dian-zhi-zuo-mdict-ci-dian/" target="_blank">
+                    <a href="/posts/undefined.html" target="_blank">
                         <div class="card-image">
                             
                             
@@ -764,7 +801,7 @@ $(function () {
             
             <div class="article col s12 m6 l4" data-aos="zoom-in">
                 <div class="card">
-                    <a href="/2020/05/28/bu-kai-fang-shell-de-ipad-tong-guo-textastic-yuan-cheng-fang-wen-iterm/" target="_blank">
+                    <a href="/posts/undefined.html" target="_blank">
                         <div class="card-image">
                             
                             
@@ -796,7 +833,7 @@ $(function () {
             
             <div class="article col s12 m6 l4" data-aos="zoom-in">
                 <div class="card">
-                    <a href="/2020/05/28/mac-ping-tai-docker-rong-qi-pei-he-zhi-q-shi-xian-qq-ji-qi-ren/" target="_blank">
+                    <a href="/posts/undefined.html" target="_blank">
                         <div class="card-image">
                             
                             
@@ -828,7 +865,7 @@ $(function () {
             
             <div class="article col s12 m6 l4" data-aos="zoom-in">
                 <div class="card">
-                    <a href="/2020/05/28/termux-cao-zuo-hui-zong/" target="_blank">
+                    <a href="/posts/undefined.html" target="_blank">
                         <div class="card-image">
                             
                             
@@ -860,7 +897,7 @@ $(function () {
             
             <div class="article col s12 m6 l4" data-aos="zoom-in">
                 <div class="card">
-                    <a href="/2020/05/28/mac-os-chang-jian-cuo-wu-hui-zong/" target="_blank">
+                    <a href="/posts/undefined.html" target="_blank">
                         <div class="card-image">
                             
                             
@@ -907,7 +944,7 @@ $(function () {
             
             <div class="article col s12 m6 l4" data-aos="zoom-in">
                 <div class="card">
-                    <a href="/2020/05/27/hexo-github-da-jian-bo-ke/" target="_blank">
+                    <a href="/posts/undefined.html" target="_blank">
                         <div class="card-image">
                             
                             
@@ -954,7 +991,7 @@ $(function () {
             
             <div class="article col s12 m6 l4" data-aos="zoom-in">
                 <div class="card">
-                    <a href="/2020/02/16/sort-algorithms/" target="_blank">
+                    <a href="/posts/undefined.html" target="_blank">
                         <div class="card-image">
                             
                             
@@ -1039,7 +1076,7 @@ $(function () {
             
         </div>
         <div class="col s12 m4 l4 social-link social-statis">
-    <a href="https://github.com/2270057439https://github.com/2270057439" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
+    <a href="https://github.com/22700574392270057439" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
         <i class="fa fa-github"></i>
     </a>
 
@@ -1051,7 +1088,7 @@ $(function () {
 
 
 
-    <a href="https://zhihu.com/people/bang-81https://www.zhihu.com/bang-81" class="tooltipped" target="_blank" data-tooltip="访问我的知乎" data-position="top" data-delay="50">
+    <a href="https://zhihu.com/people/bang-81bang-81" class="tooltipped" target="_blank" data-tooltip="访问我的知乎" data-position="top" data-delay="50">
         <i class="fa fa-inverse">知</i>
     </a>
 
@@ -1063,7 +1100,7 @@ $(function () {
 
 
 
-    <a href="https://weibo.com/https://weibo.com/忘忧草in" class="tooltipped" target="_blank" data-tooltip="关注我的微博" data-position="top" data-delay="50">
+    <a href="https://weibo.com/忘忧草in" class="tooltipped" target="_blank" data-tooltip="关注我的微博" data-position="top" data-delay="50">
         <i class="fa fa-weibo"></i>
     </a>
 
