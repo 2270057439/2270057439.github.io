@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>パン楽楽</title>
+  <title>火花</title>
   
-  <subtitle>火花のブログ</subtitle>
+  <subtitle>ブログ</subtitle>
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://pan-le.cn/"/>
