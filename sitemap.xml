@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://pan-le.cn/friends/index.html</loc>
+    
+    <lastmod>2020-05-29T10:33:40.703Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://pan-le.cn/2020/05/28/ou-lu-zi-dian-zhi-zuo-mdict-ci-dian/</loc>
     
     <lastmod>2020-05-29T09:00:00.014Z</lastmod>
@@ -79,13 +86,6 @@
   </url>
   
   <url>
-    <loc>https://pan-le.cn/friends/index.html</loc>
-    
-    <lastmod>2020-05-27T08:22:03.000Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://pan-le.cn/404.html</loc>
     
     <lastmod>2020-04-04T11:43:42.000Z</lastmod>
@@ -93,7 +93,7 @@
   </url>
   
   <url>
-    <loc>https://pan-le.cn/categories/index.html</loc>
+    <loc>https://pan-le.cn/archives/index.html</loc>
     
     <lastmod>2020-04-04T11:43:42.000Z</lastmod>
     
@@ -107,7 +107,7 @@
   </url>
   
   <url>
-    <loc>https://pan-le.cn/archives/index.html</loc>
+    <loc>https://pan-le.cn/categories/index.html</loc>
     
     <lastmod>2020-04-04T11:43:42.000Z</lastmod>
     
