@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://pan-le.cn/"/>
-  <updated>2020-06-01T13:09:36.895Z</updated>
+  <updated>2020-06-01T13:58:54.997Z</updated>
   <id>https://pan-le.cn/</id>
   
   <author>
@@ -15,6 +15,20 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>pos擦擦你的路由器，绕开校园网的mac地址绑定，实现多设备登陆</title>
+    <link href="https://pan-le.cn/2020/06/01/pos-ca-ca-ni-de-lu-you-qi-rao-kai-xiao-yuan-wang-de-mac-di-zhi-bang-ding-shi-xian-duo-she-bei-deng-lu/"/>
+    <id>https://pan-le.cn/2020/06/01/pos-ca-ca-ni-de-lu-you-qi-rao-kai-xiao-yuan-wang-de-mac-di-zhi-bang-ding-shi-xian-duo-she-bei-deng-lu/</id>
+    <published>2020-06-01T13:58:54.000Z</published>
+    <updated>2020-06-01T13:58:54.997Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>老牌aircrack-ng跑字典破Wi-Fi</title>
