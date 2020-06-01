@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://pan-le.cn/"/>
-  <updated>2020-05-31T06:37:17.000Z</updated>
+  <updated>2020-06-01T13:09:36.895Z</updated>
   <id>https://pan-le.cn/</id>
   
   <author>
@@ -15,6 +15,36 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>老牌aircrack-ng跑字典破Wi-Fi</title>
+    <link href="https://pan-le.cn/2020/06/01/lao-pai-aircrack-ng-pao-zi-dian-po-wi-fi/"/>
+    <id>https://pan-le.cn/2020/06/01/lao-pai-aircrack-ng-pao-zi-dian-po-wi-fi/</id>
+    <published>2020-06-01T13:08:54.000Z</published>
+    <updated>2020-06-01T13:09:36.895Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;pre&gt;&lt;code&gt;切换目录
+ cd Desktop/jikefeng/
+监听周围wifi 
+airport -s
+c+f键搜索 选中信道开始抓包
+sudo airport en0 sniff 1
+c+c停止抓包，进入/bin找到包
+包和字典放一起开跑
+aircrack-ng
+        
+      
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>pebble-产品总结</title>
@@ -119,7 +149,7 @@
     <link href="https://pan-le.cn/2020/05/28/termux-cao-zuo-hui-zong/"/>
     <id>https://pan-le.cn/2020/05/28/termux-cao-zuo-hui-zong/</id>
     <published>2020-05-28T00:51:11.000Z</published>
-    <updated>2020-05-31T06:35:10.000Z</updated>
+    <updated>2020-06-01T13:06:25.286Z</updated>
     
     <summary type="html">
     
@@ -147,7 +177,7 @@
     <link href="https://pan-le.cn/2020/05/28/mac-os-chang-jian-cuo-wu-hui-zong/"/>
     <id>https://pan-le.cn/2020/05/28/mac-os-chang-jian-cuo-wu-hui-zong/</id>
     <published>2020-05-28T00:17:26.000Z</published>
-    <updated>2020-05-31T06:25:35.000Z</updated>
+    <updated>2020-06-01T13:06:48.132Z</updated>
     
     <summary type="html">
     
@@ -169,11 +199,11 @@
   </entry>
   
   <entry>
-    <title>Hexo+github+coding+码云搭建双路博客</title>
+    <title>Hexo+github+coding+matry搭建双路博客</title>
     <link href="https://pan-le.cn/2020/05/27/hexo-github-da-jian-bo-ke/"/>
     <id>https://pan-le.cn/2020/05/27/hexo-github-da-jian-bo-ke/</id>
     <published>2020-05-26T23:41:35.000Z</published>
-    <updated>2020-05-31T06:25:12.000Z</updated>
+    <updated>2020-06-01T12:47:22.846Z</updated>
     
     <summary type="html">
     

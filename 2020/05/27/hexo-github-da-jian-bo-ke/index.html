@@ -4,7 +4,7 @@
 
 <head><meta name="generator" content="Hexo 3.9.0">
     <meta charset="utf-8">
-    <meta name="keywords" content="Hexo+github+coding+码云搭建双路博客, sql c java 软件工程 火花 冰蓝色火花 楽楽 linux termux macos">
+    <meta name="keywords" content="Hexo+github+coding+matry搭建双路博客, sql c java 软件工程 火花 冰蓝色火花 楽楽 linux termux macos">
     <meta name="baidu-site-verification" content="XGOMoOZrlG">
     <meta name="google-site-verification" content="yCy2azpds5XSuGZvis6OuA-XIGF5GuGpYRAaGfD6o48">
     <meta name="360-site-verification" content="b7c11a830ef90fd1464ad6206bb7b6e7">
@@ -16,7 +16,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>Hexo+github+coding+码云搭建双路博客 | 火花</title>
+    <title>Hexo+github+coding+matry搭建双路博客 | 火花</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/font-awesome.min.css">
@@ -320,13 +320,13 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/19.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/25.jpg')">
     <div class="container">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
                     <div class="description center-align post-title">
-                        Hexo+github+coding+码云搭建双路博客
+                        Hexo+github+coding+matry搭建双路博客
                     </div>
                 </div>
             </div>
@@ -484,14 +484,14 @@
                 
                 <div class="info-break-policy">
                     <i class="fa fa-file-word-o fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    225
+                    532
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="fa fa-clock-o fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    1 分
+                    2 分
                 </div>
                 
                 
@@ -508,17 +508,35 @@
         <div class="card-content article-card-content">
             <div id="articleContent">
                 <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>第一次正式搭建个人博客，想通过它来记录一些学习过程中经常遗忘的代码和一些折腾的过程。搭建博客的方式和工具都有很多种选择，我采用的是Hexo+github的方式进行搭建。选择这种方式的原因很简单，我也考虑过采用反向穿透配合nginx的方式进行搭建，无奈服务器的价钱都不便宜。得益于github不收费，并且速度还可以，所以对于我来时是个更好的选择。</p>
-<h2 id="本文不讲具体的每一步细节，毕竟网上这种文章太多了，只记录一些重点。"><a href="#本文不讲具体的每一步细节，毕竟网上这种文章太多了，只记录一些重点。" class="headerlink" title="本文不讲具体的每一步细节，毕竟网上这种文章太多了，只记录一些重点。"></a>本文不讲具体的每一步细节，毕竟网上这种文章太多了，只记录一些重点。</h2><blockquote>
-<p>首先直接上我认为比较容易理解的教程.</p>
+<h2 id="魔改"><a href="#魔改" class="headerlink" title="魔改"></a>魔改</h2><blockquote>
+<p>本文不讲具体的每一步细节，毕竟网上这种文章太多了，只记录一些好玩的魔改。</p>
 </blockquote>
-<p>链接：<a href="https://www.baidu.com/s?wd=%E5%A6%82%E4%BD%95hexo%2Bgithub%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2&tn=84053098_3_dg&ie=utf-8/" title="超详细Hexo+Github博客搭建小白教程" target="_blank" rel="noopener">超详细Hexo+Github博客搭建小白教程</a> 。。</p>
-<pre class="line-numbers language-c"><code class="language-c"><span class="token macro property">#<span class="token directive keyword">include</span><span class="token string">&lt;stdio.h></span></span>
-<span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
-<span class="token punctuation">{</span>
-    <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"学会了吗？（狗头敷衍）"</span><span class="token punctuation">)</span>。
-    <span class="token keyword">return</span> <span class="token number">0</span>；
-<span class="token punctuation">}</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h3 id="调色篇"><a href="#调色篇" class="headerlink" title="调色篇"></a>调色篇</h3><p>好玩的工具：<a href="http://tools.jb51.net/static/colorpicker/" target="_blank" rel="noopener">在线颜色选择器 | RGB颜色查询对照表</a><br>主要针对<code>themes\Matery\source\css\matery.css</code>,<code>themes\Matery\layout\_partial\bg-cover-content.ejs</code>和<code>themes\Matery\layout\_partial\post-detail-toc.ejs</code>这三个文件的修改。</p>
+<h4 id="matery-css文件"><a href="#matery-css文件" class="headerlink" title="matery.css文件"></a>matery.css文件</h4><blockquote>
+<p>主页的渐变动画去除<br>打开<code>matery.css</code>文件搜索<code>.bg-cover:after</code>注释掉所在代码块即可。<br>博客背景壁纸修改<br><code>matery.css</code>中搜索<code>body</code>,其中<code>url(****)</code>括号内替换为自己想要的效果，或者喜欢纯色直接修改<code>rgna</code>括号内的rgb值即可。</p>
+</blockquote>
+<h4 id="bg-cover-content-ejs文件"><a href="#bg-cover-content-ejs文件" class="headerlink" title="bg-cover-content.ejs文件"></a>bg-cover-content.ejs文件</h4><blockquote>
+<p>修改主页轮播图<br>1.主题配置文件_config.yml中取消掉或者固定显示轮播图。<br>2.bg-cover-content.ejs中搜索`&lt;% if (theme.banner.enable) { %&gt;</p>
+</blockquote>
+<script>`所在代码块的`url（****）`其中****替换为自己想要的图片链接地址即可。
 
+#### post-detail-toc.ejs
+> 文章侧旁目录背景颜色
+搜索代码 `.toc-widget {width: 345px;padding-left: 20px;`，更改`background-color:`属性的rgb值即可。
+
+## 出现的问题
+> github出现The CNAME godweiyang.com is already taken.
+解决办法：删除站点所有`CNAME`文件。
+> 不蒜子统计计数本地数据不正常
+解决：没提交。。。。
+
+
+
+
+
+链接：[超详细Hexo+Github博客搭建小白教程](https://www.baidu.com/s?wd=%E5%A6%82%E4%BD%95hexo%2Bgithub%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2&tn=84053098_3_dg&ie=utf-8/ "超详细Hexo+Github博客搭建小白教程") 。。
+
+</script>
             </div>
             <hr />
 
@@ -676,7 +694,7 @@
             <br/>
             <span xmlns:dct="http://purl.org/dc/terms/" href="http://purl.org/dc/dcmitype/Text"
                   property="dct:title" rel="dct:type">
-                    《Hexo+github+coding+码云搭建双路博客》
+                    《Hexo+github+coding+matry搭建双路博客》
                 </span> 由
             <a xmlns:cc="http://creativecommons.org/ns#" href="/2020/05/27/hexo-github-da-jian-bo-ke/" property="cc:attributionName"
                rel="cc:attributionURL">
@@ -1018,7 +1036,7 @@
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            总结mac的iTerm使用过程中的出错信息。
+                            mac的iTerm配置汇总。
                         
                     </div>
                     <div class="publish-info">
@@ -1059,9 +1077,9 @@
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/19.jpg" class="responsive-img" alt="Hexo+github+coding+码云搭建双路博客">
+                        <img src="/medias/featureimages/25.jpg" class="responsive-img" alt="Hexo+github+coding+matry搭建双路博客">
                         
-                        <span class="card-title">Hexo+github+coding+码云搭建双路博客</span>
+                        <span class="card-title">Hexo+github+coding+matry搭建双路博客</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -1266,7 +1284,7 @@
            
             
             &nbsp;<i class="fa fa-area-chart"></i>&nbsp;码了那么多字:&nbsp;
-            <span class="white-color">853</span>
+            <span class="white-color">1.6k</span>
             
 
             <br>
@@ -1459,11 +1477,11 @@ $(function () {
     </script>
 
 
-<script src="/assets/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"assets/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"log":false,"model":{"jsonPath":"/assets/assets/hijiki.model.json"},"display":{"position":"right","width":200,"height":350},"mobile":{"show":true},"react":{"opacity":1}});</script><script>
+<script>
             window.imageLazyLoadSetting = {
                 isSPA: false,
                 processImages: null,
             };
-        </script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})});</script><script>!function(n){n.imageLazyLoadSetting.processImages=o;var i=n.imageLazyLoadSetting.isSPA,r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function o(){i&&(r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]")));for(var t,e,a=0;a<r.length;a++)t=r[a],0<=(e=t.getBoundingClientRect()).bottom&&0<=e.left&&e.top<=(n.innerHeight||document.documentElement.clientHeight)&&function(){var t,e,n,i,o=r[a];t=o,e=function(){r=r.filter(function(t){return o!==t})},n=new Image,i=t.getAttribute("data-original"),n.onload=function(){t.src=i,e&&e()},n.src=i}()}o(),n.addEventListener("scroll",function(){var t,e;t=o,e=n,clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(e)},500)})}(this);</script></body>
+        </script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})});</script><script>!function(n){n.imageLazyLoadSetting.processImages=o;var i=n.imageLazyLoadSetting.isSPA,r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function o(){i&&(r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]")));for(var t,e,a=0;a<r.length;a++)t=r[a],0<=(e=t.getBoundingClientRect()).bottom&&0<=e.left&&e.top<=(n.innerHeight||document.documentElement.clientHeight)&&function(){var t,e,n,i,o=r[a];t=o,e=function(){r=r.filter(function(t){return o!==t})},n=new Image,i=t.getAttribute("data-original"),n.onload=function(){t.src=i,e&&e()},n.src=i}()}o(),n.addEventListener("scroll",function(){var t,e;t=o,e=n,clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(e)},500)})}(this);</script><script src="/assets/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"assets/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"log":false,"model":{"jsonPath":"/assets/assets/hijiki.model.json"},"display":{"position":"right","width":200,"height":350},"mobile":{"show":true},"react":{"opacity":1}});</script></body>
 
 </html>
