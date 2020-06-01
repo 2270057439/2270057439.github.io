@@ -484,14 +484,14 @@
                 
                 <div class="info-break-policy">
                     <i class="fa fa-file-word-o fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    532
+                    492
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="fa fa-clock-o fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    2 分
+                    1 分
                 </div>
                 
                 
@@ -513,30 +513,31 @@
 </blockquote>
 <h3 id="调色篇"><a href="#调色篇" class="headerlink" title="调色篇"></a>调色篇</h3><p>好玩的工具：<a href="http://tools.jb51.net/static/colorpicker/" target="_blank" rel="noopener">在线颜色选择器 | RGB颜色查询对照表</a><br>主要针对<code>themes\Matery\source\css\matery.css</code>,<code>themes\Matery\layout\_partial\bg-cover-content.ejs</code>和<code>themes\Matery\layout\_partial\post-detail-toc.ejs</code>这三个文件的修改。</p>
 <h4 id="matery-css文件"><a href="#matery-css文件" class="headerlink" title="matery.css文件"></a>matery.css文件</h4><blockquote>
-<p>主页的渐变动画去除<br>打开<code>matery.css</code>文件搜索<code>.bg-cover:after</code>注释掉所在代码块即可。<br>博客背景壁纸修改<br><code>matery.css</code>中搜索<code>body</code>,其中<code>url(****)</code>括号内替换为自己想要的效果，或者喜欢纯色直接修改<code>rgna</code>括号内的rgb值即可。</p>
+<p>主页的渐变动画去除</p>
 </blockquote>
+<p>打开<code>matery.css</code>文件搜索<code>.bg-cover:after</code>注释掉所在代码块即可。</p>
+<blockquote>
+<p>博客背景壁纸修改</p>
+</blockquote>
+<p><code>matery.css</code>中搜索<code>body</code>,其中<code>url(****)</code>括号内替换为自己想要的效果，或者喜欢纯色直接修改<code>rgna</code>括号内的rgb值即可。</p>
 <h4 id="bg-cover-content-ejs文件"><a href="#bg-cover-content-ejs文件" class="headerlink" title="bg-cover-content.ejs文件"></a>bg-cover-content.ejs文件</h4><blockquote>
-<p>修改主页轮播图<br>1.主题配置文件_config.yml中取消掉或者固定显示轮播图。<br>2.bg-cover-content.ejs中搜索`&lt;% if (theme.banner.enable) { %&gt;</p>
+<p>修改主页轮播图</p>
 </blockquote>
-<script>`所在代码块的`url（****）`其中****替换为自己想要的图片链接地址即可。
+<p>1.主题配置文件_config.yml中取消掉或者固定显示轮播图。<br>2.bg-cover-content.ejs中搜索<code>&lt;% if (theme.banner.enable) { %&gt;&lt;script&gt;</code>所在代码块的<code>url（****）</code>其中<em>**</em>替换为自己想要的图片链接地址即可。</p>
+<h4 id="post-detail-toc-ejs"><a href="#post-detail-toc-ejs" class="headerlink" title="post-detail-toc.ejs"></a>post-detail-toc.ejs</h4><blockquote>
+<p>文章侧旁目录背景颜色</p>
+</blockquote>
+<p>搜索代码 <code>.toc-widget {width: 345px;padding-left: 20px;</code>，更改<code>background-color:</code>属性的rgb值即可。</p>
+<h2 id="出现的问题"><a href="#出现的问题" class="headerlink" title="出现的问题"></a>出现的问题</h2><blockquote>
+<p>github出现The CNAME godweiyang.com is already taken.</p>
+</blockquote>
+<p>解决办法：删除站点所有<code>CNAME</code>文件。</p>
+<blockquote>
+<p>不蒜子统计计数本地数据不正常</p>
+</blockquote>
+<p>解决：没提交。。。。</p>
+<p>链接：<a href="https://www.baidu.com/s?wd=%E5%A6%82%E4%BD%95hexo%2Bgithub%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2&tn=84053098_3_dg&ie=utf-8/" title="超详细Hexo+Github博客搭建小白教程" target="_blank" rel="noopener">超详细Hexo+Github博客搭建小白教程</a> 。。</p>
 
-#### post-detail-toc.ejs
-> 文章侧旁目录背景颜色
-搜索代码 `.toc-widget {width: 345px;padding-left: 20px;`，更改`background-color:`属性的rgb值即可。
-
-## 出现的问题
-> github出现The CNAME godweiyang.com is already taken.
-解决办法：删除站点所有`CNAME`文件。
-> 不蒜子统计计数本地数据不正常
-解决：没提交。。。。
-
-
-
-
-
-链接：[超详细Hexo+Github博客搭建小白教程](https://www.baidu.com/s?wd=%E5%A6%82%E4%BD%95hexo%2Bgithub%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2&tn=84053098_3_dg&ie=utf-8/ "超详细Hexo+Github博客搭建小白教程") 。。
-
-</script>
             </div>
             <hr />
 
@@ -1028,9 +1029,9 @@
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/15.jpg" class="responsive-img" alt="Macos上iTerm常见错误汇总">
+                        <img src="/medias/featureimages/1.jpg" class="responsive-img" alt="iTerm配置汇总">
                         
-                        <span class="card-title">Macos上iTerm常见错误汇总</span>
+                        <span class="card-title">iTerm配置汇总</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -1284,7 +1285,7 @@
            
             
             &nbsp;<i class="fa fa-area-chart"></i>&nbsp;码了那么多字:&nbsp;
-            <span class="white-color">1.6k</span>
+            <span class="white-color">1.5k</span>
             
 
             <br>
@@ -1477,11 +1478,11 @@ $(function () {
     </script>
 
 
-<script>
+<script src="/assets/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"assets/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"log":false,"model":{"jsonPath":"/assets/assets/hijiki.model.json"},"display":{"position":"right","width":200,"height":350},"mobile":{"show":true},"react":{"opacity":1}});</script><script>
             window.imageLazyLoadSetting = {
                 isSPA: false,
                 processImages: null,
             };
-        </script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})});</script><script>!function(n){n.imageLazyLoadSetting.processImages=o;var i=n.imageLazyLoadSetting.isSPA,r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function o(){i&&(r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]")));for(var t,e,a=0;a<r.length;a++)t=r[a],0<=(e=t.getBoundingClientRect()).bottom&&0<=e.left&&e.top<=(n.innerHeight||document.documentElement.clientHeight)&&function(){var t,e,n,i,o=r[a];t=o,e=function(){r=r.filter(function(t){return o!==t})},n=new Image,i=t.getAttribute("data-original"),n.onload=function(){t.src=i,e&&e()},n.src=i}()}o(),n.addEventListener("scroll",function(){var t,e;t=o,e=n,clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(e)},500)})}(this);</script><script src="/assets/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"assets/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"log":false,"model":{"jsonPath":"/assets/assets/hijiki.model.json"},"display":{"position":"right","width":200,"height":350},"mobile":{"show":true},"react":{"opacity":1}});</script></body>
+        </script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})});</script><script>!function(n){n.imageLazyLoadSetting.processImages=o;var i=n.imageLazyLoadSetting.isSPA,r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function o(){i&&(r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]")));for(var t,e,a=0;a<r.length;a++)t=r[a],0<=(e=t.getBoundingClientRect()).bottom&&0<=e.left&&e.top<=(n.innerHeight||document.documentElement.clientHeight)&&function(){var t,e,n,i,o=r[a];t=o,e=function(){r=r.filter(function(t){return o!==t})},n=new Image,i=t.getAttribute("data-original"),n.onload=function(){t.src=i,e&&e()},n.src=i}()}o(),n.addEventListener("scroll",function(){var t,e;t=o,e=n,clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(e)},500)})}(this);</script></body>
 
 </html>
