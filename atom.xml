@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://pan-le.cn/"/>
-  <updated>2020-06-01T23:43:17.158Z</updated>
+  <updated>2020-06-02T01:51:19.135Z</updated>
   <id>https://pan-le.cn/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>软件配置</title>
+    <link href="https://pan-le.cn/2020/06/02/ruan-jian-pei-zhi/"/>
+    <id>https://pan-le.cn/2020/06/02/ruan-jian-pei-zhi/</id>
+    <published>2020-06-02T01:46:19.000Z</published>
+    <updated>2020-06-02T01:51:19.135Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;Sublime-Text配置中文&quot;&gt;&lt;a href=&quot;#Sublime-Text配置中文&quot; class=&quot;headerlink&quot; title=&quot;Sublime Text配置中文&quot;&gt;&lt;/a&gt;Sublime Text配置中文&lt;/h2&gt;&lt;p&gt;1.下载配置文件&lt;a
+        
+      
+    
+    </summary>
+    
+      <category term="捣鼓" scheme="https://pan-le.cn/categories/%E6%8D%A3%E9%BC%93/"/>
+    
+    
+      <category term="MacBook" scheme="https://pan-le.cn/tags/MacBook/"/>
+    
+  </entry>
   
   <entry>
     <title>擦擦你的路由器，绕开校园网的mac地址绑定，实现多设备登陆</title>
@@ -43,15 +69,10 @@
       
         
         
-          &lt;pre&gt;&lt;code&gt;切换目录
+          &lt;pre class=&quot;line-numbers language-hljs undefined&quot;&gt;&lt;code class=&quot;language-hljs undefined&quot;&gt;切换目录
  cd Desktop/jikefeng/
 监听周围wifi 
-airport -s
-c+f键搜索 选中信道开始抓包
-sudo airport en0 sniff 1
-c+c停止抓包，进入/bin找到包
-包和字典放一起开跑
-aircrack-ng
+airport
         
       
     
