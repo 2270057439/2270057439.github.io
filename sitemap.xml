@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://pan-le.cn/2020/06/03/xian-cheng/</loc>
+    
+    <lastmod>2020-06-03T12:57:05.163Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://pan-le.cn/about/index.html</loc>
     
     <lastmod>2020-06-02T12:09:03.958Z</lastmod>
@@ -121,14 +128,14 @@
   </url>
   
   <url>
-    <loc>https://pan-le.cn/archives/index.html</loc>
+    <loc>https://pan-le.cn/categories/index.html</loc>
     
     <lastmod>2020-04-04T11:43:42.000Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://pan-le.cn/categories/index.html</loc>
+    <loc>https://pan-le.cn/archives/index.html</loc>
     
     <lastmod>2020-04-04T11:43:42.000Z</lastmod>
     
