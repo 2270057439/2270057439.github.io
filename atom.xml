@@ -95,10 +95,15 @@
       
         
         
-          &lt;pre class=&quot;line-numbers language-hljs undefined&quot;&gt;&lt;code class=&quot;language-hljs undefined&quot;&gt;切换目录
+          &lt;pre&gt;&lt;code&gt;切换目录
  cd Desktop/jikefeng/
 监听周围wifi 
-airport
+airport -s
+c+f键搜索 选中信道开始抓包
+sudo airport en0 sniff 1
+c+c停止抓包，进入/bin找到包
+包和字典放一起开跑
+aircrack-ng
         
       
     
