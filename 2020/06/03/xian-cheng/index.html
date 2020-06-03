@@ -543,7 +543,7 @@ System.out.println<span class="token punctuation">(</span><span class="token str
 Demo02_Thread thread2 <span class="token operator">=</span> new Demo02_Thread<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> //创建新线程thread2
 thread.start<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 thread2.start<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> //启动thread2<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
-<h4 id="线程应该-start-而不能直接调用-run"><a href="#线程应该-start-而不能直接调用-run" class="headerlink" title="线程应该 start() 而不能直接调用 run()"></a>线程应该 start() 而不能直接调用 run()</h4><p><img src="https://pan-le.cn/medias/pebble/loading.gif" data-original="/img/%E7%BA%BF%E7%A8%8B/start_thread.png" alt></p>
+<h4 id="线程应该-start-而不能直接调用-run"><a href="#线程应该-start-而不能直接调用-run" class="headerlink" title="线程应该 start() 而不能直接调用 run()"></a>线程应该 start() 而不能直接调用 run()</h4><p><img src="https://pan-le.cn/medias/pebble/loading.gif" data-original="/medias/%E7%BA%BF%E7%A8%8B/start_thread.png" alt></p>
 <h3 id="3-实现-Runnable-接口创建进程"><a href="#3-实现-Runnable-接口创建进程" class="headerlink" title="3. 实现 Runnable 接口创建进程"></a>3. 实现 Runnable 接口创建进程</h3><ol>
 <li>实现 Runnable 接口</li>
 <li>创建 Thread 对象，传入 Runnable 对象</li>
@@ -573,8 +573,8 @@ class MyRunnable implements Runnable <span class="token punctuation">{</span>
 <li>避免单继承局限性</li>
 <li>便于共享资源</li>
 </ul>
-<h2 id="三、线程状态"><a href="#三、线程状态" class="headerlink" title="三、线程状态"></a>三、线程状态</h2><h3 id="1-线程状态转换图"><a href="#1-线程状态转换图" class="headerlink" title="1. 线程状态转换图"></a>1. 线程状态转换图</h3><p><img src="https://pan-le.cn/medias/pebble/loading.gif" data-original="/img/%E7%BA%BF%E7%A8%8B/%E7%BA%BF%E7%A8%8B%E7%8A%B6%E6%80%81%E8%BD%AC%E6%8D%A2%E5%9B%BE.jpg" alt="状态转换图"></p>
-<h2 id="四、线程调度"><a href="#四、线程调度" class="headerlink" title="四、线程调度"></a>四、线程调度</h2><h3 id="1-线程调度"><a href="#1-线程调度" class="headerlink" title="1. 线程调度"></a>1. 线程调度</h3><p><strong>线程调度：</strong> 指按照特定机制为多个线程分配 CPU 的使用权。<br>线程调度方法：<br><img src="https://pan-le.cn/medias/pebble/loading.gif" data-original="/img/%E7%BA%BF%E7%A8%8B/methods.png" alt="线程调度方法"></p>
+<h2 id="三、线程状态"><a href="#三、线程状态" class="headerlink" title="三、线程状态"></a>三、线程状态</h2><h3 id="1-线程状态转换图"><a href="#1-线程状态转换图" class="headerlink" title="1. 线程状态转换图"></a>1. 线程状态转换图</h3><p><img src="https://pan-le.cn/medias/pebble/loading.gif" data-original="/medias/%E7%BA%BF%E7%A8%8B/%E7%BA%BF%E7%A8%8B%E7%8A%B6%E6%80%81%E8%BD%AC%E6%8D%A2%E5%9B%BE.jpg" alt="状态转换图"></p>
+<h2 id="四、线程调度"><a href="#四、线程调度" class="headerlink" title="四、线程调度"></a>四、线程调度</h2><h3 id="1-线程调度"><a href="#1-线程调度" class="headerlink" title="1. 线程调度"></a>1. 线程调度</h3><p><strong>线程调度：</strong> 指按照特定机制为多个线程分配 CPU 的使用权。<br>线程调度方法：<br><img src="https://pan-le.cn/medias/pebble/loading.gif" data-original="/medias/%E7%BA%BF%E7%A8%8B/methods.png" alt="线程调度方法"></p>
 <h3 id="2-线程优先级"><a href="#2-线程优先级" class="headerlink" title="2. 线程优先级"></a>2. 线程优先级</h3><p><code>线程的优先级</code><br><code>线程优先级由1~10表示，1最低，默认优先级为5</code><br><code>优先级高的线程获得CPU资源的概率较大</code></p>
 <pre class="line-numbers language-bash"><code class="language-bash">t1.setPriority<span class="token punctuation">(</span>Thread.MAX_PRIORITY<span class="token punctuation">)</span><span class="token punctuation">;</span>
 t2.setPriority<span class="token punctuation">(</span>Thread.MIN_PRIORITY<span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
@@ -585,7 +585,7 @@ t2.setPriority<span class="token punctuation">(</span>Thread.MIN_PRIORITY<span c
     e.printStackTrace<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <h3 id="4-线程的强制运行"><a href="#4-线程的强制运行" class="headerlink" title="4. 线程的强制运行"></a>4. 线程的强制运行</h3><p><code>线程的强制运行 join()</code><br><code>使当前线程暂停执行，等待其他线程结束后再继续执行本线程</code><br><code>需处理InterruptedException异常</code></p>
-<p><img src="https://pan-le.cn/medias/pebble/loading.gif" data-original="/img/%E7%BA%BF%E7%A8%8B/join.png" alt="join"><br><strong>注：</strong></p>
+<p><img src="https://pan-le.cn/medias/pebble/loading.gif" data-original="/medias/%E7%BA%BF%E7%A8%8B/join.png" alt="join"><br><strong>注：</strong></p>
 <ul>
 <li>millis:以毫秒为单位的等待时长</li>
 <li>nanos:要等待的附加纳秒时长</li>
@@ -651,13 +651,13 @@ class Site_unsafty implements Runnable <span class="token punctuation">{</span>
 <p><strong>同步方法：</strong> 同步方法和同步代码块的作用和内涵是一致的。同步方法即是用当前对象 this 锁定的同步代码块。</p>
 <h3 id="4-线程安全的类型"><a href="#4-线程安全的类型" class="headerlink" title="4. 线程安全的类型"></a>4. 线程安全的类型</h3><ul>
 <li>ArrayList类的add()方法为非同步方法</li>
-<li>当多个线程向同一个ArrayList对象添加数据时，可能出现数据不一致问题<br><img src="https://pan-le.cn/medias/pebble/loading.gif" data-original="/img/%E7%BA%BF%E7%A8%8B/%E7%BA%BF%E7%A8%8B%E5%AE%89%E5%85%A8%E7%B1%BB%E5%9E%8B.png" alt="线程安全的类型"></li>
+<li>当多个线程向同一个ArrayList对象添加数据时，可能出现数据不一致问题<br><img src="https://pan-le.cn/medias/pebble/loading.gif" data-original="/medias/%E7%BA%BF%E7%A8%8B/%E7%BA%BF%E7%A8%8B%E5%AE%89%E5%85%A8%E7%B1%BB%E5%9E%8B.png" alt="线程安全的类型"></li>
 <li><em>为达到安全性和效率的平衡，可以根据实际场景来选择合适的类型*</em></li>
 </ul>
 <h2 id="六、课堂练习"><a href="#六、课堂练习" class="headerlink" title="六、课堂练习"></a>六、课堂练习</h2><ol>
 <li>使用 Thread 创建线程练习<br>需求说明：<ol>
 <li>创建两个子线程，每个线程均输出20次消息数字、“你好”、线程名</li>
-<li>观察多个线程交替执行的过程<br><img src="https://pan-le.cn/medias/pebble/loading.gif" data-original="/img/%E7%BA%BF%E7%A8%8B/c1.png" alt="c1"></li>
+<li>观察多个线程交替执行的过程<br><img src="https://pan-le.cn/medias/pebble/loading.gif" data-original="/medias/%E7%BA%BF%E7%A8%8B/c1.png" alt="c1"></li>
 </ol>
 </li>
 <li>使用 Runnable 创建线程练习<br>需求说明：<br>修改上机练习1，要求线程类使用实现Runnable接口的方式创建，并修改测试类</li>
@@ -666,13 +666,13 @@ class Site_unsafty implements Runnable <span class="token punctuation">{</span>
  2. 构造方法完成属性初始化
  3. 实现run()方法，线程休眠模拟爬山中的延时
  4. 实现测试类Test，创建多个线程对象模拟多个人，设置人名、爬100米时长
- ![c3](/img/线程/ex_climb.png)</code></pre></li>
+ ![c3](/medias/线程/ex_climb.png)</code></pre></li>
 <li>模拟看病叫号<br>需求说明：<pre><code> 1. 某科室一天需看普通号50个，特需号10个
  2. 特需号看病时间是普通号的2倍
  3. 开始时普通号和特需号并行叫号，叫到特需号的概率比普通号高
  4. 当普通号叫完第10号时，要求先看完全部特需号，再看普通号
  5. 使用多线程模拟这一过程
- ![叫号](/img/线程/ex_hospital.png)</code></pre></li>
+ ![叫号](/medias/线程/ex_hospital.png)</code></pre></li>
 <li>模拟多线程网络购票</li>
 </ol>
 
