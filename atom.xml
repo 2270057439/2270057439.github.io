@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://pan-le.cn/"/>
-  <updated>2020-06-03T13:06:21.597Z</updated>
+  <updated>2020-06-15T09:06:08.941Z</updated>
   <id>https://pan-le.cn/</id>
   
   <author>
@@ -17,9 +17,35 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>Aircrack-ng抓包破解Wi-Fi(WPA2)</title>
+    <link href="https://pan-le.cn/2020/06/15/aircrack-ng-zhua-bao-po-jie-wi-fi-wpa2/"/>
+    <id>https://pan-le.cn/2020/06/15/aircrack-ng-zhua-bao-po-jie-wi-fi-wpa2/</id>
+    <published>2020-06-15T13:08:54.000Z</published>
+    <updated>2020-06-15T09:06:08.941Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;写在前面&quot;&gt;&lt;a href=&quot;#写在前面&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="折腾" scheme="https://pan-le.cn/categories/%E6%8A%98%E8%85%BE/"/>
+    
+    
+      <category term="aircrack-ng" scheme="https://pan-le.cn/tags/aircrack-ng/"/>
+    
+  </entry>
+  
+  <entry>
     <title>java多线程机制</title>
-    <link href="https://pan-le.cn/2020/06/03/xian-cheng/"/>
-    <id>https://pan-le.cn/2020/06/03/xian-cheng/</id>
+    <link href="https://pan-le.cn/2020/06/03/java-duo-xian-cheng-ji-zhi/"/>
+    <id>https://pan-le.cn/2020/06/03/java-duo-xian-cheng-ji-zhi/</id>
     <published>2020-06-02T23:41:35.000Z</published>
     <updated>2020-06-03T13:06:21.597Z</updated>
     
@@ -47,7 +73,7 @@
     <link href="https://pan-le.cn/2020/06/02/ruan-jian-pei-zhi/"/>
     <id>https://pan-le.cn/2020/06/02/ruan-jian-pei-zhi/</id>
     <published>2020-06-02T01:46:19.000Z</published>
-    <updated>2020-06-02T01:51:19.135Z</updated>
+    <updated>2020-06-15T13:27:06.944Z</updated>
     
     <summary type="html">
     
@@ -55,7 +81,10 @@
       
         
         
-          &lt;h2 id=&quot;Sublime-Text配置中文&quot;&gt;&lt;a href=&quot;#Sublime-Text配置中文&quot; class=&quot;headerlink&quot; title=&quot;Sublime Text配置中文&quot;&gt;&lt;/a&gt;Sublime Text配置中文&lt;/h2&gt;&lt;p&gt;1.下载配置文件&lt;a
+          &lt;blockquote&gt;
+&lt;p&gt;记录一下现有软件。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;img src=&quot;https://pan-le.cn/medias/pebble/loading.gif&quot;
         
       
     
@@ -69,53 +98,9 @@
   </entry>
   
   <entry>
-    <title>擦擦你的路由器，绕开校园网的mac地址绑定，实现多设备登陆</title>
-    <link href="https://pan-le.cn/2020/06/01/pos-ca-ca-ni-de-lu-you-qi-rao-kai-xiao-yuan-wang-de-mac-di-zhi-bang-ding-shi-xian-duo-she-bei-deng-lu/"/>
-    <id>https://pan-le.cn/2020/06/01/pos-ca-ca-ni-de-lu-you-qi-rao-kai-xiao-yuan-wang-de-mac-di-zhi-bang-ding-shi-xian-duo-she-bei-deng-lu/</id>
-    <published>2020-06-01T13:58:54.000Z</published>
-    <updated>2020-06-01T23:43:17.158Z</updated>
-    
-    <summary type="html">
-    
-    </summary>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>老牌aircrack-ng跑字典破Wi-Fi</title>
-    <link href="https://pan-le.cn/2020/06/01/lao-pai-aircrack-ng-pao-zi-dian-po-wi-fi/"/>
-    <id>https://pan-le.cn/2020/06/01/lao-pai-aircrack-ng-pao-zi-dian-po-wi-fi/</id>
-    <published>2020-06-01T13:08:54.000Z</published>
-    <updated>2020-06-01T13:09:36.895Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;pre&gt;&lt;code&gt;切换目录
- cd Desktop/jikefeng/
-监听周围wifi 
-airport -s
-c+f键搜索 选中信道开始抓包
-sudo airport en0 sniff 1
-c+c停止抓包，进入/bin找到包
-包和字典放一起开跑
-aircrack-ng
-        
-      
-    
-    </summary>
-    
-    
-  </entry>
-  
-  <entry>
     <title>pebble-产品总结</title>
-    <link href="https://pan-le.cn/2020/05/30/mei-luo-de-zhi-neng-shou-biao-bi-pebble-chan-pin-xian-jie-shao/"/>
-    <id>https://pan-le.cn/2020/05/30/mei-luo-de-zhi-neng-shou-biao-bi-pebble-chan-pin-xian-jie-shao/</id>
+    <link href="https://pan-le.cn/2020/05/30/pebble-chan-pin-zong-jie/"/>
+    <id>https://pan-le.cn/2020/05/30/pebble-chan-pin-zong-jie/</id>
     <published>2020-05-29T22:07:47.000Z</published>
     <updated>2020-05-31T06:37:17.000Z</updated>
     
@@ -155,55 +140,21 @@ aircrack-ng
   </entry>
   
   <entry>
-    <title>浏览器插件汇总</title>
-    <link href="https://pan-le.cn/2020/05/28/liu-lan-qi-cha-jian-hui-zong/"/>
-    <id>https://pan-le.cn/2020/05/28/liu-lan-qi-cha-jian-hui-zong/</id>
-    <published>2020-05-28T01:14:51.000Z</published>
-    <updated>2020-05-28T01:14:51.000Z</updated>
-    
-    <summary type="html">
-    
-    </summary>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>欧陆字典制作（mdict词典）</title>
-    <link href="https://pan-le.cn/2020/05/28/ou-lu-zi-dian-zhi-zuo-mdict-ci-dian/"/>
-    <id>https://pan-le.cn/2020/05/28/ou-lu-zi-dian-zhi-zuo-mdict-ci-dian/</id>
-    <published>2020-05-28T01:14:26.000Z</published>
-    <updated>2020-05-29T09:00:00.000Z</updated>
-    
-    <summary type="html">
-    
-    </summary>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>不开放shell的ipad通过Textastic远程访问iTerm</title>
-    <link href="https://pan-le.cn/2020/05/28/bu-kai-fang-shell-de-ipad-tong-guo-textastic-yuan-cheng-fang-wen-iterm/"/>
-    <id>https://pan-le.cn/2020/05/28/bu-kai-fang-shell-de-ipad-tong-guo-textastic-yuan-cheng-fang-wen-iterm/</id>
-    <published>2020-05-28T01:12:08.000Z</published>
-    <updated>2020-05-28T01:12:08.000Z</updated>
-    
-    <summary type="html">
-    
-    </summary>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>Mac平台Docker容器配合智q实现qq机器人</title>
-    <link href="https://pan-le.cn/2020/05/28/mac-ping-tai-docker-rong-qi-pei-he-zhi-q-shi-xian-qq-ji-qi-ren/"/>
-    <id>https://pan-le.cn/2020/05/28/mac-ping-tai-docker-rong-qi-pei-he-zhi-q-shi-xian-qq-ji-qi-ren/</id>
+    <title>Mac平台Docker容器配合酷q实现qq机器人（踩坑指南）</title>
+    <link href="https://pan-le.cn/2020/05/28/mac-ping-tai-docker-rong-qi-pei-he-ku-q-shi-xian-qq-ji-qi-ren-cai-keng-zhi-nan/"/>
+    <id>https://pan-le.cn/2020/05/28/mac-ping-tai-docker-rong-qi-pei-he-ku-q-shi-xian-qq-ji-qi-ren-cai-keng-zhi-nan/</id>
     <published>2020-05-28T01:08:17.000Z</published>
-    <updated>2020-05-29T08:49:11.000Z</updated>
+    <updated>2020-06-15T09:14:15.541Z</updated>
     
     <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;说明&quot;&gt;&lt;a href=&quot;#说明&quot; class=&quot;headerlink&quot;
+        
+      
     
     </summary>
     
@@ -215,7 +166,7 @@ aircrack-ng
     <link href="https://pan-le.cn/2020/05/28/termux-cao-zuo-hui-zong/"/>
     <id>https://pan-le.cn/2020/05/28/termux-cao-zuo-hui-zong/</id>
     <published>2020-05-28T00:51:11.000Z</published>
-    <updated>2020-06-01T13:06:25.286Z</updated>
+    <updated>2020-06-15T09:07:17.240Z</updated>
     
     <summary type="html">
     
@@ -240,10 +191,10 @@ aircrack-ng
   
   <entry>
     <title>iTerm配置汇总</title>
-    <link href="https://pan-le.cn/2020/05/28/mac-os-chang-jian-cuo-wu-hui-zong/"/>
-    <id>https://pan-le.cn/2020/05/28/mac-os-chang-jian-cuo-wu-hui-zong/</id>
+    <link href="https://pan-le.cn/2020/05/28/iterm-pei-zhi-hui-zong/"/>
+    <id>https://pan-le.cn/2020/05/28/iterm-pei-zhi-hui-zong/</id>
     <published>2020-05-28T00:17:26.000Z</published>
-    <updated>2020-06-01T13:18:04.652Z</updated>
+    <updated>2020-06-15T09:09:31.103Z</updated>
     
     <summary type="html">
     
@@ -266,10 +217,10 @@ aircrack-ng
   
   <entry>
     <title>Hexo+github+coding+matry搭建双路博客</title>
-    <link href="https://pan-le.cn/2020/05/27/hexo-github-da-jian-bo-ke/"/>
-    <id>https://pan-le.cn/2020/05/27/hexo-github-da-jian-bo-ke/</id>
+    <link href="https://pan-le.cn/2020/05/27/hexo-github-coding-matry-da-jian-shuang-lu-bo-ke/"/>
+    <id>https://pan-le.cn/2020/05/27/hexo-github-coding-matry-da-jian-shuang-lu-bo-ke/</id>
     <published>2020-05-26T23:41:35.000Z</published>
-    <updated>2020-06-01T23:50:50.507Z</updated>
+    <updated>2020-06-15T09:12:05.243Z</updated>
     
     <summary type="html">
     
