@@ -4,14 +4,14 @@
 
 <head><meta name="generator" content="Hexo 3.9.0">
     <meta charset="utf-8">
-    <meta name="keywords" content="Termux操作汇总, sql c java 软件工程 火花 冰蓝色火花 楽楽 linux termux macos">
+    <meta name="keywords" content="🈚️, sql c java 软件工程 火花 冰蓝色火花 楽楽 linux termux macos">
     <meta name="baidu-site-verification" content="XGOMoOZrlG">
     <meta name="google-site-verification" content="yCy2azpds5XSuGZvis6OuA-XIGF5GuGpYRAaGfD6o48">
     <meta name="360-site-verification" content="b7c11a830ef90fd1464ad6206bb7b6e7">
-    <meta name="description" content="一：软件安装1.安装clang1.1过程升级并安装clang编译器和vibash
-apt update;apt install clang;apt install vim编辑c程序：bash
-vim hello编译：bash
-clang h">
+    <meta name="description" content="很明显，你很懒。
+你不该如此。
+OK？
+">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -19,7 +19,7 @@ clang h">
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>Termux操作汇总 | 火花</title>
+    <title>🈚️ | 火花</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/font-awesome.min.css">
@@ -310,7 +310,7 @@ clang h">
 <script src="/libs/cryptojs/crypto-js.min.js"></script>
 <script>
     (function() {
-        let pwd = '';
+        let pwd = '1e70fb54b508a84bdb40e2a2ae5ca56e4fdf44be65748f6318c3b86e08967352';
         if (pwd && pwd.length > 0) {
             if (pwd !== CryptoJS.SHA256(prompt('请输入文章密码')).toString(CryptoJS.enc.Hex)) {
                 alert('密码错误，返回咯！');
@@ -323,13 +323,13 @@ clang h">
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/15.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/26.jpg')">
     <div class="container">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
                     <div class="description center-align post-title">
-                        Termux操作汇总
+                        🈚️
                     </div>
                 </div>
             </div>
@@ -448,28 +448,11 @@ clang h">
                 <div class="col s7">
                     
                     <div class="article-tag">
-                        
-                        <a href="/tags/Termux/" target="_blank">
-                            <span class="chip bg-color">Termux</span>
-                        </a>
-                        
+                        <span class="chip bg-color">无标签</span>
                     </div>
                     
                 </div>
                 <div class="col s5 right-align">
-                    
-                    <div class="post-cate">
-                        <i class="fa fa-bookmark fa-fw icon-category"></i>
-                        
-                        <a href="/categories/linux/" class="post-category" target="_blank">
-                            linux
-                        </a>
-                        
-                        <a href="/categories/linux/鼓捣/" class="post-category" target="_blank">
-                            鼓捣
-                        </a>
-                        
-                    </div>
                     
                 </div>
             </div>
@@ -477,7 +460,7 @@ clang h">
             <div class="post-info">
                 <div class="post-date info-break-policy">
                     <i class="fa fa-calendar-minus-o fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2020-05-28
+                    2020-06-16
                 </div>
 
                 <div class="post-author info-break-policy">
@@ -491,7 +474,7 @@ clang h">
                 
                 <div class="info-break-policy">
                     <i class="fa fa-file-word-o fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    130
+                    12
                 </div>
                 
 
@@ -514,26 +497,9 @@ clang h">
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="一：软件安装"><a href="#一：软件安装" class="headerlink" title="一：软件安装"></a>一：软件安装</h2><h3 id="1-安装clang"><a href="#1-安装clang" class="headerlink" title="1.安装clang"></a>1.安装clang</h3><h4 id="1-1过程"><a href="#1-1过程" class="headerlink" title="1.1过程"></a>1.1过程</h4><p><strong>升级并安装clang编译器和vi</strong><br><code>bash
-apt update;apt install clang;apt install vim</code><br><strong>编辑c程序：</strong><br><code>bash
-vim hello</code><br><strong>编译：</strong><br><code>bash
-clang hello.c
-//或者：gcc hello.c -o name.o</code><br><strong>执行生成的编译文件:</strong><br><code>name.o</code></p>
-<h4 id="1-2增加vi中文注释支持"><a href="#1-2增加vi中文注释支持" class="headerlink" title="1.2增加vi中文注释支持"></a>1.2增加vi中文注释支持</h4><p><strong>根目录下修改.vimrc文件</strong></p>
-<pre class="line-numbers language-bash"><code class="language-bash"><span class="token function">cd</span> ~ //切换到根
-vim .vimrc //编辑<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
-<p><strong>写入配置信息</strong></p>
-<pre class="line-numbers language-bash"><code class="language-bash"><span class="token keyword">set</span> encoding<span class="token operator">=</span>utf-8
-<span class="token keyword">set</span> fileencodings<span class="token operator">=</span>ucs-bom,utf-8,cp936,gb18030
-<span class="token keyword">set</span> termencoding<span class="token operator">=</span>utf-8
-<span class="token keyword">set</span> expandtab
-<span class="token keyword">set</span> ts<span class="token operator">=</span>4
-<span class="token keyword">set</span> shiftwidth<span class="token operator">=</span>4
-<span class="token keyword">set</span> nu
-syntax on
-<span class="token keyword">if</span> has<span class="token punctuation">(</span><span class="token string">'mouse'</span><span class="token punctuation">)</span>
-<span class="token keyword">set</span> mouse-<span class="token operator">=</span>a
-endif<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+                <p>很明显，你很懒。</p>
+<p>你不该如此。</p>
+<p>OK？</p>
 
             </div>
             <hr />
@@ -692,9 +658,9 @@ endif<span aria-hidden="true" class="line-numbers-rows"><span></span><span></spa
             <br/>
             <span xmlns:dct="http://purl.org/dc/terms/" href="http://purl.org/dc/dcmitype/Text"
                   property="dct:title" rel="dct:type">
-                    《Termux操作汇总》
+                    《🈚️》
                 </span> 由
-            <a xmlns:cc="http://creativecommons.org/ns#" href="/2020/05/28/termux-cao-zuo-hui-zong/" property="cc:attributionName"
+            <a xmlns:cc="http://creativecommons.org/ns#" href="/2020/06/16/" property="cc:attributionName"
                rel="cc:attributionURL">
                 火花
             </a> 采用
@@ -735,7 +701,7 @@ endif<span aria-hidden="true" class="line-numbers-rows"><span></span><span></spa
         repo: 'wodepinglunqu',
         owner: '2270057439',
         admin: 2270057439,
-        id: '2020/05/28/termux-cao-zuo-hui-zong/',
+        id: '2020/06/16//',
         distractionFreeMode: false  // Facebook-like distraction free mode
     });
 
@@ -1018,37 +984,36 @@ endif<span aria-hidden="true" class="line-numbers-rows"><span></span><span></spa
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fa fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="fa fa-dot-circle-o"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/2020/05/28/mac-ping-tai-docker-rong-qi-pei-he-ku-q-shi-xian-qq-ji-qi-ren-cai-keng-zhi-nan/">
+                <a href="/2020/06/16/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/4.jpg" class="responsive-img" alt="Mac平台Docker容器配合酷q实现qq机器人（踩坑指南）">
+                        <img src="/medias/featureimages/26.jpg" class="responsive-img" alt="🈚️">
                         
-                        <span class="card-title">Mac平台Docker容器配合酷q实现qq机器人（踩坑指南）</span>
+                        <span class="card-title">🈚️</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            说明
-win系统的话此教程基本无用，这里只针对基于mac或者其他linux系统（当然win装个xshell模拟终端也行）此处项目官方文档目前已关闭注册.话不多说，开始！
-
-在你的机器上安装docker ce1.卸载机器上可能存在的docke
+                            。。。。。。。。。。。。。。。。。
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="fa fa-clock-o fa-fw icon-date"></i>2020-05-28
-                        </span>
+                            <span class="publish-date">
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2020-06-16
+                            </span>
                         <span class="publish-author">
                             
                         </span>
                     </div>
                 </div>
+
                 
             </div>
         </div>
@@ -1059,24 +1024,24 @@ win系统的话此教程基本无用，这里只针对基于mac或者其他linux
                 下一篇&nbsp;<i class="fa fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2020/05/28/iterm-pei-zhi-hui-zong/">
+                <a href="/2020/06/15/aircrack-ng-zhua-bao-po-jie-wi-fi-wpa2/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="iTerm配置汇总">
+                        <img src="/medias/featureimages/22.jpg" class="responsive-img" alt="Aircrack-ng抓包破解Wi-Fi(WPA2)">
                         
-                        <span class="card-title">iTerm配置汇总</span>
+                        <span class="card-title">Aircrack-ng抓包破解Wi-Fi(WPA2)</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            mac的iTerm配置汇总。
+                            暴力破解WPA2
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="fa fa-clock-o fa-fw icon-date"></i>2020-05-28
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2020-06-15
                             </span>
                         <span class="publish-author">
                             
@@ -1093,8 +1058,8 @@ win系统的话此教程基本无用，这里只针对基于mac或者其他linux
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/macbook/" target="_blank">
-                        <span class="chip bg-color">macbook</span>
+                    <a href="/tags/aircrack-ng/" target="_blank">
+                        <span class="chip bg-color">aircrack-ng</span>
                     </a>
                     
                 </div>

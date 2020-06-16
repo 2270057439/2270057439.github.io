@@ -2,6 +2,27 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://pan-le.cn/2020/06/16/</loc>
+    
+    <lastmod>2020-06-16T09:48:54.354Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://pan-le.cn/friends/index.html</loc>
+    
+    <lastmod>2020-06-16T09:37:19.250Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://pan-le.cn/about/index.html</loc>
+    
+    <lastmod>2020-06-16T09:35:44.603Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://pan-le.cn/2020/06/02/ruan-jian-pei-zhi/</loc>
     
     <lastmod>2020-06-15T13:27:06.944Z</lastmod>
@@ -51,20 +72,6 @@
   </url>
   
   <url>
-    <loc>https://pan-le.cn/about/index.html</loc>
-    
-    <lastmod>2020-06-02T12:09:03.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://pan-le.cn/friends/index.html</loc>
-    
-    <lastmod>2020-06-01T12:10:47.000Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://pan-le.cn/2020/05/30/pebble-chan-pin-zong-jie/</loc>
     
     <lastmod>2020-05-31T06:37:17.000Z</lastmod>
@@ -82,13 +89,6 @@
     <loc>https://pan-le.cn/2020/05/28/termux-iterm-nginx-fan-xiang-chuan-tou-da-jian-bo-ke/</loc>
     
     <lastmod>2020-05-28T01:22:10.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://pan-le.cn/bbs/index.html</loc>
-    
-    <lastmod>2020-05-27T22:13:48.000Z</lastmod>
     
   </url>
   
