@@ -8,8 +8,8 @@
     <meta name="baidu-site-verification" content="XGOMoOZrlG">
     <meta name="google-site-verification" content="yCy2azpds5XSuGZvis6OuA-XIGF5GuGpYRAaGfD6o48">
     <meta name="360-site-verification" content="b7c11a830ef90fd1464ad6206bb7b6e7">
-    <meta name="description" content="一.sqli-labs介绍：sqli-labs是由印度程序员开发的一个SQL注入实战平台，涵盖了报错注入、盲注、Update注入、Insert注入、Heather注入、二阶注入、绕过WAF，比较全面的一个注入平台。项目地址
-二.前置条件「A">
+    <meta name="description" content="一.sqli-labs介绍：sqli-labs是由一个印度程序员开发的SQL注入实战平台，涵盖了报错注入、盲注、Update注入、Insert注入、Heather注入、二阶注入、绕过WAF，比较全面的一个注入平台：项目地址
+二.前置条件需要">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -476,14 +476,14 @@
                 
                 <div class="info-break-policy">
                     <i class="fa fa-file-word-o fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    410
+                    540
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="fa fa-clock-o fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    1 分
+                    2 分
                 </div>
                 
                 
@@ -499,15 +499,18 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="一-sqli-labs介绍："><a href="#一-sqli-labs介绍：" class="headerlink" title="一.sqli-labs介绍："></a>一.sqli-labs介绍：</h2><p>sqli-labs是由印度程序员开发的一个SQL注入实战平台，涵盖了报错注入、盲注、Update注入、Insert注入、Heather注入、二阶注入、绕过WAF，比较全面的一个注入平台。<a href="https://github.com/Audi-1/sqli-labs" title="项目地址" target="_blank" rel="noopener">项目地址</a></p>
-<h2 id="二-前置条件"><a href="#二-前置条件" class="headerlink" title="二.前置条件"></a>二.前置条件</h2><p>「Apache/Nginx + PHP + Tomcat + java环境」<br>对于win用户通过XAMPP（LAMP）配置也可以轻松搭建。mac平台也有XAMPP，但界面过于丑陋且不够方便。作为一个“精致”的boy，此处使用Mxsrvs代替。（当然使用MAMP也可以代替XAMPP，mac系统其实已经内置了Apache与PHP，这两个也可以不同安装）</p>
-<p>此处使用 <a href="http://www.xsrvs.com/index.html" title="MxSrvs_1.2.1" target="_blank" rel="noopener">MxSrvs_1.2.1</a> + Nginx1.18.0 + PHP7.4.6 + Tomcat9.0.35 + JDK11作为演示。</p>
-<h2 id="三-安装"><a href="#三-安装" class="headerlink" title="三.安装"></a>三.安装</h2><h3 id="1-安装MxSrvs。"><a href="#1-安装MxSrvs。" class="headerlink" title="1.安装MxSrvs。"></a>1.安装MxSrvs。</h3><p>MxSrvs是MacOS平台免费的PHP集成开发环境，界面简洁，功能强大。<br>按以下图示操作：<br><img src="https://pan-le.cn/medias/pebble/loading.gif" data-original="/medias/%E9%85%8D%E7%BD%AEsqli/%E5%AE%89%E8%A3%85.png" alt><br>切换版本后启动 Nginx1.18.0 和 PHP7.4.6，成功即完成安装。<br>MxSrvs只能运行在/Applications/MxSrvs 目录中，即相应的sqli-labs需要放到/Applications/MxSrvs/www目录下才能执行。</p>
-<h3 id="2-下载sqli-labs"><a href="#2-下载sqli-labs" class="headerlink" title="2.下载sqli-labs"></a>2.下载sqli-labs</h3><p>PHP版本 &lt; 7:<a href="https://github.com/Audi-1/sqli-labs" title="下载" target="_blank" rel="noopener">下载</a>官方版。<br>PHP版本 &gt; 7<a href="https://github.com/skyblueee/sqli-labs-php7" title="下载" target="_blank" rel="noopener">下载</a>修改版。<br>也可以使用GET：</p>
+                <h2 id="一-sqli-labs介绍："><a href="#一-sqli-labs介绍：" class="headerlink" title="一.sqli-labs介绍："></a>一.sqli-labs介绍：</h2><p>sqli-labs是由一个印度程序员开发的SQL注入实战平台，涵盖了报错注入、盲注、Update注入、Insert注入、Heather注入、二阶注入、绕过WAF，比较全面的一个注入平台：<a href="https://github.com/Audi-1/sqli-labs" title="项目地址" target="_blank" rel="noopener">项目地址</a></p>
+<h2 id="二-前置条件"><a href="#二-前置条件" class="headerlink" title="二.前置条件"></a>二.前置条件</h2><p>需要：<strong>「Apache/Nginx + PHP + Tomcat + java环境」</strong><br>对于win用户通过XAMPP（LAMP）配置可轻松搭建。而对于mac平台也有XAMPP，但界面过于丑陋且不够方便。作为一个“精致”的boy，此处使用Mxsrvs代替，当然使用MAMP也可以代替XAMPP，mac系统其实已经内置了Apache与PHP，这两个也可以不用安装。</p>
+<p>此处使用 <strong><a href="http://www.xsrvs.com/index.html" title="MxSrvs_1.2.1" target="_blank" rel="noopener">MxSrvs_1.2.1</a> + Nginx1.18.0 + PHP7.4.6 + Tomcat9.0.35 + JDK11</strong>作为演示。</p>
+<h2 id="三-安装"><a href="#三-安装" class="headerlink" title="三.安装"></a>三.安装</h2><h3 id="1-安装MxSrvs。"><a href="#1-安装MxSrvs。" class="headerlink" title="1.安装MxSrvs。"></a>1.安装MxSrvs。</h3><p><a href="http://www.xsrvs.com/index.html" title="MxSrvs" target="_blank" rel="noopener">MxSrvs</a> 是MacOS平台免费的PHP集成开发环境，界面简洁，功能强大。<br>按以下图示操作：<br><img src="https://pan-le.cn/medias/pebble/loading.gif" data-original="/medias/%E9%85%8D%E7%BD%AEsqli/%E5%AE%89%E8%A3%85.png" alt><br>切换版本后启动 Nginx1.18.0 和 PHP7.4.6，成功即完成安装。<br>MxSrvs只能运行在/Applications/MxSrvs 目录中，即相应的sqli-labs需要放到/Applications/MxSrvs/www目录下才能执行。</p>
+<h3 id="2-下载sqli-labs"><a href="#2-下载sqli-labs" class="headerlink" title="2.下载sqli-labs"></a>2.下载sqli-labs</h3><p>PHP版本 &lt; 7:  <a href="https://github.com/Audi-1/sqli-labs" title="下载" target="_blank" rel="noopener">下载</a>官方版。<br>PHP版本 &gt; 7:  <a href="https://github.com/skyblueee/sqli-labs-php7" title="下载" target="_blank" rel="noopener">下载</a>修改版。<br>也可以使用GET：</p>
 <pre class="line-numbers language-bash"><code class="language-bash"><span class="token function">sudo</span> <span class="token function">apt-get</span> <span class="token function">install</span> <span class="token function">git</span>
 <span class="token function">sudo</span> <span class="token function">git</span> clone https://github.com/skyblueee/sqli-labs-php7 /var/www/html/sqli-labs<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
-<p>由于php在php5之后移除了mysql扩展（函数），而sqli-labs是基于php5以下版本的平台。要使用mysqli扩展需要手动修改：<br>  1.进入sqli-labs/sql-connections<br>  2.所有文件进行以下修改：<br>  <img src="https://pan-le.cn/medias/pebble/loading.gif" data-original="/medias/%E9%85%8D%E7%BD%AEsqli/%E4%BF%AE%E6%94%B9php.png" alt></p>
+<p>注：由于php在php5之后移除了mysql扩展（函数），而sqli-labs是基于php5以下版本的平台。所以下载<a href="https://github.com/Audi-1/sqli-labs" title="官方版" target="_blank" rel="noopener">官方版</a>后要使用mysqli扩展就需要手动修改：<br>  1.进入sqli-labs/sql-connections<br>  2.对内部所有文件进行以下修改：<br>  <img src="https://pan-le.cn/medias/pebble/loading.gif" data-original="/medias/%E9%85%8D%E7%BD%AEsqli/%E4%BF%AE%E6%94%B9php.png" alt></p>
 <h3 id="3-配置sqli-labs"><a href="#3-配置sqli-labs" class="headerlink" title="3.配置sqli-labs"></a>3.配置sqli-labs</h3><p>  1）.将sqli-labs文件夹放到MxSrvs的www目录下。<br>  2）.打开sqli-labs/sql-connections/db-creds.inc,修改$dbpass为你的数据库密码</p>
+<h3 id="4-启动sqli-labs"><a href="#4-启动sqli-labs" class="headerlink" title="4.启动sqli-labs"></a>4.启动sqli-labs</h3><p>  1）.确定mysql，php，Nginx都已经启动的前提下，浏览器输入：<a href="http://localhost:[http服务器端口]/sqli-labs，即可进入以下页面：" target="_blank" rel="noopener">http://localhost:[http服务器端口]/sqli-labs，即可进入以下页面：</a><br>  <img src="https://pan-le.cn/medias/pebble/loading.gif" data-original="/medias/%E9%85%8D%E7%BD%AEsqli/%E6%AC%A2%E8%BF%8E.png" alt><br>  2）.点击 _Setup/reset Database for labs_ 后显示：<br>  <img src="https://pan-le.cn/medias/pebble/loading.gif" data-original="/medias/%E9%85%8D%E7%BD%AEsqli/%E6%88%90%E5%8A%9F.png" alt></p>
+<h2 id="四-修改mysql密码"><a href="#四-修改mysql密码" class="headerlink" title="四.修改mysql密码"></a>四.修改mysql密码</h2><p>MySQL和Redis所有版本的默认root密码均为空，想要修改mysql密码可以有以下几种方法：</p>
+<h3 id="1-使用mysql自带的mysqladmin（位于bin下）。"><a href="#1-使用mysql自带的mysqladmin（位于bin下）。" class="headerlink" title="1.使用mysql自带的mysqladmin（位于bin下）。"></a>1.使用mysql自带的mysqladmin（位于bin下）。</h3><pre class="line-numbers language-bash"><code class="language-bash">mysqladmin -u用户名 -p旧密码 password 新密码<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
             </div>
             <hr />
@@ -1235,7 +1238,7 @@
            
             
             &nbsp;<i class="fa fa-area-chart"></i>&nbsp;码了那么多字:&nbsp;
-            <span class="white-color">5.7k</span>
+            <span class="white-color">5.8k</span>
             
 
             <br>
