@@ -1,0 +1,340 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>火花</title>
+  
+  <subtitle>ブログ</subtitle>
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="https://pan-le.cn/"/>
+  <updated>2020-11-01T09:29:24.000Z</updated>
+  <id>https://pan-le.cn/</id>
+  
+  <author>
+    <name>火花</name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>testlink + jira测试环境搭建</title>
+    <link href="https://pan-le.cn/2020/11/01/testlink-jira-ce-shi-huan-jing-da-jian/"/>
+    <id>https://pan-le.cn/2020/11/01/testlink-jira-ce-shi-huan-jing-da-jian/</id>
+    <published>2020-11-01T06:55:48.000Z</published>
+    <updated>2020-11-01T09:29:24.000Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;一-下载testlink-jira并进行配置&quot;&gt;&lt;a href=&quot;#一-下载testlink-jira并进行配置&quot; class=&quot;headerlink&quot; title=&quot;一.下载testlink + jira并进行配置&quot;&gt;&lt;/a&gt;一.下载testlink +
+        
+      
+    
+    </summary>
+    
+    
+      <category term="安装" scheme="https://pan-le.cn/tags/%E5%AE%89%E8%A3%85/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>sqli-labs靶场部署（MAC）</title>
+    <link href="https://pan-le.cn/2020/11/01/sqli-labs-ba-chang-bu-shu-mac/"/>
+    <id>https://pan-le.cn/2020/11/01/sqli-labs-ba-chang-bu-shu-mac/</id>
+    <published>2020-11-01T04:36:14.000Z</published>
+    <updated>2020-11-01T07:27:24.000Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;一-sqli-labs介绍：&quot;&gt;&lt;a href=&quot;#一-sqli-labs介绍：&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+    
+      <category term="折腾" scheme="https://pan-le.cn/tags/%E6%8A%98%E8%85%BE/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>阿里云Ubuntu 18.04搭建nextcloud私有网盘</title>
+    <link href="https://pan-le.cn/2020/09/25/a-li-yun-ubuntu-18-04-da-jian-nextcloud-si-you-wang-pan/"/>
+    <id>https://pan-le.cn/2020/09/25/a-li-yun-ubuntu-18-04-da-jian-nextcloud-si-you-wang-pan/</id>
+    <published>2020-09-24T22:54:45.000Z</published>
+    <updated>2020-11-05T11:31:45.782Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;awdawdawd&lt;br&gt;aw&lt;br&gt;daw&lt;br&gt;d&lt;br&gt;awd&lt;/p&gt;
+
+        
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>🈚️</title>
+    <link href="https://pan-le.cn/2020/06/16//"/>
+    <id>https://pan-le.cn/2020/06/16//</id>
+    <published>2020-06-16T09:41:26.000Z</published>
+    <updated>2020-06-16T09:48:54.000Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;很明显，你很懒。&lt;/p&gt;
+&lt;p&gt;你不该如此。&lt;/p&gt;
+&lt;p&gt;OK？&lt;/p&gt;
+
+        
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Aircrack-ng抓包破解Wi-Fi(WPA2)</title>
+    <link href="https://pan-le.cn/2020/06/15/aircrack-ng-zhua-bao-po-jie-wi-fi-wpa2/"/>
+    <id>https://pan-le.cn/2020/06/15/aircrack-ng-zhua-bao-po-jie-wi-fi-wpa2/</id>
+    <published>2020-06-15T13:08:54.000Z</published>
+    <updated>2020-06-15T09:06:08.000Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;写在前面&quot;&gt;&lt;a href=&quot;#写在前面&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="折腾" scheme="https://pan-le.cn/categories/%E6%8A%98%E8%85%BE/"/>
+    
+    
+      <category term="aircrack-ng" scheme="https://pan-le.cn/tags/aircrack-ng/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>java多线程机制</title>
+    <link href="https://pan-le.cn/2020/06/03/java-duo-xian-cheng-ji-zhi/"/>
+    <id>https://pan-le.cn/2020/06/03/java-duo-xian-cheng-ji-zhi/</id>
+    <published>2020-06-02T23:41:35.000Z</published>
+    <updated>2020-06-03T13:06:20.000Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;第十二部分：多线程&quot;&gt;&lt;a href=&quot;#第十二部分：多线程&quot; class=&quot;headerlink&quot; title=&quot;第十二部分：多线程&quot;&gt;&lt;/a&gt;第十二部分：多线程&lt;/h1&gt;&lt;h2 id=&quot;一、进程与线程&quot;&gt;&lt;a href=&quot;#一、进程与线程&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="笔记" scheme="https://pan-le.cn/categories/%E7%AC%94%E8%AE%B0/"/>
+    
+    
+      <category term="java" scheme="https://pan-le.cn/tags/java/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>软件配置</title>
+    <link href="https://pan-le.cn/2020/06/02/ruan-jian-pei-zhi/"/>
+    <id>https://pan-le.cn/2020/06/02/ruan-jian-pei-zhi/</id>
+    <published>2020-06-02T01:46:19.000Z</published>
+    <updated>2020-06-15T13:27:06.000Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;blockquote&gt;
+&lt;p&gt;记录一下现有软件。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;img src=&quot;https://pan-le.cn/medias/pebble/loading.gif&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="捣鼓" scheme="https://pan-le.cn/categories/%E6%8D%A3%E9%BC%93/"/>
+    
+    
+      <category term="MacBook" scheme="https://pan-le.cn/tags/MacBook/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>pebble-产品总结</title>
+    <link href="https://pan-le.cn/2020/05/30/pebble-chan-pin-zong-jie/"/>
+    <id>https://pan-le.cn/2020/05/30/pebble-chan-pin-zong-jie/</id>
+    <published>2020-05-29T22:07:47.000Z</published>
+    <updated>2020-05-31T06:37:16.000Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;一：产品介绍&quot;&gt;&lt;a href=&quot;#一：产品介绍&quot; class=&quot;headerlink&quot; title=&quot;一：产品介绍&quot;&gt;&lt;/a&gt;一：产品介绍&lt;/h2&gt;&lt;h3 id=&quot;1-众筹出道&quot;&gt;&lt;a href=&quot;#1-众筹出道&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="设备体验" scheme="https://pan-le.cn/categories/%E8%AE%BE%E5%A4%87%E4%BD%93%E9%AA%8C/"/>
+    
+      <category term="鼓捣" scheme="https://pan-le.cn/categories/%E8%AE%BE%E5%A4%87%E4%BD%93%E9%AA%8C/%E9%BC%93%E6%8D%A3/"/>
+    
+    
+      <category term="pebble" scheme="https://pan-le.cn/tags/pebble/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>termux/iTerm + nginx反向穿透搭建博客</title>
+    <link href="https://pan-le.cn/2020/05/28/termux-iterm-nginx-fan-xiang-chuan-tou-da-jian-bo-ke/"/>
+    <id>https://pan-le.cn/2020/05/28/termux-iterm-nginx-fan-xiang-chuan-tou-da-jian-bo-ke/</id>
+    <published>2020-05-28T01:22:10.000Z</published>
+    <updated>2020-05-28T01:22:10.000Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Mac平台Docker容器配合酷q实现qq机器人（踩坑指南）</title>
+    <link href="https://pan-le.cn/2020/05/28/mac-ping-tai-docker-rong-qi-pei-he-ku-q-shi-xian-qq-ji-qi-ren-cai-keng-zhi-nan/"/>
+    <id>https://pan-le.cn/2020/05/28/mac-ping-tai-docker-rong-qi-pei-he-ku-q-shi-xian-qq-ji-qi-ren-cai-keng-zhi-nan/</id>
+    <published>2020-05-28T01:08:17.000Z</published>
+    <updated>2020-06-15T09:14:14.000Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;说明&quot;&gt;&lt;a href=&quot;#说明&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Termux操作汇总</title>
+    <link href="https://pan-le.cn/2020/05/28/termux-cao-zuo-hui-zong/"/>
+    <id>https://pan-le.cn/2020/05/28/termux-cao-zuo-hui-zong/</id>
+    <published>2020-05-28T00:51:11.000Z</published>
+    <updated>2020-06-15T09:07:16.000Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;一：软件安装&quot;&gt;&lt;a href=&quot;#一：软件安装&quot; class=&quot;headerlink&quot; title=&quot;一：软件安装&quot;&gt;&lt;/a&gt;一：软件安装&lt;/h2&gt;&lt;h3 id=&quot;1-安装clang&quot;&gt;&lt;a href=&quot;#1-安装clang&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="linux" scheme="https://pan-le.cn/categories/linux/"/>
+    
+      <category term="鼓捣" scheme="https://pan-le.cn/categories/linux/%E9%BC%93%E6%8D%A3/"/>
+    
+    
+      <category term="Termux" scheme="https://pan-le.cn/tags/Termux/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>iTerm配置汇总</title>
+    <link href="https://pan-le.cn/2020/05/28/iterm-pei-zhi-hui-zong/"/>
+    <id>https://pan-le.cn/2020/05/28/iterm-pei-zhi-hui-zong/</id>
+    <published>2020-05-28T00:17:26.000Z</published>
+    <updated>2020-06-15T09:09:30.000Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;写在前面&quot;&gt;&lt;a href=&quot;#写在前面&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="折腾" scheme="https://pan-le.cn/categories/%E6%8A%98%E8%85%BE/"/>
+    
+    
+      <category term="macbook" scheme="https://pan-le.cn/tags/macbook/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Hexo+github+coding+matry搭建双路博客</title>
+    <link href="https://pan-le.cn/2020/05/27/hexo-github-coding-matry-da-jian-shuang-lu-bo-ke/"/>
+    <id>https://pan-le.cn/2020/05/27/hexo-github-coding-matry-da-jian-shuang-lu-bo-ke/</id>
+    <published>2020-05-26T23:41:35.000Z</published>
+    <updated>2020-06-15T09:12:04.000Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="折腾" scheme="https://pan-le.cn/categories/%E6%8A%98%E8%85%BE/"/>
+    
+    
+      <category term="第一个博客" scheme="https://pan-le.cn/tags/%E7%AC%AC%E4%B8%80%E4%B8%AA%E5%8D%9A%E5%AE%A2/"/>
+    
+  </entry>
+  
+</feed>
