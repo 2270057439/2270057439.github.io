@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://pan-le.cn/"/>
-  <updated>2020-11-01T09:29:24.000Z</updated>
+  <updated>2020-11-08T04:14:11.992Z</updated>
   <id>https://pan-le.cn/</id>
   
   <author>
@@ -15,6 +15,122 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>配置你的zsh与bash</title>
+    <link href="https://pan-le.cn/2020/11/08/pei-zhi-ni-de-zsh-yu-bash/"/>
+    <id>https://pan-le.cn/2020/11/08/pei-zhi-ni-de-zsh-yu-bash/</id>
+    <published>2020-11-08T03:59:04.000Z</published>
+    <updated>2020-11-08T04:14:11.992Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;zsh配置文件&quot;&gt;&lt;a href=&quot;#zsh配置文件&quot; class=&quot;headerlink&quot; title=&quot;zsh配置文件&quot;&gt;&lt;/a&gt;zsh配置文件&lt;/h1&gt;&lt;blockquote&gt;
+&lt;p&gt;zsh是Bourne Shell的一个变种。Mac OS X
+        
+      
+    
+    </summary>
+    
+    
+      <category term="折腾" scheme="https://pan-le.cn/tags/%E6%8A%98%E8%85%BE/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>配置你的zsh与bash</title>
+    <link href="https://pan-le.cn/2020/11/08/docs/16047218498852/"/>
+    <id>https://pan-le.cn/2020/11/08/docs/16047218498852/</id>
+    <published>2020-11-08T03:59:04.000Z</published>
+    <updated>2020-11-08T04:01:14.766Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;zsh配置文件&quot;&gt;&lt;a href=&quot;#zsh配置文件&quot; class=&quot;headerlink&quot; title=&quot;zsh配置文件&quot;&gt;&lt;/a&gt;zsh配置文件&lt;/h1&gt;&lt;blockquote&gt;
+&lt;p&gt;zsh是Bourne Shell的一个变种。Mac OS X
+        
+      
+    
+    </summary>
+    
+    
+      <category term="折腾" scheme="https://pan-le.cn/tags/%E6%8A%98%E8%85%BE/"/>
+    
+  </entry>
+  
+  <entry>
+    <title></title>
+    <link href="https://pan-le.cn/2020/11/06/docs/16046453423293/"/>
+    <id>https://pan-le.cn/2020/11/06/docs/16046453423293/</id>
+    <published>2020-11-06T06:49:02.330Z</published>
+    <updated>2020-11-06T06:49:02.330Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;#
+        
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title></title>
+    <link href="https://pan-le.cn/2020/11/06/docs/16046258713554/"/>
+    <id>https://pan-le.cn/2020/11/06/docs/16046258713554/</id>
+    <published>2020-11-06T01:24:31.356Z</published>
+    <updated>2020-11-06T01:24:31.356Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;#
+        
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title></title>
+    <link href="https://pan-le.cn/2020/11/06/docs/16046252859534/"/>
+    <id>https://pan-le.cn/2020/11/06/docs/16046252859534/</id>
+    <published>2020-11-06T01:14:45.957Z</published>
+    <updated>2020-11-06T01:14:45.957Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;欢迎使用-MWeb&quot;&gt;&lt;a href=&quot;#欢迎使用-MWeb&quot; class=&quot;headerlink&quot; title=&quot;欢迎使用 MWeb&quot;&gt;&lt;/a&gt;欢迎使用 MWeb&lt;/h1&gt;&lt;p&gt;MWeb 是专业的 Markdown 写作、记笔记、静态博客生成软件，目前已支持
+        
+      
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>testlink + jira测试环境搭建</title>

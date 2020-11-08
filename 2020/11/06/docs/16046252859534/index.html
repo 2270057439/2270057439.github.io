@@ -4,11 +4,14 @@
 
 <head><meta name="generator" content="Hexo 3.9.0">
     <meta charset="utf-8">
-    <meta name="keywords" content="testlink + jira测试环境搭建, sql c java 软件工程 火花 冰蓝色火花 楽楽 linux termux macos">
+    <meta name="keywords" content="sql c java 软件工程 火花 冰蓝色火花 楽楽 linux termux macos">
     <meta name="baidu-site-verification" content="XGOMoOZrlG">
     <meta name="google-site-verification" content="yCy2azpds5XSuGZvis6OuA-XIGF5GuGpYRAaGfD6o48">
     <meta name="360-site-verification" content="b7c11a830ef90fd1464ad6206bb7b6e7">
-    <meta name="description" content="一.下载testlink + jira并进行配置注：本文默认使用的PHP集成开发环境是Mxsrvs，采用 testlink1.9.20 + MxSrvs_1.2.1 + Nginx1.18.0 + PHP7.4.6 + JDK11 + my">
+    <meta name="description" content="欢迎使用 MWebMWeb 是专业的 Markdown 写作、记笔记、静态博客生成软件，目前已支持 Mac，iPad 和 iPhone。MWeb 有以下特色：
+软件本身：
+使用原生的 macOS 技术打造，追求与系统的完美结合。
+原则上，首">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -16,7 +19,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>testlink + jira测试环境搭建 | 火花</title>
+    <title>火花</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/font-awesome.min.css">
@@ -320,13 +323,13 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/13.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/0.jpg')">
     <div class="container">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
                     <div class="description center-align post-title">
-                        testlink + jira测试环境搭建
+                        
                     </div>
                 </div>
             </div>
@@ -445,11 +448,7 @@
                 <div class="col s7">
                     
                     <div class="article-tag">
-                        
-                        <a href="/tags/安装/" target="_blank">
-                            <span class="chip bg-color">安装</span>
-                        </a>
-                        
+                        <span class="chip bg-color">无标签</span>
                     </div>
                     
                 </div>
@@ -461,7 +460,7 @@
             <div class="post-info">
                 <div class="post-date info-break-policy">
                     <i class="fa fa-calendar-minus-o fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2020-11-01
+                    2020-11-06
                 </div>
 
                 <div class="post-author info-break-policy">
@@ -475,7 +474,7 @@
                 
                 <div class="info-break-policy">
                     <i class="fa fa-file-word-o fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    595
+                    625
                 </div>
                 
 
@@ -498,47 +497,41 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="一-下载testlink-jira并进行配置"><a href="#一-下载testlink-jira并进行配置" class="headerlink" title="一.下载testlink + jira并进行配置"></a>一.下载testlink + jira并进行配置</h2><p>注：本文默认使用的PHP集成开发环境是Mxsrvs，采用 <strong>testlink1.9.20 + MxSrvs_1.2.1 + Nginx1.18.0 + PHP7.4.6 + JDK11 + mysql8.0.19</strong> 方案。Mxsrvs的安装可参考<a href="https://pan-le.cn/2020/11/01/sqli-labs-ba-chang-bu-shu-mac/" title="sqli-labs靶场部署（MAC）">sqli-labs靶场部署（MAC）</a>。</p>
-<h3 id="1-下载-amp-配置testlink"><a href="#1-下载-amp-配置testlink" class="headerlink" title="1.下载&amp;配置testlink"></a>1.<strong>下载&amp;配置testlink</strong></h3><ul>
-<li><a href="http://www.testlink.org.cn/download" title="testlink官网" target="_blank" rel="noopener">testlink官网</a>下载压缩文件并解压到Mxsrvs的www项目目录下改名为testlink。</li>
-<li>testlink需要改的配置文件<br>  <strong>1./config.inc.php：</strong><br>  搜索tlCfg-&gt;log_path 此行修改为：$tlCfg-&gt;log_path = [testlin根目录下logs文件夹的绝对路径]<br>  例如： <pre class="line-numbers language-bash"><code class="language-bash">      <span class="token variable">$tlCfg</span>-<span class="token operator">></span>log_path <span class="token operator">=</span> <span class="token string">'/Applications/XAMPP/xamppfiles/htdocs/testlink/logs/'</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-  搜索g_repositoryPath 此行修改为：$g_repositoryPath = [testlin根目录下upload_area文件夹的绝对路径]<br>  例如：   <pre class="line-numbers language-bash"><code class="language-bash">  <span class="token variable">$g_repositoryPath</span> <span class="token operator">=</span> <span class="token string">'/Applications/XAMPP/xamppfiles/htdocs/testlink/upload_area/'</span><span class="token punctuation">;</span> <span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-</li>
-<li>启动testlink<ol>
-<li>浏览器输入：<strong><a href="http://localhost:[http服务器端口]/testlink" target="_blank" rel="noopener">http://localhost:[http服务器端口]/testlink</a></strong>进入安装页面：</li>
-<li>new installation</li>
-<li><a href="http://localhost/TestLink" target="_blank" rel="noopener">http://localhost/TestLink</a></li>
+                <h1 id="欢迎使用-MWeb"><a href="#欢迎使用-MWeb" class="headerlink" title="欢迎使用 MWeb"></a>欢迎使用 MWeb</h1><p>MWeb 是专业的 Markdown 写作、记笔记、静态博客生成软件，目前已支持 Mac，iPad 和 iPhone。MWeb 有以下特色：</p>
+<h2 id="软件本身："><a href="#软件本身：" class="headerlink" title="软件本身："></a>软件本身：</h2><ul>
+<li>使用原生的 macOS 技术打造，追求与系统的完美结合。</li>
+<li>原则上，首先是追求界面简洁和高性能，然后才是强大易用，功能全面。</li>
+</ul>
+<h2 id="Markdown-语法："><a href="#Markdown-语法：" class="headerlink" title="Markdown 语法："></a>Markdown 语法：</h2><ul>
+<li>使用 Github Flavored Markdown 语法，简称 GFM 语法。</li>
+<li>支持表格、TOC、LaTeX、代码块、任务列表、脚注等。</li>
+<li>画图库支持 mermaid, viz, echarts, plantuml, sequence, flow。</li>
+</ul>
+<h2 id="Markdown-辅助："><a href="#Markdown-辅助：" class="headerlink" title="Markdown 辅助："></a>Markdown 辅助：</h2><ul>
+<li>支持截图并粘贴、复制并粘贴、拖拽等方式插入图片并直接显示在编辑器内。</li>
+<li>在兼容 Markdown 语法的情况下支持设置图片宽度。</li>
+<li>好用的表格插入和 LaTeX 书写辅助。</li>
+</ul>
+<h2 id="Markdown-输出："><a href="#Markdown-输出：" class="headerlink" title="Markdown 输出："></a>Markdown 输出：</h2><ul>
+<li>支持导出为图片、HTML、Epub、PDF、RTF、Docx。</li>
+<li>支持发布到 Wordrpess、支持 Metaweblog API 协议的服务、Wordpress.com、印象笔记（Evernote）、Blogger、Medium、Tumblr。</li>
+<li>图片上传服务（图床）支持 Google Photos、Imgur、七牛云、又拍云和自定义的图床服务。</li>
+</ul>
+<h2 id="Markdown-笔记："><a href="#Markdown-笔记：" class="headerlink" title="Markdown 笔记："></a>Markdown 笔记：</h2><ul>
+<li>强大的文档库支持分类树和标签管理文档，文档可归类于多个分类，可以把分类整个导出为 Epub、PDF 和生成静态网站。非常合适用于笔记、个人知识收集、管理和输出。</li>
+<li>快速笔记：随意增加笔记及图片等素材，支持以天为单位把增加的素材组合在一个文档内，方便整理及记录历史收集情况。</li>
+<li>快速搜索：目前已支持全局快捷键调出搜索。</li>
+</ul>
+<h2 id="外部-Markdown-文档："><a href="#外部-Markdown-文档：" class="headerlink" title="外部 Markdown 文档："></a>外部 Markdown 文档：</h2><ul>
+<li>外部 Markdown 文档使用外部模式管理。外部模式使用目录树的方式编辑和管理你的 markdown 文档，还能很好的支持 gitbook、JekyII、hexo 等等编辑和图片插入。</li>
+</ul>
+<h2 id="MWeb-文档："><a href="#MWeb-文档：" class="headerlink" title="MWeb 文档："></a>MWeb 文档：</h2><p>如果要更详细了解 MWeb，建议你一定要去看一下官网的帮助文档，网址为：<a href="https://zh.mweb.im/help.html" target="_blank" rel="noopener">https://zh.mweb.im/help.html</a>。我们建议在使用文档库之前，一定要阅读一下  <a href="https://zh.mweb.im/mweb-library.html" target="_blank" rel="noopener">MWeb 文档库详细介绍</a> 这篇文章，以便更好的使用文档库。</p>
+<h2 id="帮助我们改进-MWeb"><a href="#帮助我们改进-MWeb" class="headerlink" title="帮助我们改进 MWeb"></a>帮助我们改进 MWeb</h2><p>如果你喜欢 MWeb，想让它变得更好，你可以：</p>
+<ol>
+<li>推荐 MWeb，让更多的人知道。</li>
+<li>给我们发反馈和建议：<a href="mailto:&#99;&#x6f;&#100;&#101;&#x72;&#102;&#111;&#x72;&#x61;&#x72;&#116;&#x2b;&#x32;&#x33;&#51;&#x33;&#64;&#103;&#x6d;&#97;&#105;&#108;&#x2e;&#x63;&#x6f;&#109;" target="_blank" rel="noopener">&#99;&#x6f;&#100;&#101;&#x72;&#102;&#111;&#x72;&#x61;&#x72;&#116;&#x2b;&#x32;&#x33;&#51;&#x33;&#64;&#103;&#x6d;&#97;&#105;&#108;&#x2e;&#x63;&#x6f;&#109;</a></li>
+<li>在 Mac App Store 上评价 （如果是在 MAS 上购买的话）。</li>
 </ol>
-</li>
-</ul>
-<hr>
-<h3 id="2-下载-amp-配置jira"><a href="#2-下载-amp-配置jira" class="headerlink" title="2.下载&amp;配置jira"></a>2.下载&amp;配置jira</h3><blockquote>
-<p>由于mac没有安装版jira，故使用官网提供的服务器版jira进行安装。<br>注：jira只支持JDK11或者JDK1.8版本（后面讲如何实现mac平台多JDK切换使用）<br>默认已经安装JDK11，并且已经启动mysql。</p>
-</blockquote>
-<ul>
-<li><p>1.下载jira<br><a href="https://www.atlassian.com/software/jira/free" title="jira官网" target="_blank" rel="noopener">jira官网</a>下  载服务器版jira压缩文件并解压到/usr/local/（此处需挂梯子）。</p>
-</li>
-<li><p>2.mysql中创建一个jiradb数据库，字符集选择utf8mb4，排序规则选择utf8mb4_danish_ci。<br>否则后期报错：<br><img src="https://pan-le.cn/medias/pebble/loading.gif" data-original="/medias/%E9%85%8D%E7%BD%AEtestlink/%E6%8A%A5%E9%94%99.png" alt><br>社区的解决办法：<br><img src="https://pan-le.cn/medias/pebble/loading.gif" data-original="/medias/%E9%85%8D%E7%BD%AEtestlink/%E8%A7%A3%E5%86%B3.png" alt></p>
-</li>
-<li><p>3.设置JIRA Home Directory：<br>打开终端Terminal，进入JIRA 的bin 输入./config.sh。<br><img src="https://pan-le.cn/medias/pebble/loading.gif" data-original="/medias/%E9%85%8D%E7%BD%AEtestlink/%E9%85%8D%E7%BD%AE2.png" alt><br>此处放置位置自由选择，我放在了桌面。</p>
-</li>
-<li><p>4.设置MySQL驱动及破解jira：<br>下载jira破解文件<a href="https://pan.baidu.com/s/1ggtAR0v" title="密码：p4gh" target="_blank" rel="noopener">密码：p4gh</a>：atlassian-extras-3.2.jar<br>前往 <a href="https://dev.mysql.com/downloads/" title="传送门" target="_blank" rel="noopener">传送门</a>下载对应mysql版本的mysql数据库的驱动软件包：mysql-connector-java-X.X.XX-bin.jar<br>把两个文件复制到/usr/local/atlassian-jira-software-8.4.1-standalone/atlassian-jira/WEB-INF/lib目录下。其中atlassian-extras-3.2.jar是用来替换原来的atlassian-extras-3.2.jar文件，用作破解jira系统。<br><img src="https://pan-le.cn/medias/pebble/loading.gif" data-original="/medias/%E9%85%8D%E7%BD%AEtestlink/%E7%A0%B4%E8%A7%A3.png" alt></p>
-</li>
-<li><p>5.设置关联的数据库，填写相关信息并测试是否连接成功。<br><img src="https://pan-le.cn/medias/pebble/loading.gif" data-original="/medias/%E9%85%8D%E7%BD%AEtestlink/%E8%BF%9E%E6%8E%A5.png" alt></p>
-</li>
-<li><p>6.启动<br>执行jira根目录bin文件夹下的shutdown.sh，再运行start-jira.sh<br>浏览器输入 <a href="http://localhost:8080（jira默认使用jira端口，8080端口其他应用需先关闭）" target="_blank" rel="noopener">http://localhost:8080（jira默认使用jira端口，8080端口其他应用需先关闭）</a><br><img src="https://pan-le.cn/medias/pebble/loading.gif" data-original="/medias/%E9%85%8D%E7%BD%AEtestlink/%E7%99%BB%E9%99%86.png" alt></p>
-<p>填入许可证： </p>
-<pre class="line-numbers language-bash"><code class="language-bash">AAABbQ0ODAoPeNp9UUlvgkAUvvMrSHppD0MQC6jJJDUwSTG4RKhJk16m+NRpEPDNYOu/LwpN3Y9v+
-7b3EK9KfVCmuunqltVr2T2rq3t+rFtmy9GWCJCt8qIANEKRQCaBzYUSeUbZKGbTyTSImDYq15+A4
-8WbBJSUtLQvgdy46E5KTFZcgs8V0D08MV1idrQGON4VMOJroN54OGRTL+iHfyP2UwjcHd11iOloX
-p4pnig25CKlbdfpuo5rv2w2RpKvtQhwCxj4tP88axPrPZyQuN+xSfxqdWt9BebzMlHGviAyX6hvj
-mBUgGILVGEJ9dpt21fCueahkpcpyHiW3PBxR81Fhg1P5SsM/IiNSNhpuY7t2lpV0JPGHdhIcVSAd
-MFTCdoYlzwTkh/8nefoIRwG509LayGzStf+zDpJAyrDWKCQTZA+yARFcSAYBNO+HjVK9Mf6T08fP
-Z1teVoeuGrptz5xLeNj8uO7f8y6/gU5evy/MCwCFEm32Qka5do3eM4z83LwUe5AXUt8AhR0YbU7w
-tKNxEGjT56zGsM/S/JUpw<span class="token operator">==</span>X02ht<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-</li>
-</ul>
-<p>参考：<br><a href="https://www.jianshu.com/p/d128a9d7e1ed" title="【踩坑】Mac搭建jira（数据库、命令行一点不通的小白）" target="_blank" rel="noopener">【踩坑】Mac搭建jira（数据库、命令行一点不通的小白）</a></p>
 
             </div>
             <hr />
@@ -697,9 +690,9 @@ tKNxEGjT56zGsM/S/JUpw<span class="token operator">==</span>X02ht<span aria-hidde
             <br/>
             <span xmlns:dct="http://purl.org/dc/terms/" href="http://purl.org/dc/dcmitype/Text"
                   property="dct:title" rel="dct:type">
-                    《testlink + jira测试环境搭建》
+                    《》
                 </span> 由
-            <a xmlns:cc="http://creativecommons.org/ns#" href="/2020/11/01/testlink-jira-ce-shi-huan-jing-da-jian/" property="cc:attributionName"
+            <a xmlns:cc="http://creativecommons.org/ns#" href="/2020/11/06/docs/16046252859534/" property="cc:attributionName"
                rel="cc:attributionURL">
                 火花
             </a> 采用
@@ -740,7 +733,7 @@ tKNxEGjT56zGsM/S/JUpw<span class="token operator">==</span>X02ht<span aria-hidde
         repo: 'wodepinglunqu',
         owner: '2270057439',
         admin: 2270057439,
-        id: '2020/11/01/testlink-jira-ce-shi-huan-jing-da-jian/',
+        id: '2020/11/06/docs/16046252859534/',
         distractionFreeMode: false  // Facebook-like distraction free mode
     });
 
@@ -1027,7 +1020,7 @@ tKNxEGjT56zGsM/S/JUpw<span class="token operator">==</span>X02ht<span aria-hidde
             <div class="article-badge left-badge text-color">
                 <i class="fa fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2020/11/06/docs/16046252859534/">
+                <a href="/2020/11/06/docs/16046258713554/">
                     <div class="card-image">
                         
                         
@@ -1039,10 +1032,8 @@ tKNxEGjT56zGsM/S/JUpw<span class="token operator">==</span>X02ht<span aria-hidde
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            欢迎使用 MWebMWeb 是专业的 Markdown 写作、记笔记、静态博客生成软件，目前已支持 Mac，iPad 和 iPhone。MWeb 有以下特色：
-软件本身：
-使用原生的 macOS 技术打造，追求与系统的完美结合。
-原则上，首
+                            # 
+
                         
                     </div>
                     <div class="publish-info">
@@ -1064,19 +1055,19 @@ tKNxEGjT56zGsM/S/JUpw<span class="token operator">==</span>X02ht<span aria-hidde
                 下一篇&nbsp;<i class="fa fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2020/11/01/sqli-labs-ba-chang-bu-shu-mac/">
+                <a href="/2020/11/01/testlink-jira-ce-shi-huan-jing-da-jian/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/15.jpg" class="responsive-img" alt="sqli-labs靶场部署（MAC）">
+                        <img src="/medias/featureimages/13.jpg" class="responsive-img" alt="testlink + jira测试环境搭建">
                         
-                        <span class="card-title">sqli-labs靶场部署（MAC）</span>
+                        <span class="card-title">testlink + jira测试环境搭建</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            记录一次mac上sqli靶场搭建（PHP7）
+                            记录一次mac平台testlink + jira环境的搭建
                         
                     </div>
                     <div class="publish-info">
@@ -1091,8 +1082,8 @@ tKNxEGjT56zGsM/S/JUpw<span class="token operator">==</span>X02ht<span aria-hidde
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/折腾/" target="_blank">
-                        <span class="chip bg-color">折腾</span>
+                    <a href="/tags/安装/" target="_blank">
+                        <span class="chip bg-color">安装</span>
                     </a>
                     
                 </div>
@@ -1238,25 +1229,6 @@ tKNxEGjT56zGsM/S/JUpw<span class="token operator">==</span>X02ht<span aria-hidde
     
 
 </main>
-
-
-<script src="https://cdn.bootcss.com/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-<script>
-    MathJax.Hub.Config({
-        tex2jax: {inlineMath: [['$', '$'], ['\(', '\)']]}
-    });
-</script>
-
-<script type="text/javascript" src="/libs/codeBlock/codeBlockFuction.js"></script>
-<!-- 代码语言 -->
-<script type="text/javascript" src="/libs/codeBlock/codeLang.js"></script>
-<!-- 代码块复制 -->
-<script type="text/javascript" src="/libs/codeBlock/codeCopy.js"></script>
-<script type="text/javascript" src="/libs/codeBlock/clipboard.min.js"></script>
-<!-- 代码块收缩 -->
-<script type="text/javascript" src="/libs/codeBlock/codeShrink.js"></script> 
-<!-- 代码块折行 -->
-<style type="text/css">code[class*="language-"], pre[class*="language-"] { white-space: pre !important; }</style>
 
 
     <footer class="page-footer bg-color">

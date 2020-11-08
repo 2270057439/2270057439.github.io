@@ -4,11 +4,12 @@
 
 <head><meta name="generator" content="Hexo 3.9.0">
     <meta charset="utf-8">
-    <meta name="keywords" content="testlink + jira测试环境搭建, sql c java 软件工程 火花 冰蓝色火花 楽楽 linux termux macos">
+    <meta name="keywords" content="配置你的zsh与bash, sql c java 软件工程 火花 冰蓝色火花 楽楽 linux termux macos">
     <meta name="baidu-site-verification" content="XGOMoOZrlG">
     <meta name="google-site-verification" content="yCy2azpds5XSuGZvis6OuA-XIGF5GuGpYRAaGfD6o48">
     <meta name="360-site-verification" content="b7c11a830ef90fd1464ad6206bb7b6e7">
-    <meta name="description" content="一.下载testlink + jira并进行配置注：本文默认使用的PHP集成开发环境是Mxsrvs，采用 testlink1.9.20 + MxSrvs_1.2.1 + Nginx1.18.0 + PHP7.4.6 + JDK11 + my">
+    <meta name="description" content="zsh配置文件
+zsh是Bourne Shell的一个变种。Mac OS X 10.3之后默认的是Bourne Shell（bash/sh/zsh），之前为C Shell（csh/tcsh），通过zsh配合oh-my-zsh可以实现非常惊艳">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -16,7 +17,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>testlink + jira测试环境搭建 | 火花</title>
+    <title>配置你的zsh与bash | 火花</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/font-awesome.min.css">
@@ -307,7 +308,7 @@
 <script src="/libs/cryptojs/crypto-js.min.js"></script>
 <script>
     (function() {
-        let pwd = '';
+        let pwd = '00A1F187721C63501356BF791E69382C';
         if (pwd && pwd.length > 0) {
             if (pwd !== CryptoJS.SHA256(prompt('请输入文章密码')).toString(CryptoJS.enc.Hex)) {
                 alert('密码错误，返回咯！');
@@ -320,13 +321,13 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/13.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/10.jpg')">
     <div class="container">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
                     <div class="description center-align post-title">
-                        testlink + jira测试环境搭建
+                        配置你的zsh与bash
                     </div>
                 </div>
             </div>
@@ -446,8 +447,8 @@
                     
                     <div class="article-tag">
                         
-                        <a href="/tags/安装/" target="_blank">
-                            <span class="chip bg-color">安装</span>
+                        <a href="/tags/折腾/" target="_blank">
+                            <span class="chip bg-color">折腾</span>
                         </a>
                         
                     </div>
@@ -461,7 +462,7 @@
             <div class="post-info">
                 <div class="post-date info-break-policy">
                     <i class="fa fa-calendar-minus-o fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2020-11-01
+                    2020-11-08
                 </div>
 
                 <div class="post-author info-break-policy">
@@ -475,7 +476,7 @@
                 
                 <div class="info-break-policy">
                     <i class="fa fa-file-word-o fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    595
+                    682
                 </div>
                 
 
@@ -498,47 +499,45 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="一-下载testlink-jira并进行配置"><a href="#一-下载testlink-jira并进行配置" class="headerlink" title="一.下载testlink + jira并进行配置"></a>一.下载testlink + jira并进行配置</h2><p>注：本文默认使用的PHP集成开发环境是Mxsrvs，采用 <strong>testlink1.9.20 + MxSrvs_1.2.1 + Nginx1.18.0 + PHP7.4.6 + JDK11 + mysql8.0.19</strong> 方案。Mxsrvs的安装可参考<a href="https://pan-le.cn/2020/11/01/sqli-labs-ba-chang-bu-shu-mac/" title="sqli-labs靶场部署（MAC）">sqli-labs靶场部署（MAC）</a>。</p>
-<h3 id="1-下载-amp-配置testlink"><a href="#1-下载-amp-配置testlink" class="headerlink" title="1.下载&amp;配置testlink"></a>1.<strong>下载&amp;配置testlink</strong></h3><ul>
-<li><a href="http://www.testlink.org.cn/download" title="testlink官网" target="_blank" rel="noopener">testlink官网</a>下载压缩文件并解压到Mxsrvs的www项目目录下改名为testlink。</li>
-<li>testlink需要改的配置文件<br>  <strong>1./config.inc.php：</strong><br>  搜索tlCfg-&gt;log_path 此行修改为：$tlCfg-&gt;log_path = [testlin根目录下logs文件夹的绝对路径]<br>  例如： <pre class="line-numbers language-bash"><code class="language-bash">      <span class="token variable">$tlCfg</span>-<span class="token operator">></span>log_path <span class="token operator">=</span> <span class="token string">'/Applications/XAMPP/xamppfiles/htdocs/testlink/logs/'</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-  搜索g_repositoryPath 此行修改为：$g_repositoryPath = [testlin根目录下upload_area文件夹的绝对路径]<br>  例如：   <pre class="line-numbers language-bash"><code class="language-bash">  <span class="token variable">$g_repositoryPath</span> <span class="token operator">=</span> <span class="token string">'/Applications/XAMPP/xamppfiles/htdocs/testlink/upload_area/'</span><span class="token punctuation">;</span> <span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-</li>
-<li>启动testlink<ol>
-<li>浏览器输入：<strong><a href="http://localhost:[http服务器端口]/testlink" target="_blank" rel="noopener">http://localhost:[http服务器端口]/testlink</a></strong>进入安装页面：</li>
-<li>new installation</li>
-<li><a href="http://localhost/TestLink" target="_blank" rel="noopener">http://localhost/TestLink</a></li>
-</ol>
-</li>
-</ul>
-<hr>
-<h3 id="2-下载-amp-配置jira"><a href="#2-下载-amp-配置jira" class="headerlink" title="2.下载&amp;配置jira"></a>2.下载&amp;配置jira</h3><blockquote>
-<p>由于mac没有安装版jira，故使用官网提供的服务器版jira进行安装。<br>注：jira只支持JDK11或者JDK1.8版本（后面讲如何实现mac平台多JDK切换使用）<br>默认已经安装JDK11，并且已经启动mysql。</p>
+                <h1 id="zsh配置文件"><a href="#zsh配置文件" class="headerlink" title="zsh配置文件"></a>zsh配置文件</h1><blockquote>
+<p>zsh是Bourne Shell的一个变种。Mac OS X 10.3之后默认的是Bourne Shell（bash/sh/zsh），之前为C Shell（csh/tcsh），通过zsh配合oh-my-zsh可以实现非常惊艳的效果。</p>
 </blockquote>
+<p>附上我美化后的终端：<br><img src="https://pan-le.cn/medias/pebble/loading.gif" data-original="/medias/mac%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6/%E7%BB%88%E7%AB%AF.png" alt></p>
+<blockquote>
+<p>对于zsh我们主要关心的配置文件有  <code>zshenv</code>  <code>zprofile</code>  <code>zshrc</code>  <code>zlogin</code>  <code>zlogout</code>。</p>
+</blockquote>
+<h2 id="位置"><a href="#位置" class="headerlink" title="位置"></a>位置</h2><p>zsh的五个配置文件分两份存储，即用户根目录home下的隐藏形式<code>~/.XXXX</code>和linux根目录下的非隐藏形式<code>/etc/XXXX</code>。<br><strong><code>/etc</code>里的是全局的，对所有用户起作用。用户家目录中的只对当前用户有效果。</strong></p>
+<blockquote>
+<p>MAC OS 可通过 <code>shift + command + .</code> 来显示隐藏文件（.XXXX）。</p>
+</blockquote>
+<p><img src="https://pan-le.cn/medias/pebble/loading.gif" data-original="/medias/mac%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6/%E5%8F%AA%E6%9C%89%E4%B8%80%E4%B8%AA.png" alt><br>而通过实际的查看我们发现，我的目录中只有 <code>zshrc</code>一个文件，也就是说此时只加载<code>zshrc</code>。</p>
+<h2 id="加载顺序"><a href="#加载顺序" class="headerlink" title="加载顺序"></a>加载顺序</h2><p>配置文件的位置我们知道了，那么如何确定他们的加载顺序呢，我们只需要在用户根目录home下的五个配置文件（没有的话自行创建）中分别加入一句话： </p>
+<pre class="line-numbers language-bash"><code class="language-bash"><span class="token keyword">echo</span> <span class="token string">'.XXXX'</span> <span class="token operator">>></span> /Users/YYYY/Desktop/1<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>将信息打印输出到桌面的 ’ <code>1</code> ‘文件中。</p>
+<blockquote>
+<p>其中：XXXX是配置文件的名称，YYYY为用户名。</p>
+</blockquote>
+<p>结果如下：<br><img src="https://pan-le.cn/medias/pebble/loading.gif" data-original="/medias/mac%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6/%E7%BB%93%E6%9E%9C.png" alt></p>
+<p>由此可得加载顺序为：<code>.zshenv</code> → <code>.zprofile</code> → <code>.zshrc</code> → <code>.zlogin</code> → <code>.zlogout</code> 。</p>
+<h2 id="作用"><a href="#作用" class="headerlink" title="作用"></a>作用</h2><p>以下引用自网络。</p>
 <ul>
-<li><p>1.下载jira<br><a href="https://www.atlassian.com/software/jira/free" title="jira官网" target="_blank" rel="noopener">jira官网</a>下  载服务器版jira压缩文件并解压到/usr/local/（此处需挂梯子）。</p>
-</li>
-<li><p>2.mysql中创建一个jiradb数据库，字符集选择utf8mb4，排序规则选择utf8mb4_danish_ci。<br>否则后期报错：<br><img src="https://pan-le.cn/medias/pebble/loading.gif" data-original="/medias/%E9%85%8D%E7%BD%AEtestlink/%E6%8A%A5%E9%94%99.png" alt><br>社区的解决办法：<br><img src="https://pan-le.cn/medias/pebble/loading.gif" data-original="/medias/%E9%85%8D%E7%BD%AEtestlink/%E8%A7%A3%E5%86%B3.png" alt></p>
-</li>
-<li><p>3.设置JIRA Home Directory：<br>打开终端Terminal，进入JIRA 的bin 输入./config.sh。<br><img src="https://pan-le.cn/medias/pebble/loading.gif" data-original="/medias/%E9%85%8D%E7%BD%AEtestlink/%E9%85%8D%E7%BD%AE2.png" alt><br>此处放置位置自由选择，我放在了桌面。</p>
-</li>
-<li><p>4.设置MySQL驱动及破解jira：<br>下载jira破解文件<a href="https://pan.baidu.com/s/1ggtAR0v" title="密码：p4gh" target="_blank" rel="noopener">密码：p4gh</a>：atlassian-extras-3.2.jar<br>前往 <a href="https://dev.mysql.com/downloads/" title="传送门" target="_blank" rel="noopener">传送门</a>下载对应mysql版本的mysql数据库的驱动软件包：mysql-connector-java-X.X.XX-bin.jar<br>把两个文件复制到/usr/local/atlassian-jira-software-8.4.1-standalone/atlassian-jira/WEB-INF/lib目录下。其中atlassian-extras-3.2.jar是用来替换原来的atlassian-extras-3.2.jar文件，用作破解jira系统。<br><img src="https://pan-le.cn/medias/pebble/loading.gif" data-original="/medias/%E9%85%8D%E7%BD%AEtestlink/%E7%A0%B4%E8%A7%A3.png" alt></p>
-</li>
-<li><p>5.设置关联的数据库，填写相关信息并测试是否连接成功。<br><img src="https://pan-le.cn/medias/pebble/loading.gif" data-original="/medias/%E9%85%8D%E7%BD%AEtestlink/%E8%BF%9E%E6%8E%A5.png" alt></p>
-</li>
-<li><p>6.启动<br>执行jira根目录bin文件夹下的shutdown.sh，再运行start-jira.sh<br>浏览器输入 <a href="http://localhost:8080（jira默认使用jira端口，8080端口其他应用需先关闭）" target="_blank" rel="noopener">http://localhost:8080（jira默认使用jira端口，8080端口其他应用需先关闭）</a><br><img src="https://pan-le.cn/medias/pebble/loading.gif" data-original="/medias/%E9%85%8D%E7%BD%AEtestlink/%E7%99%BB%E9%99%86.png" alt></p>
-<p>填入许可证： </p>
-<pre class="line-numbers language-bash"><code class="language-bash">AAABbQ0ODAoPeNp9UUlvgkAUvvMrSHppD0MQC6jJJDUwSTG4RKhJk16m+NRpEPDNYOu/LwpN3Y9v+
-7b3EK9KfVCmuunqltVr2T2rq3t+rFtmy9GWCJCt8qIANEKRQCaBzYUSeUbZKGbTyTSImDYq15+A4
-8WbBJSUtLQvgdy46E5KTFZcgs8V0D08MV1idrQGON4VMOJroN54OGRTL+iHfyP2UwjcHd11iOloX
-p4pnig25CKlbdfpuo5rv2w2RpKvtQhwCxj4tP88axPrPZyQuN+xSfxqdWt9BebzMlHGviAyX6hvj
-mBUgGILVGEJ9dpt21fCueahkpcpyHiW3PBxR81Fhg1P5SsM/IiNSNhpuY7t2lpV0JPGHdhIcVSAd
-MFTCdoYlzwTkh/8nefoIRwG509LayGzStf+zDpJAyrDWKCQTZA+yARFcSAYBNO+HjVK9Mf6T08fP
-Z1teVoeuGrptz5xLeNj8uO7f8y6/gU5evy/MCwCFEm32Qka5do3eM4z83LwUe5AXUt8AhR0YbU7w
-tKNxEGjT56zGsM/S/JUpw<span class="token operator">==</span>X02ht<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-</li>
+<li>.zshenv总是被读取,所以通常把$PATH, $EDITOR等变量写在这里,这样无论是在shell交互,或者运行程序都会读取此文件。</li>
+<li>.zshrc主要用在交互shell,所以主要是为shell服务的,比如对shell做的一些个性化设置都可以在这里写入。</li>
+<li>.zlogin在login shell的时候读取,所以比如X系统启动的时候会读取此文件,所以不会再运行中重复读取。</li>
+<li>.zprofile是给ksh用户的一个.zlogin的替代品,所以我们如果使用了.zlogin就不必再关心此文件。</li>
+<li>.zlogout退出终端的时候读取,用于做一些清理工作,一般用不上。</li>
 </ul>
-<p>参考：<br><a href="https://www.jianshu.com/p/d128a9d7e1ed" title="【踩坑】Mac搭建jira（数据库、命令行一点不通的小白）" target="_blank" rel="noopener">【踩坑】Mac搭建jira（数据库、命令行一点不通的小白）</a></p>
+<p>所以我们使用<code>iterm2</code>一般只需要关心<code>.zshrc</code>即可， <code>.zshrc</code>也是我们最常用到的配置文件。</p>
+<blockquote>
+<p>对配置文件 <code>.zshrc</code> 修改完应执行 <code>source ~/.zshrc</code> 使修改生效。同时如果之前使用<code>bash</code>时使用的配置文件想要在zsh中也被加载生效，可以在<code>.zshrc</code>中添加<code>source ~/.bash_profile</code>。否则每次打开zsh需要手动<code>source ~/.bash_profile</code>。</p>
+</blockquote>
+<h1 id="bash配置文件"><a href="#bash配置文件" class="headerlink" title="bash配置文件"></a>bash配置文件</h1><blockquote>
+<p>Mac OS X 10.3之后默认的shell 本质为Bourne Shell。自带的bash并不美观（<del>花里胡哨</del>），以下作为了解。</p>
+</blockquote>
+<p><img src="https://pan-le.cn/medias/pebble/loading.gif" data-original="/medias/mac%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6/bash.png" alt></p>
+<blockquote>
+<pre><code>终端输入**`chsh -s /bin/bash`**来切换成bash，重启终端生效。</code></pre></blockquote>
+<h2 id="运行模式"><a href="#运行模式" class="headerlink" title="运行模式"></a>运行模式</h2><p>bash有常见的两种运行模式即<code>login shell</code>和<code>non-login shell</code></p>
 
             </div>
             <hr />
@@ -697,9 +696,9 @@ tKNxEGjT56zGsM/S/JUpw<span class="token operator">==</span>X02ht<span aria-hidde
             <br/>
             <span xmlns:dct="http://purl.org/dc/terms/" href="http://purl.org/dc/dcmitype/Text"
                   property="dct:title" rel="dct:type">
-                    《testlink + jira测试环境搭建》
+                    《配置你的zsh与bash》
                 </span> 由
-            <a xmlns:cc="http://creativecommons.org/ns#" href="/2020/11/01/testlink-jira-ce-shi-huan-jing-da-jian/" property="cc:attributionName"
+            <a xmlns:cc="http://creativecommons.org/ns#" href="/2020/11/08/pei-zhi-ni-de-zsh-yu-bash/" property="cc:attributionName"
                rel="cc:attributionURL">
                 火花
             </a> 采用
@@ -740,7 +739,7 @@ tKNxEGjT56zGsM/S/JUpw<span class="token operator">==</span>X02ht<span aria-hidde
         repo: 'wodepinglunqu',
         owner: '2270057439',
         admin: 2270057439,
-        id: '2020/11/01/testlink-jira-ce-shi-huan-jing-da-jian/',
+        id: '2020/11/08/pei-zhi-ni-de-zsh-yu-bash/',
         distractionFreeMode: false  // Facebook-like distraction free mode
     });
 
@@ -1023,36 +1022,43 @@ tKNxEGjT56zGsM/S/JUpw<span class="token operator">==</span>X02ht<span aria-hidde
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fa fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="fa fa-dot-circle-o"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/2020/11/06/docs/16046252859534/">
+                <a href="/2020/11/08/pei-zhi-ni-de-zsh-yu-bash/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="">
+                        <img src="/medias/featureimages/10.jpg" class="responsive-img" alt="配置你的zsh与bash">
                         
-                        <span class="card-title"></span>
+                        <span class="card-title">配置你的zsh与bash</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            欢迎使用 MWebMWeb 是专业的 Markdown 写作、记笔记、静态博客生成软件，目前已支持 Mac，iPad 和 iPhone。MWeb 有以下特色：
-软件本身：
-使用原生的 macOS 技术打造，追求与系统的完美结合。
-原则上，首
+                            zsh与bash环境变量载入机制。
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="fa fa-clock-o fa-fw icon-date"></i>2020-11-06
-                        </span>
+                            <span class="publish-date">
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2020-11-08
+                            </span>
                         <span class="publish-author">
                             
                         </span>
                     </div>
+                </div>
+
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/折腾/" target="_blank">
+                        <span class="chip bg-color">折腾</span>
+                    </a>
+                    
                 </div>
                 
             </div>
@@ -1064,24 +1070,24 @@ tKNxEGjT56zGsM/S/JUpw<span class="token operator">==</span>X02ht<span aria-hidde
                 下一篇&nbsp;<i class="fa fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2020/11/01/sqli-labs-ba-chang-bu-shu-mac/">
+                <a href="/2020/11/08/docs/16047218498852/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/15.jpg" class="responsive-img" alt="sqli-labs靶场部署（MAC）">
+                        <img src="/medias/featureimages/10.jpg" class="responsive-img" alt="配置你的zsh与bash">
                         
-                        <span class="card-title">sqli-labs靶场部署（MAC）</span>
+                        <span class="card-title">配置你的zsh与bash</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            记录一次mac上sqli靶场搭建（PHP7）
+                            zsh与bash环境变量载入机制。
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="fa fa-clock-o fa-fw icon-date"></i>2020-11-01
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2020-11-08
                             </span>
                         <span class="publish-author">
                             

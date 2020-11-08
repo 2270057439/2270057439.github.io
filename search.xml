@@ -4,6 +4,83 @@
   
     
     <entry>
+      <title>配置你的zsh与bash</title>
+      <link href="/2020/11/08/pei-zhi-ni-de-zsh-yu-bash/"/>
+      <url>/2020/11/08/pei-zhi-ni-de-zsh-yu-bash/</url>
+      
+        <content type="html"><![CDATA[<h1 id="zsh配置文件"><a href="#zsh配置文件" class="headerlink" title="zsh配置文件"></a>zsh配置文件</h1><blockquote><p>zsh是Bourne Shell的一个变种。Mac OS X 10.3之后默认的是Bourne Shell（bash/sh/zsh），之前为C Shell（csh/tcsh），通过zsh配合oh-my-zsh可以实现非常惊艳的效果。</p></blockquote><p>附上我美化后的终端：<br><img src="https://pan-le.cn/medias/pebble/loading.gif" data-original="/medias/mac%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6/%E7%BB%88%E7%AB%AF.png" alt></p><blockquote><p>对于zsh我们主要关心的配置文件有  <code>zshenv</code>  <code>zprofile</code>  <code>zshrc</code>  <code>zlogin</code>  <code>zlogout</code>。</p></blockquote><h2 id="位置"><a href="#位置" class="headerlink" title="位置"></a>位置</h2><p>zsh的五个配置文件分两份存储，即用户根目录home下的隐藏形式<code>~/.XXXX</code>和linux根目录下的非隐藏形式<code>/etc/XXXX</code>。<br><strong><code>/etc</code>里的是全局的，对所有用户起作用。用户家目录中的只对当前用户有效果。</strong></p><blockquote><p>MAC OS 可通过 <code>shift + command + .</code> 来显示隐藏文件（.XXXX）。</p></blockquote><p><img src="https://pan-le.cn/medias/pebble/loading.gif" data-original="/medias/mac%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6/%E5%8F%AA%E6%9C%89%E4%B8%80%E4%B8%AA.png" alt><br>而通过实际的查看我们发现，我的目录中只有 <code>zshrc</code>一个文件，也就是说此时只加载<code>zshrc</code>。</p><h2 id="加载顺序"><a href="#加载顺序" class="headerlink" title="加载顺序"></a>加载顺序</h2><p>配置文件的位置我们知道了，那么如何确定他们的加载顺序呢，我们只需要在用户根目录home下的五个配置文件（没有的话自行创建）中分别加入一句话： </p><pre class="line-numbers language-bash"><code class="language-bash"><span class="token keyword">echo</span> <span class="token string">'.XXXX'</span> <span class="token operator">>></span> /Users/YYYY/Desktop/1<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>将信息打印输出到桌面的 ’ <code>1</code> ‘文件中。</p><blockquote><p>其中：XXXX是配置文件的名称，YYYY为用户名。</p></blockquote><p>结果如下：<br><img src="https://pan-le.cn/medias/pebble/loading.gif" data-original="/medias/mac%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6/%E7%BB%93%E6%9E%9C.png" alt></p><p>由此可得加载顺序为：<code>.zshenv</code> → <code>.zprofile</code> → <code>.zshrc</code> → <code>.zlogin</code> → <code>.zlogout</code> 。</p><h2 id="作用"><a href="#作用" class="headerlink" title="作用"></a>作用</h2><p>以下引用自网络。</p><ul><li>.zshenv总是被读取,所以通常把$PATH, $EDITOR等变量写在这里,这样无论是在shell交互,或者运行程序都会读取此文件。</li><li>.zshrc主要用在交互shell,所以主要是为shell服务的,比如对shell做的一些个性化设置都可以在这里写入。</li><li>.zlogin在login shell的时候读取,所以比如X系统启动的时候会读取此文件,所以不会再运行中重复读取。</li><li>.zprofile是给ksh用户的一个.zlogin的替代品,所以我们如果使用了.zlogin就不必再关心此文件。</li><li>.zlogout退出终端的时候读取,用于做一些清理工作,一般用不上。</li></ul><p>所以我们使用<code>iterm2</code>一般只需要关心<code>.zshrc</code>即可， <code>.zshrc</code>也是我们最常用到的配置文件。</p><blockquote><p>对配置文件 <code>.zshrc</code> 修改完应执行 <code>source ~/.zshrc</code> 使修改生效。同时如果之前使用<code>bash</code>时使用的配置文件想要在zsh中也被加载生效，可以在<code>.zshrc</code>中添加<code>source ~/.bash_profile</code>。否则每次打开zsh需要手动<code>source ~/.bash_profile</code>。</p></blockquote><h1 id="bash配置文件"><a href="#bash配置文件" class="headerlink" title="bash配置文件"></a>bash配置文件</h1><blockquote><p>Mac OS X 10.3之后默认的shell 本质为Bourne Shell。自带的bash并不美观（<del>花里胡哨</del>），以下作为了解。</p></blockquote><p><img src="https://pan-le.cn/medias/pebble/loading.gif" data-original="/medias/mac%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6/bash.png" alt></p><blockquote><pre><code>终端输入**`chsh -s /bin/bash`**来切换成bash，重启终端生效。</code></pre></blockquote><h2 id="运行模式"><a href="#运行模式" class="headerlink" title="运行模式"></a>运行模式</h2><p>bash有常见的两种运行模式即<code>login shell</code>和<code>non-login shell</code></p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> 折腾 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>配置你的zsh与bash</title>
+      <link href="/2020/11/08/docs/16047218498852/"/>
+      <url>/2020/11/08/docs/16047218498852/</url>
+      
+        <content type="html"><![CDATA[<h1 id="zsh配置文件"><a href="#zsh配置文件" class="headerlink" title="zsh配置文件"></a>zsh配置文件</h1><blockquote><p>zsh是Bourne Shell的一个变种。Mac OS X 10.3之后默认的是Bourne Shell（bash/sh/zsh），之前为C Shell（csh/tcsh），通过zsh配合oh-my-zsh可以实现非常惊艳的效果。</p></blockquote><p>附上我美化后的终端：<br><img src="https://pan-le.cn/medias/pebble/loading.gif" data-original="/medias/mac%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6/%E7%BB%88%E7%AB%AF.png" alt></p><blockquote><p>对于zsh我们主要关心的配置文件有  <code>zshenv</code>  <code>zprofile</code>  <code>zshrc</code>  <code>zlogin</code>  <code>zlogout</code>。</p></blockquote><h2 id="位置"><a href="#位置" class="headerlink" title="位置"></a>位置</h2><p>zsh的五个配置文件分两份存储，即用户根目录home下的隐藏形式<code>~/.XXXX</code>和linux根目录下的非隐藏形式<code>/etc/XXXX</code>。<br><strong><code>/etc</code>里的是全局的，对所有用户起作用。用户家目录中的只对当前用户有效果。</strong></p><blockquote><p>MAC OS 可通过 <code>shift + command + .</code> 来显示隐藏文件（.XXXX）。</p></blockquote><p><img src="https://pan-le.cn/medias/pebble/loading.gif" data-original="/medias/mac%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6/%E5%8F%AA%E6%9C%89%E4%B8%80%E4%B8%AA.png" alt><br>而通过实际的查看我们发现，我的目录中只有 <code>zshrc</code>一个文件，也就是说此时只加载<code>zshrc</code>。</p><h2 id="加载顺序"><a href="#加载顺序" class="headerlink" title="加载顺序"></a>加载顺序</h2><p>配置文件的位置我们知道了，那么如何确定他们的加载顺序呢，我们只需要在用户根目录home下的五个配置文件（没有的话自行创建）中分别加入一句话： </p><pre class="line-numbers language-bash"><code class="language-bash"><span class="token keyword">echo</span> <span class="token string">'.XXXX'</span> <span class="token operator">>></span> /Users/YYYY/Desktop/1<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>将信息打印输出到桌面的 ’ <code>1</code> ‘文件中。</p><blockquote><p>其中：XXXX是配置文件的名称，YYYY为用户名。</p></blockquote><p>结果如下：<br><img src="https://pan-le.cn/medias/pebble/loading.gif" data-original="/medias/mac%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6/%E7%BB%93%E6%9E%9C.png" alt></p><p>由此可得加载顺序为：<code>.zshenv</code> → <code>.zprofile</code> → <code>.zshrc</code> → <code>.zlogin</code> → <code>.zlogout</code> 。</p><h2 id="作用"><a href="#作用" class="headerlink" title="作用"></a>作用</h2><p>以下引用自网络。</p><ul><li>.zshenv总是被读取,所以通常把$PATH, $EDITOR等变量写在这里,这样无论是在shell交互,或者运行程序都会读取此文件。</li><li>.zshrc主要用在交互shell,所以主要是为shell服务的,比如对shell做的一些个性化设置都可以在这里写入。</li><li>.zlogin在login shell的时候读取,所以比如X系统启动的时候会读取此文件,所以不会再运行中重复读取。</li><li>.zprofile是给ksh用户的一个.zlogin的替代品,所以我们如果使用了.zlogin就不必再关心此文件。</li><li>.zlogout退出终端的时候读取,用于做一些清理工作,一般用不上。</li></ul><p>所以我们使用<code>iterm2</code>一般只需要关心<code>.zshrc</code>即可， <code>.zshrc</code>也是我们最常用到的配置文件。</p><blockquote><p>对配置文件 <code>.zshrc</code> 修改完应执行 <code>source ~/.zshrc</code> 使修改生效。同时如果之前使用<code>bash</code>时使用的配置文件想要在zsh中也被加载生效，可以在<code>.zshrc</code>中添加<code>source ~/.bash_profile</code>。否则每次打开zsh需要手动<code>source ~/.bash_profile</code>。</p></blockquote><h1 id="bash配置文件"><a href="#bash配置文件" class="headerlink" title="bash配置文件"></a>bash配置文件</h1><blockquote><p>Mac OS X 10.3之后默认的shell 本质为Bourne Shell。自带的bash并不美观（<del>花里胡哨</del>），以下作为了解。</p></blockquote><p><img src="https://pan-le.cn/medias/pebble/loading.gif" data-original="/medias/mac%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6/bash.png" alt></p><blockquote><pre><code>终端输入**`chsh -s /bin/bash`**来切换成bash，重启终端生效。</code></pre></blockquote><h2 id="运行模式"><a href="#运行模式" class="headerlink" title="运行模式"></a>运行模式</h2><p>bash有常见的两种运行模式即<code>login shell</code>和<code>non-login shell</code></p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> 折腾 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title></title>
+      <link href="/2020/11/06/docs/16046453423293/"/>
+      <url>/2020/11/06/docs/16046453423293/</url>
+      
+        <content type="html"><![CDATA[<p># </p>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title></title>
+      <link href="/2020/11/06/docs/16046258713554/"/>
+      <url>/2020/11/06/docs/16046258713554/</url>
+      
+        <content type="html"><![CDATA[<p># </p>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title></title>
+      <link href="/2020/11/06/docs/16046252859534/"/>
+      <url>/2020/11/06/docs/16046252859534/</url>
+      
+        <content type="html"><![CDATA[<h1 id="欢迎使用-MWeb"><a href="#欢迎使用-MWeb" class="headerlink" title="欢迎使用 MWeb"></a>欢迎使用 MWeb</h1><p>MWeb 是专业的 Markdown 写作、记笔记、静态博客生成软件，目前已支持 Mac，iPad 和 iPhone。MWeb 有以下特色：</p><h2 id="软件本身："><a href="#软件本身：" class="headerlink" title="软件本身："></a>软件本身：</h2><ul><li>使用原生的 macOS 技术打造，追求与系统的完美结合。</li><li>原则上，首先是追求界面简洁和高性能，然后才是强大易用，功能全面。</li></ul><h2 id="Markdown-语法："><a href="#Markdown-语法：" class="headerlink" title="Markdown 语法："></a>Markdown 语法：</h2><ul><li>使用 Github Flavored Markdown 语法，简称 GFM 语法。</li><li>支持表格、TOC、LaTeX、代码块、任务列表、脚注等。</li><li>画图库支持 mermaid, viz, echarts, plantuml, sequence, flow。</li></ul><h2 id="Markdown-辅助："><a href="#Markdown-辅助：" class="headerlink" title="Markdown 辅助："></a>Markdown 辅助：</h2><ul><li>支持截图并粘贴、复制并粘贴、拖拽等方式插入图片并直接显示在编辑器内。</li><li>在兼容 Markdown 语法的情况下支持设置图片宽度。</li><li>好用的表格插入和 LaTeX 书写辅助。</li></ul><h2 id="Markdown-输出："><a href="#Markdown-输出：" class="headerlink" title="Markdown 输出："></a>Markdown 输出：</h2><ul><li>支持导出为图片、HTML、Epub、PDF、RTF、Docx。</li><li>支持发布到 Wordrpess、支持 Metaweblog API 协议的服务、Wordpress.com、印象笔记（Evernote）、Blogger、Medium、Tumblr。</li><li>图片上传服务（图床）支持 Google Photos、Imgur、七牛云、又拍云和自定义的图床服务。</li></ul><h2 id="Markdown-笔记："><a href="#Markdown-笔记：" class="headerlink" title="Markdown 笔记："></a>Markdown 笔记：</h2><ul><li>强大的文档库支持分类树和标签管理文档，文档可归类于多个分类，可以把分类整个导出为 Epub、PDF 和生成静态网站。非常合适用于笔记、个人知识收集、管理和输出。</li><li>快速笔记：随意增加笔记及图片等素材，支持以天为单位把增加的素材组合在一个文档内，方便整理及记录历史收集情况。</li><li>快速搜索：目前已支持全局快捷键调出搜索。</li></ul><h2 id="外部-Markdown-文档："><a href="#外部-Markdown-文档：" class="headerlink" title="外部 Markdown 文档："></a>外部 Markdown 文档：</h2><ul><li>外部 Markdown 文档使用外部模式管理。外部模式使用目录树的方式编辑和管理你的 markdown 文档，还能很好的支持 gitbook、JekyII、hexo 等等编辑和图片插入。</li></ul><h2 id="MWeb-文档："><a href="#MWeb-文档：" class="headerlink" title="MWeb 文档："></a>MWeb 文档：</h2><p>如果要更详细了解 MWeb，建议你一定要去看一下官网的帮助文档，网址为：<a href="https://zh.mweb.im/help.html" target="_blank" rel="noopener">https://zh.mweb.im/help.html</a>。我们建议在使用文档库之前，一定要阅读一下  <a href="https://zh.mweb.im/mweb-library.html" target="_blank" rel="noopener">MWeb 文档库详细介绍</a> 这篇文章，以便更好的使用文档库。</p><h2 id="帮助我们改进-MWeb"><a href="#帮助我们改进-MWeb" class="headerlink" title="帮助我们改进 MWeb"></a>帮助我们改进 MWeb</h2><p>如果你喜欢 MWeb，想让它变得更好，你可以：</p><ol><li>推荐 MWeb，让更多的人知道。</li><li>给我们发反馈和建议：<a href="mailto:&#99;&#x6f;&#100;&#101;&#x72;&#102;&#111;&#x72;&#x61;&#x72;&#116;&#x2b;&#x32;&#x33;&#51;&#x33;&#64;&#103;&#x6d;&#97;&#105;&#108;&#x2e;&#x63;&#x6f;&#109;" target="_blank" rel="noopener">&#99;&#x6f;&#100;&#101;&#x72;&#102;&#111;&#x72;&#x61;&#x72;&#116;&#x2b;&#x32;&#x33;&#51;&#x33;&#64;&#103;&#x6d;&#97;&#105;&#108;&#x2e;&#x63;&#x6f;&#109;</a></li><li>在 Mac App Store 上评价 （如果是在 MAS 上购买的话）。</li></ol>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>testlink + jira测试环境搭建</title>
       <link href="/2020/11/01/testlink-jira-ce-shi-huan-jing-da-jian/"/>
       <url>/2020/11/01/testlink-jira-ce-shi-huan-jing-da-jian/</url>
