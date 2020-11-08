@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://pan-le.cn/"/>
-  <updated>2020-11-08T04:16:52.632Z</updated>
+  <updated>2020-11-08T09:47:35.291Z</updated>
   <id>https://pan-le.cn/</id>
   
   <author>
@@ -17,11 +17,35 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>iTerm2终端配置及美化</title>
+    <link href="https://pan-le.cn/2020/11/08/iterm2-zhong-duan-pei-zhi-ji-mei-hua/"/>
+    <id>https://pan-le.cn/2020/11/08/iterm2-zhong-duan-pei-zhi-ji-mei-hua/</id>
+    <published>2020-11-08T06:59:59.000Z</published>
+    <updated>2020-11-08T09:47:35.291Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;软件设置&quot;&gt;&lt;a href=&quot;#软件设置&quot; class=&quot;headerlink&quot; title=&quot;软件设置&quot;&gt;&lt;/a&gt;软件设置&lt;/h1&gt;&lt;p&gt;主要设置颜色，窗口和字体。&lt;br&gt;&lt;img
+        
+      
+    
+    </summary>
+    
+    
+      <category term="折腾" scheme="https://pan-le.cn/tags/%E6%8A%98%E8%85%BE/"/>
+    
+  </entry>
+  
+  <entry>
     <title>配置你的zsh与bash</title>
     <link href="https://pan-le.cn/2020/11/08/pei-zhi-ni-de-zsh-yu-bash/"/>
     <id>https://pan-le.cn/2020/11/08/pei-zhi-ni-de-zsh-yu-bash/</id>
     <published>2020-11-08T03:59:04.000Z</published>
-    <updated>2020-11-08T04:16:52.632Z</updated>
+    <updated>2020-11-08T09:48:56.652Z</updated>
     
     <summary type="html">
     
@@ -30,7 +54,7 @@
         
         
           &lt;h1 id=&quot;zsh配置文件&quot;&gt;&lt;a href=&quot;#zsh配置文件&quot; class=&quot;headerlink&quot; title=&quot;zsh配置文件&quot;&gt;&lt;/a&gt;zsh配置文件&lt;/h1&gt;&lt;blockquote&gt;
-&lt;p&gt;zsh是Bourne Shell的一个变种。Mac OS X
+&lt;p&gt;zsh是Bourne Shell(sh)的一个变种。Mac OS X
         
       
     
@@ -282,32 +306,6 @@
     
     
       <category term="Termux" scheme="https://pan-le.cn/tags/Termux/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>iTerm配置汇总</title>
-    <link href="https://pan-le.cn/2020/05/28/iterm-pei-zhi-hui-zong/"/>
-    <id>https://pan-le.cn/2020/05/28/iterm-pei-zhi-hui-zong/</id>
-    <published>2020-05-28T00:17:26.000Z</published>
-    <updated>2020-06-15T09:09:30.000Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h2 id=&quot;写在前面&quot;&gt;&lt;a href=&quot;#写在前面&quot; class=&quot;headerlink&quot;
-        
-      
-    
-    </summary>
-    
-      <category term="折腾" scheme="https://pan-le.cn/categories/%E6%8A%98%E8%85%BE/"/>
-    
-    
-      <category term="macbook" scheme="https://pan-le.cn/tags/macbook/"/>
     
   </entry>
   

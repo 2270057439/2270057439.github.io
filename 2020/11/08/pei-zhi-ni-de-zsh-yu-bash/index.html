@@ -9,7 +9,7 @@
     <meta name="google-site-verification" content="yCy2azpds5XSuGZvis6OuA-XIGF5GuGpYRAaGfD6o48">
     <meta name="360-site-verification" content="b7c11a830ef90fd1464ad6206bb7b6e7">
     <meta name="description" content="zsh配置文件
-zsh是Bourne Shell的一个变种。Mac OS X 10.3之后默认的是Bourne Shell（bash/sh/zsh），之前为C Shell（csh/tcsh），通过zsh配合oh-my-zsh可以实现非常惊艳">
+zsh是Bourne Shell(sh)的一个变种。Mac OS X 10.3之后默认的是Bourne Shell（bash/sh/zsh），之前为C Shell（csh/tcsh），通过zsh配合oh-my-zsh可以实现">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -308,7 +308,7 @@ zsh是Bourne Shell的一个变种。Mac OS X 10.3之后默认的是Bourne Shell�
 <script src="/libs/cryptojs/crypto-js.min.js"></script>
 <script>
     (function() {
-        let pwd = 'f931c308fc5b60b421c09969912839dff2776957d98b8d2f91c554ed8fc80f78';
+        let pwd = '';
         if (pwd && pwd.length > 0) {
             if (pwd !== CryptoJS.SHA256(prompt('请输入文章密码')).toString(CryptoJS.enc.Hex)) {
                 alert('密码错误，返回咯！');
@@ -476,14 +476,14 @@ zsh是Bourne Shell的一个变种。Mac OS X 10.3之后默认的是Bourne Shell�
                 
                 <div class="info-break-policy">
                     <i class="fa fa-file-word-o fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    682
+                    1.6k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="fa fa-clock-o fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    2 分
+                    5 分
                 </div>
                 
                 
@@ -500,11 +500,11 @@ zsh是Bourne Shell的一个变种。Mac OS X 10.3之后默认的是Bourne Shell�
         <div class="card-content article-card-content">
             <div id="articleContent">
                 <h1 id="zsh配置文件"><a href="#zsh配置文件" class="headerlink" title="zsh配置文件"></a>zsh配置文件</h1><blockquote>
-<p>zsh是Bourne Shell的一个变种。Mac OS X 10.3之后默认的是Bourne Shell（bash/sh/zsh），之前为C Shell（csh/tcsh），通过zsh配合oh-my-zsh可以实现非常惊艳的效果。</p>
+<p>zsh是Bourne Shell(sh)的一个变种。Mac OS X 10.3之后默认的是Bourne Shell（bash/sh/zsh），之前为C Shell（csh/tcsh），通过zsh配合oh-my-zsh可以实现非常惊艳的效果。<br>zsh又被称为终极shell,可见其强大之处。</p>
 </blockquote>
-<p>附上我美化后的终端：<br><img src="https://pan-le.cn/medias/pebble/loading.gif" data-original="/medias/mac%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6/%E7%BB%88%E7%AB%AF.png" alt></p>
+<p>附上我美化后的终端：<br><img src="https://pan-le.cn/medias/pebble/loading.gif" data-original="/medias/mac%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6/%E7%BB%88%E7%AB%AF.png" alt><br>想了解美化的具体过程可参考<a href="https://blog.csdn.net/sfhawx/article/details/49969321" title="iTerm2终端美化" target="_blank" rel="noopener">iTerm2终端美化</a></p>
 <blockquote>
-<p>对于zsh我们主要关心的配置文件有  <code>zshenv</code>  <code>zprofile</code>  <code>zshrc</code>  <code>zlogin</code>  <code>zlogout</code>。</p>
+<p>对于zsh我们主要关心的配置文件有  <code>zshenv</code> ， <code>zprofile</code> ， <code>zshrc</code> ， <code>zlogin</code> ， <code>zlogout</code>。</p>
 </blockquote>
 <h2 id="位置"><a href="#位置" class="headerlink" title="位置"></a>位置</h2><p>zsh的五个配置文件分两份存储，即用户根目录home下的隐藏形式<code>~/.XXXX</code>和linux根目录下的非隐藏形式<code>/etc/XXXX</code>。<br><strong><code>/etc</code>里的是全局的，对所有用户起作用。用户家目录中的只对当前用户有效果。</strong></p>
 <blockquote>
@@ -527,17 +527,50 @@ zsh是Bourne Shell的一个变种。Mac OS X 10.3之后默认的是Bourne Shell�
 <li>.zprofile是给ksh用户的一个.zlogin的替代品,所以我们如果使用了.zlogin就不必再关心此文件。</li>
 <li>.zlogout退出终端的时候读取,用于做一些清理工作,一般用不上。</li>
 </ul>
-<p>所以我们使用<code>iterm2</code>一般只需要关心<code>.zshrc</code>即可， <code>.zshrc</code>也是我们最常用到的配置文件。</p>
+<p>所以我们使用<code>iterm2</code>一般只需要关心<code>.zshrc</code>即可。<code>.zshrc</code>也是我们最常用到的配置文件，既可以被登陆shell读取，也可以被非登陆shell读取。</p>
 <blockquote>
 <p>对配置文件 <code>.zshrc</code> 修改完应执行 <code>source ~/.zshrc</code> 使修改生效。同时如果之前使用<code>bash</code>时使用的配置文件想要在zsh中也被加载生效，可以在<code>.zshrc</code>中添加<code>source ~/.bash_profile</code>。否则每次打开zsh需要手动<code>source ~/.bash_profile</code>。</p>
 </blockquote>
 <h1 id="bash配置文件"><a href="#bash配置文件" class="headerlink" title="bash配置文件"></a>bash配置文件</h1><blockquote>
-<p>Mac OS X 10.3之后默认的shell 本质为Bourne Shell。自带的bash并不美观（<del>花里胡哨</del>），以下作为了解。</p>
+<p>Mac OS X 10.3之后默认的shell 本质为Bourne Shell(sh)。自带的bash并不美观（<del>花里胡哨</del>），以下作为了解。</p>
 </blockquote>
-<p><img src="https://pan-le.cn/medias/pebble/loading.gif" data-original="/medias/mac%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6/bash.png" alt></p>
+<p><img src="https://pan-le.cn/medias/pebble/loading.gif" data-original="/medias/mac%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6/bash.png" alt><br>     终端输入<code>chsh -s /bin/bash</code>来切换成bash，重启终端生效。</p>
+<h2 id="运行模式"><a href="#运行模式" class="headerlink" title="运行模式"></a>运行模式</h2><p>bash这块复杂的多。<br>shell有常见的两种运行模式即<code>login shell</code>（登陆shell）和<code>non-login shell</code>（非登陆shell）。</p>
+<h3 id="定义如下："><a href="#定义如下：" class="headerlink" title="定义如下："></a>定义如下：</h3><ul>
+<li><code>login shell：</code>在取得bash时需要完整的登陆流程。什么时候取得bash呢？当然就是用户登陆的时候。需要输入账号和密码，此时取得的bash就是login shell。</li>
+<li><code>non-login shell：</code>就是取得bash不需要重复登录。例如shell窗口直接su切换用户。</li>
+</ul>
+<p>本质上的区别是读取的配置文件不同：</p>
+<ul>
+<li><p><code>login shell：</code> 读取全局配置<code>etc/profile</code>与用户配置<code>~/.bash_profile</code> 或 <code>~/.bash_login</code>或<code>~/.profile</code>中的一个。</p>
 <blockquote>
-<pre><code>终端输入**`chsh -s /bin/bash`**来切换成bash，重启终端生效。</code></pre></blockquote>
-<h2 id="运行模式"><a href="#运行模式" class="headerlink" title="运行模式"></a>运行模式</h2><p>bash有常见的两种运行模式即<code>login shell</code>和<code>non-login shell</code></p>
+<p>其中三选一按照：<code>~/.bash_profile</code> ——&gt; <code>~/.bash_login</code> ——&gt; <code>~/.profile</code> 的顺序读取，三个文件不同用户都有自己的一份。</p>
+</blockquote>
+</li>
+<li><p><code>non-login shell：</code>只能读取<code>~/.bashrc</code>这个配置文件。</p>
+<h3 id="注意："><a href="#注意：" class="headerlink" title="注意："></a>注意：</h3></li>
+</ul>
+<ol>
+<li>su切换成root用户（<code>su root</code>）显然也是<code>non-login shell</code>，读取不到<code>etc/profile</code>，而作为root用户只读取到<code>~/.bashrc</code>显然是不行的，所以需要使用<code>su -</code>来进行切换，此时重新读取<code>etc/profile</code>（系统级）。</li>
+<li>而切换其他用户的时候，我们一般直接<code>su 用户名</code>，这也是不对的，切换到一般用户我们需要用<code>su -l 用户名</code>才能读取到<code>~/.bash_profile</code>（个人级）。<br><img src="https://pan-le.cn/medias/pebble/loading.gif" data-original="/medias/mac%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6/%E7%99%BB%E9%99%86%E4%B8%8E%E9%9D%9E%E7%99%BB%E9%99%86.png" alt><br>即：</li>
+<li>etc/profile：所有用户都能读取（通常不改动它）。</li>
+<li>.bash_profile：只能被登录用户读取。</li>
+<li>.bashrc：只能被非登录用户读取。</li>
+<li>~/.zshrc：无论登录和非登录用户都可以读取。</li>
+</ol>
+<p>经过以上分析可知我们正常情况下使用<strong>iTerm2</strong>或者<strong>Terminal</strong>时使用的都是<strong>login shell</strong><br>所以mac一般使用的配置文件为<code>~/.bash_profile</code>，自己折腾通常也不会设置多用户切换着玩。</p>
+<h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1><ol>
+<li>有以上分析可以了解，使用Mac原始的bash时主要需要关心的配置文件是<code>~/.bash_profile</code>，而切换成zsh时主要需要关心的配置文件为<code>~/.zshrc</code>。<br>安装zsh后发现很多命令不能用了可以在<code>~/.zshrc</code>文件中添加<code>source ~/.bash_profile</code>使加载<code>~/.zshrc</code>时同时加载<code>~/.bash_profile</code>。</li>
+<li>配置文件的主要作用就是加载环境变量，有时候像搭载JIRA环境时需要用到不同版本的JDK，此时就可以安装多个JDK而后通过修改配置文件来实现切换。<br><img src="https://pan-le.cn/medias/pebble/loading.gif" data-original="/medias/mac%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6/%E5%88%87%E6%8D%A2JDK.png" alt></li>
+</ol>
+<p>附：各种常见的shell</p>
+<ol>
+<li>Bourne Shell是AT&amp;T Bell实验室的 Steven Bourne为AT&amp;T的Unix开发的，它是Unix的默认Shell，也是其它Shell的开发基础。Bourne Shell在编程方面相当优秀，但在处理与用户的交互方面不如其它几种Shell。</li>
+<li>C Shell是加州伯克利大学的Bill Joy为BSD Unix开发的，与sh不同，它的语法与C语言很相似。它提供了Bourne Shell所不能处理的用户交互特征，如命令补全、命令别名、历史命令替换等。但是，C Shell与BourneShell并不兼容。</li>
+<li>Korn Shell是AT&amp;T Bell实验室的David Korn开发的，它集合了C Shell和Bourne Shell的优点，并且与Bourne Shell向下完全兼容。Korn Shell的效率很高，其命令交互界面和编程交互界面都很好。</li>
+<li>Bourne Again Shell (即bash)是自由软件基金会(GNU)开发的一个Shell，它是Linux系统中一个默认的Shell。Bash不但与Bourne Shell兼容，还继承了C Shell、Korn Shell等优点。</li>
+</ol>
+<p>参考的文章：<a href="https://blog.csdn.net/sfhawx/article/details/49969321" title="大佬" target="_blank" rel="noopener">大佬</a></p>
 
             </div>
             <hr />
@@ -1022,36 +1055,34 @@ zsh是Bourne Shell的一个变种。Mac OS X 10.3之后默认的是Bourne Shell�
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fa fa-dot-circle-o"></i>&nbsp;本篇
-            </div>
+                <i class="fa fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2020/11/08/pei-zhi-ni-de-zsh-yu-bash/">
+                <a href="/2020/11/08/iterm2-zhong-duan-pei-zhi-ji-mei-hua/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/10.jpg" class="responsive-img" alt="配置你的zsh与bash">
+                        <img src="/medias/featureimages/3.jpg" class="responsive-img" alt="iTerm2终端配置及美化">
                         
-                        <span class="card-title">配置你的zsh与bash</span>
+                        <span class="card-title">iTerm2终端配置及美化</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            zsh与bash环境变量载入机制。
+                            总结一次从零开始的iTerm2配置过程。
                         
                     </div>
                     <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="fa fa-clock-o fa-fw icon-date"></i>2020-11-08
-                            </span>
+                        <span class="publish-date">
+                            <i class="fa fa-clock-o fa-fw icon-date"></i>2020-11-08
+                        </span>
                         <span class="publish-author">
                             
                         </span>
                     </div>
                 </div>
-
                 
                 <div class="card-action article-tags">
                     
@@ -1273,7 +1304,7 @@ zsh是Bourne Shell的一个变种。Mac OS X 10.3之后默认的是Bourne Shell�
            
             
             &nbsp;<i class="fa fa-area-chart"></i>&nbsp;码了那么多字:&nbsp;
-            <span class="white-color">7.2k</span>
+            <span class="white-color">9k</span>
             
 
             <br>
