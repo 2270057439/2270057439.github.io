@@ -321,7 +321,7 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/3.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/28.jpg')">
     <div class="container">
         <div class="row">
             <div class="col s12 m12 l12">
@@ -695,12 +695,13 @@ ssh-keygen -t rsa -P <span class="token string">''</span> -f ~/.ssh/id_rsa
 </ul>
 <pre><code>        # hadoop
         export PATH=&quot;$PATH:/usr/local/Cellar/hadoop/XXX/sbin&quot;
-</code></pre><pre><code>1. 启动NameNode和datanode: `start-dfs.sh`。成功可访问：http://localhost:9870
-2. 启动 ResourceManager 和 NodeManager:`start-yarn.sh`。成功可访问: http://localhost:8088
-3. jps查看系统java进程：
-   ![](/medias/iTerm2/jps.png)
-   显示这五个表示安装正常。
-4. 或者直接 start-all.sh/stop-all.sh 一键启动/一键停止</code></pre><ul>
+</code></pre><ol>
+<li>启动NameNode和datanode: <code>start-dfs.sh</code>。成功可访问：<a href="http://localhost:9870" target="_blank" rel="noopener">http://localhost:9870</a></li>
+<li>启动 ResourceManager 和 NodeManager:<code>start-yarn.sh</code>。成功可访问: <a href="http://localhost:8088" target="_blank" rel="noopener">http://localhost:8088</a></li>
+<li>jps查看系统java进程：<br><img src="https://pan-le.cn/medias/pebble/loading.gif" data-original="/medias/iTerm2/jps.png" alt><br>显示这五个表示安装正常。</li>
+<li>或者直接 start-all.sh/stop-all.sh 一键启动/一键停止</li>
+</ol>
+<ul>
 <li>报错<br>  警告：WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform… using builtin-java classes where applicable 对Hadoop的运行没有影响<br>  后续的每次启动namenode都启动失败。<br>原因是因为每次关机tmp都会被清空，此时需要手动执行<code>hdfs namenode -format</code>初始化hdfs文件系统。解决办法网上有，此处不解决。</li>
 </ul>
 <h3 id="安装ettercap（arp欺骗工具）"><a href="#安装ettercap（arp欺骗工具）" class="headerlink" title="安装ettercap（arp欺骗工具）"></a>安装ettercap（arp欺骗工具）</h3><pre class="line-numbers language-bash"><code class="language-bash">brew <span class="token function">install</span> ettercap
@@ -1210,7 +1211,7 @@ ettercap -C  图形界面<span aria-hidden="true" class="line-numbers-rows"><spa
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/3.jpg" class="responsive-img" alt="iTerm2终端配置及美化">
+                        <img src="/medias/featureimages/28.jpg" class="responsive-img" alt="iTerm2终端配置及美化">
                         
                         <span class="card-title">iTerm2终端配置及美化</span>
                     </div>
@@ -1253,7 +1254,7 @@ ettercap -C  图形界面<span aria-hidden="true" class="line-numbers-rows"><spa
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/10.jpg" class="responsive-img" alt="配置你的zsh与bash">
+                        <img src="/medias/featureimages/7.jpg" class="responsive-img" alt="配置你的zsh与bash">
                         
                         <span class="card-title">配置你的zsh与bash</span>
                     </div>
