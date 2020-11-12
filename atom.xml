@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://pan-le.cn/"/>
-  <updated>2020-11-11T23:25:03.268Z</updated>
+  <updated>2020-11-12T11:20:23.477Z</updated>
   <id>https://pan-le.cn/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="https://pan-le.cn/2020/11/08/iterm2-zhong-duan-pei-zhi-ji-mei-hua/"/>
     <id>https://pan-le.cn/2020/11/08/iterm2-zhong-duan-pei-zhi-ji-mei-hua/</id>
     <published>2020-11-08T06:59:59.000Z</published>
-    <updated>2020-11-11T23:25:03.268Z</updated>
+    <updated>2020-11-12T11:20:23.477Z</updated>
     
     <summary type="html">
     
@@ -45,7 +45,7 @@
     <link href="https://pan-le.cn/2020/11/08/pei-zhi-ni-de-zsh-yu-bash/"/>
     <id>https://pan-le.cn/2020/11/08/pei-zhi-ni-de-zsh-yu-bash/</id>
     <published>2020-11-08T03:59:04.000Z</published>
-    <updated>2020-11-08T10:55:54.000Z</updated>
+    <updated>2020-11-12T10:40:00.914Z</updated>
     
     <summary type="html">
     
@@ -70,7 +70,7 @@
     <link href="https://pan-le.cn/2020/11/01/testlink-jira-ce-shi-huan-jing-da-jian/"/>
     <id>https://pan-le.cn/2020/11/01/testlink-jira-ce-shi-huan-jing-da-jian/</id>
     <published>2020-11-01T06:55:48.000Z</published>
-    <updated>2020-11-01T09:29:24.000Z</updated>
+    <updated>2020-11-12T10:45:49.277Z</updated>
     
     <summary type="html">
     
@@ -94,7 +94,7 @@
     <link href="https://pan-le.cn/2020/11/01/sqli-labs-ba-chang-bu-shu-mac/"/>
     <id>https://pan-le.cn/2020/11/01/sqli-labs-ba-chang-bu-shu-mac/</id>
     <published>2020-11-01T04:36:14.000Z</published>
-    <updated>2020-11-01T07:27:24.000Z</updated>
+    <updated>2020-11-12T11:25:58.722Z</updated>
     
     <summary type="html">
     
@@ -118,7 +118,7 @@
     <link href="https://pan-le.cn/2020/09/25/a-li-yun-ubuntu-18-04-da-jian-nextcloud-si-you-wang-pan/"/>
     <id>https://pan-le.cn/2020/09/25/a-li-yun-ubuntu-18-04-da-jian-nextcloud-si-you-wang-pan/</id>
     <published>2020-09-24T22:54:45.000Z</published>
-    <updated>2020-11-05T11:31:45.000Z</updated>
+    <updated>2020-11-12T10:34:26.388Z</updated>
     
     <summary type="html">
     
@@ -141,7 +141,7 @@
     <link href="https://pan-le.cn/2020/06/15/aircrack-ng-zhua-bao-po-jie-wi-fi-wpa2/"/>
     <id>https://pan-le.cn/2020/06/15/aircrack-ng-zhua-bao-po-jie-wi-fi-wpa2/</id>
     <published>2020-06-15T13:08:54.000Z</published>
-    <updated>2020-06-15T09:06:08.000Z</updated>
+    <updated>2020-11-12T11:31:23.856Z</updated>
     
     <summary type="html">
     
@@ -167,7 +167,7 @@
     <link href="https://pan-le.cn/2020/06/03/java-duo-xian-cheng-ji-zhi/"/>
     <id>https://pan-le.cn/2020/06/03/java-duo-xian-cheng-ji-zhi/</id>
     <published>2020-06-02T23:41:35.000Z</published>
-    <updated>2020-06-03T13:06:20.000Z</updated>
+    <updated>2020-11-12T11:26:35.563Z</updated>
     
     <summary type="html">
     
@@ -193,7 +193,7 @@
     <link href="https://pan-le.cn/2020/06/02/ruan-jian-pei-zhi/"/>
     <id>https://pan-le.cn/2020/06/02/ruan-jian-pei-zhi/</id>
     <published>2020-06-02T01:46:19.000Z</published>
-    <updated>2020-06-15T13:27:06.000Z</updated>
+    <updated>2020-11-12T11:32:57.768Z</updated>
     
     <summary type="html">
     
@@ -222,7 +222,7 @@
     <link href="https://pan-le.cn/2020/05/30/pebble-chan-pin-zong-jie/"/>
     <id>https://pan-le.cn/2020/05/30/pebble-chan-pin-zong-jie/</id>
     <published>2020-05-29T22:07:47.000Z</published>
-    <updated>2020-05-31T06:37:16.000Z</updated>
+    <updated>2020-11-12T11:34:40.580Z</updated>
     
     <summary type="html">
     
@@ -246,25 +246,11 @@
   </entry>
   
   <entry>
-    <title>termux/iTerm + nginx反向穿透搭建博客</title>
-    <link href="https://pan-le.cn/2020/05/28/termux-iterm-nginx-fan-xiang-chuan-tou-da-jian-bo-ke/"/>
-    <id>https://pan-le.cn/2020/05/28/termux-iterm-nginx-fan-xiang-chuan-tou-da-jian-bo-ke/</id>
-    <published>2020-05-28T01:22:10.000Z</published>
-    <updated>2020-05-28T01:22:10.000Z</updated>
-    
-    <summary type="html">
-    
-    </summary>
-    
-    
-  </entry>
-  
-  <entry>
     <title>Mac平台Docker容器配合酷q实现qq机器人（踩坑指南）</title>
     <link href="https://pan-le.cn/2020/05/28/mac-ping-tai-docker-rong-qi-pei-he-ku-q-shi-xian-qq-ji-qi-ren-cai-keng-zhi-nan/"/>
     <id>https://pan-le.cn/2020/05/28/mac-ping-tai-docker-rong-qi-pei-he-ku-q-shi-xian-qq-ji-qi-ren-cai-keng-zhi-nan/</id>
     <published>2020-05-28T01:08:17.000Z</published>
-    <updated>2020-06-15T09:14:14.000Z</updated>
+    <updated>2020-11-12T11:36:50.620Z</updated>
     
     <summary type="html">
     
@@ -286,7 +272,7 @@
     <link href="https://pan-le.cn/2020/05/28/termux-cao-zuo-hui-zong/"/>
     <id>https://pan-le.cn/2020/05/28/termux-cao-zuo-hui-zong/</id>
     <published>2020-05-28T00:51:11.000Z</published>
-    <updated>2020-06-15T09:07:16.000Z</updated>
+    <updated>2020-11-12T11:42:56.520Z</updated>
     
     <summary type="html">
     
@@ -314,7 +300,7 @@
     <link href="https://pan-le.cn/2020/05/27/hexo-github-coding-matry-da-jian-shuang-lu-bo-ke/"/>
     <id>https://pan-le.cn/2020/05/27/hexo-github-coding-matry-da-jian-shuang-lu-bo-ke/</id>
     <published>2020-05-26T23:41:35.000Z</published>
-    <updated>2020-06-15T09:12:04.000Z</updated>
+    <updated>2020-11-12T11:40:36.808Z</updated>
     
     <summary type="html">
     

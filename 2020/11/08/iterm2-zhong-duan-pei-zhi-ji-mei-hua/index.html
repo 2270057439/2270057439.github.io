@@ -321,7 +321,7 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/27.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/特征图/iterm2.jpg')">
     <div class="container">
         <div class="row">
             <div class="col s12 m12 l12">
@@ -704,6 +704,7 @@ ssh-keygen -t rsa -P <span class="token string">''</span> -f ~/.ssh/id_rsa
 <ul>
 <li>报错<br>  警告：WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform… using builtin-java classes where applicable 对Hadoop的运行没有影响<br>  后续的每次启动namenode都启动失败。<br>原因是因为每次关机tmp都会被清空，此时需要手动执行<code>hdfs namenode -format</code>初始化hdfs文件系统。解决办法网上有，此处不解决。</li>
 </ul>
+<h3 id="安装Hadoop-Hbase"><a href="#安装Hadoop-Hbase" class="headerlink" title="安装Hadoop-Hbase"></a>安装Hadoop-Hbase</h3><p>参考：<a href="https://www.jianshu.com/p/510e1d599123" target="_blank" rel="noopener">Hbase安装</a></p>
 <h3 id="安装ettercap（arp欺骗工具）"><a href="#安装ettercap（arp欺骗工具）" class="headerlink" title="安装ettercap（arp欺骗工具）"></a>安装ettercap（arp欺骗工具）</h3><pre class="line-numbers language-bash"><code class="language-bash">brew <span class="token function">install</span> ettercap
 <span class="token comment" spellcheck="true">## 图形界面</span>
 ettercap -C  图形界面<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
@@ -1210,8 +1211,7 @@ ettercap -C  图形界面<span aria-hidden="true" class="line-numbers-rows"><spa
                 <a href="/2020/11/08/iterm2-zhong-duan-pei-zhi-ji-mei-hua/">
                     <div class="card-image">
                         
-                        
-                        <img src="/medias/featureimages/27.jpg" class="responsive-img" alt="iTerm2终端配置及美化">
+                        <img src="/medias/特征图/iterm2.jpg" class="responsive-img" alt="iTerm2终端配置及美化">
                         
                         <span class="card-title">iTerm2终端配置及美化</span>
                     </div>
@@ -1253,8 +1253,7 @@ ettercap -C  图形界面<span aria-hidden="true" class="line-numbers-rows"><spa
                 <a href="/2020/11/08/pei-zhi-ni-de-zsh-yu-bash/">
                     <div class="card-image">
                         
-                        
-                        <img src="/medias/featureimages/5.jpg" class="responsive-img" alt="配置你的zsh与bash">
+                        <img src="/medias/特征图/zsh.png" class="responsive-img" alt="配置你的zsh与bash">
                         
                         <span class="card-title">配置你的zsh与bash</span>
                     </div>
@@ -1646,11 +1645,11 @@ $(function () {
     </script>
 
 
-<script src="/assets/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"assets/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"log":false,"model":{"jsonPath":"/assets/assets/hijiki.model.json"},"display":{"position":"right","width":200,"height":350},"mobile":{"show":true},"react":{"opacity":1}});</script><script>
+<script>
             window.imageLazyLoadSetting = {
                 isSPA: false,
                 processImages: null,
             };
-        </script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})});</script><script>!function(n){n.imageLazyLoadSetting.processImages=o;var i=n.imageLazyLoadSetting.isSPA,r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function o(){i&&(r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]")));for(var t,e,a=0;a<r.length;a++)t=r[a],0<=(e=t.getBoundingClientRect()).bottom&&0<=e.left&&e.top<=(n.innerHeight||document.documentElement.clientHeight)&&function(){var t,e,n,i,o=r[a];t=o,e=function(){r=r.filter(function(t){return o!==t})},n=new Image,i=t.getAttribute("data-original"),n.onload=function(){t.src=i,e&&e()},n.src=i}()}o(),n.addEventListener("scroll",function(){var t,e;t=o,e=n,clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(e)},500)})}(this);</script></body>
+        </script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})});</script><script>!function(n){n.imageLazyLoadSetting.processImages=o;var i=n.imageLazyLoadSetting.isSPA,r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function o(){i&&(r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]")));for(var t,e,a=0;a<r.length;a++)t=r[a],0<=(e=t.getBoundingClientRect()).bottom&&0<=e.left&&e.top<=(n.innerHeight||document.documentElement.clientHeight)&&function(){var t,e,n,i,o=r[a];t=o,e=function(){r=r.filter(function(t){return o!==t})},n=new Image,i=t.getAttribute("data-original"),n.onload=function(){t.src=i,e&&e()},n.src=i}()}o(),n.addEventListener("scroll",function(){var t,e;t=o,e=n,clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(e)},500)})}(this);</script><script src="/assets/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"assets/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"log":false,"model":{"jsonPath":"/assets/assets/hijiki.model.json"},"display":{"position":"right","width":200,"height":350},"mobile":{"show":true},"react":{"opacity":1}});</script></body>
 
 </html>

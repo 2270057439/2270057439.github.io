@@ -2,37 +2,86 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://pan-le.cn/2020/11/08/iterm2-zhong-duan-pei-zhi-ji-mei-hua/</loc>
+    <loc>https://pan-le.cn/2020/05/28/termux-cao-zuo-hui-zong/</loc>
     
-    <lastmod>2020-11-11T23:25:03.268Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://pan-le.cn/2020/11/08/pei-zhi-ni-de-zsh-yu-bash/</loc>
-    
-    <lastmod>2020-11-08T10:55:54.000Z</lastmod>
+    <lastmod>2020-11-12T11:42:56.520Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://pan-le.cn/2020/09/25/a-li-yun-ubuntu-18-04-da-jian-nextcloud-si-you-wang-pan/</loc>
+    <loc>https://pan-le.cn/2020/05/27/hexo-github-coding-matry-da-jian-shuang-lu-bo-ke/</loc>
     
-    <lastmod>2020-11-05T11:31:45.000Z</lastmod>
+    <lastmod>2020-11-12T11:40:36.808Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://pan-le.cn/2020/11/01/testlink-jira-ce-shi-huan-jing-da-jian/</loc>
+    <loc>https://pan-le.cn/2020/05/28/mac-ping-tai-docker-rong-qi-pei-he-ku-q-shi-xian-qq-ji-qi-ren-cai-keng-zhi-nan/</loc>
     
-    <lastmod>2020-11-01T09:29:24.000Z</lastmod>
+    <lastmod>2020-11-12T11:36:50.620Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://pan-le.cn/2020/05/30/pebble-chan-pin-zong-jie/</loc>
+    
+    <lastmod>2020-11-12T11:34:40.580Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://pan-le.cn/2020/06/02/ruan-jian-pei-zhi/</loc>
+    
+    <lastmod>2020-11-12T11:32:57.768Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://pan-le.cn/2020/06/15/aircrack-ng-zhua-bao-po-jie-wi-fi-wpa2/</loc>
+    
+    <lastmod>2020-11-12T11:31:23.856Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://pan-le.cn/2020/06/03/java-duo-xian-cheng-ji-zhi/</loc>
+    
+    <lastmod>2020-11-12T11:26:35.563Z</lastmod>
     
   </url>
   
   <url>
     <loc>https://pan-le.cn/2020/11/01/sqli-labs-ba-chang-bu-shu-mac/</loc>
     
-    <lastmod>2020-11-01T07:27:24.000Z</lastmod>
+    <lastmod>2020-11-12T11:25:58.722Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://pan-le.cn/2020/11/08/iterm2-zhong-duan-pei-zhi-ji-mei-hua/</loc>
+    
+    <lastmod>2020-11-12T11:20:23.477Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://pan-le.cn/2020/11/01/testlink-jira-ce-shi-huan-jing-da-jian/</loc>
+    
+    <lastmod>2020-11-12T10:45:49.277Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://pan-le.cn/2020/11/08/pei-zhi-ni-de-zsh-yu-bash/</loc>
+    
+    <lastmod>2020-11-12T10:40:00.914Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://pan-le.cn/2020/09/25/a-li-yun-ubuntu-18-04-da-jian-nextcloud-si-you-wang-pan/</loc>
+    
+    <lastmod>2020-11-12T10:34:26.388Z</lastmod>
     
   </url>
   
@@ -51,55 +100,6 @@
   </url>
   
   <url>
-    <loc>https://pan-le.cn/2020/06/02/ruan-jian-pei-zhi/</loc>
-    
-    <lastmod>2020-06-15T13:27:06.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://pan-le.cn/2020/05/28/mac-ping-tai-docker-rong-qi-pei-he-ku-q-shi-xian-qq-ji-qi-ren-cai-keng-zhi-nan/</loc>
-    
-    <lastmod>2020-06-15T09:14:14.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://pan-le.cn/2020/05/27/hexo-github-coding-matry-da-jian-shuang-lu-bo-ke/</loc>
-    
-    <lastmod>2020-06-15T09:12:04.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://pan-le.cn/2020/05/28/termux-cao-zuo-hui-zong/</loc>
-    
-    <lastmod>2020-06-15T09:07:16.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://pan-le.cn/2020/06/15/aircrack-ng-zhua-bao-po-jie-wi-fi-wpa2/</loc>
-    
-    <lastmod>2020-06-15T09:06:08.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://pan-le.cn/2020/06/03/java-duo-xian-cheng-ji-zhi/</loc>
-    
-    <lastmod>2020-06-03T13:06:20.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://pan-le.cn/2020/05/30/pebble-chan-pin-zong-jie/</loc>
-    
-    <lastmod>2020-05-31T06:37:16.000Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://pan-le.cn/contact/index.html</loc>
     
     <lastmod>2020-05-29T01:47:36.000Z</lastmod>
@@ -107,14 +107,14 @@
   </url>
   
   <url>
-    <loc>https://pan-le.cn/2020/05/28/termux-iterm-nginx-fan-xiang-chuan-tou-da-jian-bo-ke/</loc>
+    <loc>https://pan-le.cn/404.html</loc>
     
-    <lastmod>2020-05-28T01:22:10.000Z</lastmod>
+    <lastmod>2020-04-04T11:43:42.000Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://pan-le.cn/404.html</loc>
+    <loc>https://pan-le.cn/categories/index.html</loc>
     
     <lastmod>2020-04-04T11:43:42.000Z</lastmod>
     
@@ -129,13 +129,6 @@
   
   <url>
     <loc>https://pan-le.cn/tags/index.html</loc>
-    
-    <lastmod>2020-04-04T11:43:42.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://pan-le.cn/categories/index.html</loc>
     
     <lastmod>2020-04-04T11:43:42.000Z</lastmod>
     
