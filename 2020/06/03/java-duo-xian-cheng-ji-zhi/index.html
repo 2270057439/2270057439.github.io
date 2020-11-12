@@ -384,7 +384,7 @@
     .toc-widget {
     width: 345px;
     padding-left: 20px;
-    background-color: rgb(255, 255, 255,0.7);
+    background-color: rgb(229, 229, 229,0);
     border-radius: 10px;
     box-shadow: 0 10px 35px 2px rgba(0, 0, 0, .15), 0 5px 15px rgba(0, 0, 0, .07), 0 2px 5px -5px rgba(0, 0, 0, .1) !important;
     }
@@ -543,7 +543,7 @@ System.out.println<span class="token punctuation">(</span><span class="token str
 Demo02_Thread thread2 <span class="token operator">=</span> new Demo02_Thread<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> //创建新线程thread2
 thread.start<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 thread2.start<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> //启动thread2<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
-<h4 id="线程应该-start-而不能直接调用-run"><a href="#线程应该-start-而不能直接调用-run" class="headerlink" title="线程应该 start() 而不能直接调用 run()"></a>线程应该 start() 而不能直接调用 run()</h4><p><img src="https://pan-le.cn/medias/pebble/loading.gif" data-original="/medias/%E7%BA%BF%E7%A8%8B/start_thread.png" alt></p>
+<h4 id="线程应该-start-而不能直接调用-run"><a href="#线程应该-start-而不能直接调用-run" class="headerlink" title="线程应该 start() 而不能直接调用 run()"></a>线程应该 start() 而不能直接调用 run()</h4><p><img src="/medias/%E7%BA%BF%E7%A8%8B/start_thread.png" alt></p>
 <h3 id="3-实现-Runnable-接口创建进程"><a href="#3-实现-Runnable-接口创建进程" class="headerlink" title="3. 实现 Runnable 接口创建进程"></a>3. 实现 Runnable 接口创建进程</h3><ol>
 <li>实现 Runnable 接口</li>
 <li>创建 Thread 对象，传入 Runnable 对象</li>
@@ -573,8 +573,8 @@ class MyRunnable implements Runnable <span class="token punctuation">{</span>
 <li>避免单继承局限性</li>
 <li>便于共享资源</li>
 </ul>
-<h2 id="三、线程状态"><a href="#三、线程状态" class="headerlink" title="三、线程状态"></a>三、线程状态</h2><h3 id="1-线程状态转换图"><a href="#1-线程状态转换图" class="headerlink" title="1. 线程状态转换图"></a>1. 线程状态转换图</h3><p><img src="https://pan-le.cn/medias/pebble/loading.gif" data-original="/medias/%E7%BA%BF%E7%A8%8B/%E7%BA%BF%E7%A8%8B%E7%8A%B6%E6%80%81%E8%BD%AC%E6%8D%A2%E5%9B%BE.jpg" alt="状态转换图"></p>
-<h2 id="四、线程调度"><a href="#四、线程调度" class="headerlink" title="四、线程调度"></a>四、线程调度</h2><h3 id="1-线程调度"><a href="#1-线程调度" class="headerlink" title="1. 线程调度"></a>1. 线程调度</h3><p><strong>线程调度：</strong> 指按照特定机制为多个线程分配 CPU 的使用权。<br>线程调度方法：<br><img src="https://pan-le.cn/medias/pebble/loading.gif" data-original="/medias/%E7%BA%BF%E7%A8%8B/methods.png" alt="线程调度方法"></p>
+<h2 id="三、线程状态"><a href="#三、线程状态" class="headerlink" title="三、线程状态"></a>三、线程状态</h2><h3 id="1-线程状态转换图"><a href="#1-线程状态转换图" class="headerlink" title="1. 线程状态转换图"></a>1. 线程状态转换图</h3><p><img src="/medias/%E7%BA%BF%E7%A8%8B/%E7%BA%BF%E7%A8%8B%E7%8A%B6%E6%80%81%E8%BD%AC%E6%8D%A2%E5%9B%BE.jpg" alt="状态转换图"></p>
+<h2 id="四、线程调度"><a href="#四、线程调度" class="headerlink" title="四、线程调度"></a>四、线程调度</h2><h3 id="1-线程调度"><a href="#1-线程调度" class="headerlink" title="1. 线程调度"></a>1. 线程调度</h3><p><strong>线程调度：</strong> 指按照特定机制为多个线程分配 CPU 的使用权。<br>线程调度方法：<br><img src="/medias/%E7%BA%BF%E7%A8%8B/methods.png" alt="线程调度方法"></p>
 <h3 id="2-线程优先级"><a href="#2-线程优先级" class="headerlink" title="2. 线程优先级"></a>2. 线程优先级</h3><p><code>线程的优先级</code><br><code>线程优先级由1~10表示，1最低，默认优先级为5</code><br><code>优先级高的线程获得CPU资源的概率较大</code></p>
 <pre class="line-numbers language-bash"><code class="language-bash">t1.setPriority<span class="token punctuation">(</span>Thread.MAX_PRIORITY<span class="token punctuation">)</span><span class="token punctuation">;</span>
 t2.setPriority<span class="token punctuation">(</span>Thread.MIN_PRIORITY<span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
@@ -585,7 +585,7 @@ t2.setPriority<span class="token punctuation">(</span>Thread.MIN_PRIORITY<span c
     e.printStackTrace<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <h3 id="4-线程的强制运行"><a href="#4-线程的强制运行" class="headerlink" title="4. 线程的强制运行"></a>4. 线程的强制运行</h3><p><code>线程的强制运行 join()</code><br><code>使当前线程暂停执行，等待其他线程结束后再继续执行本线程</code><br><code>需处理InterruptedException异常</code></p>
-<p><img src="https://pan-le.cn/medias/pebble/loading.gif" data-original="/medias/%E7%BA%BF%E7%A8%8B/join.png" alt="join"><br><strong>注：</strong></p>
+<p><img src="/medias/%E7%BA%BF%E7%A8%8B/join.png" alt="join"><br><strong>注：</strong></p>
 <ul>
 <li>millis:以毫秒为单位的等待时长</li>
 <li>nanos:要等待的附加纳秒时长</li>
@@ -651,13 +651,13 @@ class Site_unsafty implements Runnable <span class="token punctuation">{</span>
 <p><strong>同步方法：</strong> 同步方法和同步代码块的作用和内涵是一致的。同步方法即是用当前对象 this 锁定的同步代码块。</p>
 <h3 id="4-线程安全的类型"><a href="#4-线程安全的类型" class="headerlink" title="4. 线程安全的类型"></a>4. 线程安全的类型</h3><ul>
 <li>ArrayList类的add()方法为非同步方法</li>
-<li>当多个线程向同一个ArrayList对象添加数据时，可能出现数据不一致问题<br><img src="https://pan-le.cn/medias/pebble/loading.gif" data-original="/medias/%E7%BA%BF%E7%A8%8B/%E7%BA%BF%E7%A8%8B%E5%AE%89%E5%85%A8%E7%B1%BB%E5%9E%8B.png" alt="线程安全的类型"></li>
+<li>当多个线程向同一个ArrayList对象添加数据时，可能出现数据不一致问题<br><img src="/medias/%E7%BA%BF%E7%A8%8B/%E7%BA%BF%E7%A8%8B%E5%AE%89%E5%85%A8%E7%B1%BB%E5%9E%8B.png" alt="线程安全的类型"></li>
 <li><em>为达到安全性和效率的平衡，可以根据实际场景来选择合适的类型*</em></li>
 </ul>
 <h2 id="六、课堂练习"><a href="#六、课堂练习" class="headerlink" title="六、课堂练习"></a>六、课堂练习</h2><ol>
 <li>使用 Thread 创建线程练习<br>需求说明：<ol>
 <li>创建两个子线程，每个线程均输出20次消息数字、“你好”、线程名</li>
-<li>观察多个线程交替执行的过程<br><img src="https://pan-le.cn/medias/pebble/loading.gif" data-original="/medias/%E7%BA%BF%E7%A8%8B/c1.png" alt="c1"></li>
+<li>观察多个线程交替执行的过程<br><img src="/medias/%E7%BA%BF%E7%A8%8B/c1.png" alt="c1"></li>
 </ol>
 </li>
 <li>使用 Runnable 创建线程练习<br>需求说明：<br>修改上机练习1，要求线程类使用实现Runnable接口的方式创建，并修改测试类</li>
@@ -860,28 +860,6 @@ class Site_unsafty implements Runnable <span class="token punctuation">{</span>
         </div>
     </div>
 
-    
-    <link rel="stylesheet" href="/libs/gitalk/gitalk.css">
-<link rel="stylesheet" href="/css/my-gitalk.css">
-
-<div class="card gitalk-card" data-aos="fade-up">
-    <div id="gitalk-container" class="card-content"></div>
-</div>
-
-<script src="/libs/gitalk/gitalk.min.js"></script>
-<script>
-    let gitalk = new Gitalk({
-        clientID: '35165437fa945323a3d7',
-        clientSecret: 'e170709a72ace390b060af8cbed88b11d9cf4d8d',
-        repo: 'wodepinglunqu',
-        owner: '2270057439',
-        admin: 2270057439,
-        id: '2020/06/03/java-duo-xian-cheng-ji-zhi/',
-        distractionFreeMode: false  // Facebook-like distraction free mode
-    });
-
-    gitalk.render('gitalk-container');
-</script>
     
 
     
@@ -1269,7 +1247,7 @@ Sublime Text配置中文1.下载配置文件提取码: 7ru9 2.打开Sublime Text
 
         var selection = window.getSelection();
         // if the selection is short let's not annoy our users.
-        if (('' + selection).length < Number.parseInt('20')) {
+        if (('' + selection).length < Number.parseInt('200')) {
             return;
         }
 
@@ -1310,12 +1288,6 @@ Sublime Text配置中文1.下载配置文件提取码: 7ru9 2.打开Sublime Text
 
 <!-- TOC 悬浮按钮. -->
 
-<div id="floating-toc-btn" class="hide-on-med-and-down">
-    <a class="btn-floating btn-large bg-color">
-        <i class="fa fa-list"></i>
-    </a>
-</div>
-
 
 <script src="/libs/tocbot/tocbot.min.js"></script>
 <script>
@@ -1354,41 +1326,6 @@ Sublime Text配置中文1.下载配置文件提取码: 7ru9 2.打开Sublime Text
             }
         });
 
-        
-        /* 修复文章卡片 div 的宽度. */
-        let fixPostCardWidth = function (srcId, targetId) {
-            let srcDiv = $('#' + srcId);
-            if (srcDiv.length === 0) {
-                return;
-            }
-
-            let w = srcDiv.width();
-            if (w >= 450) {
-                w = w + 21;
-            } else if (w >= 350 && w < 450) {
-                w = w + 18;
-            } else if (w >= 300 && w < 350) {
-                w = w + 16;
-            } else {
-                w = w + 14;
-            }
-            $('#' + targetId).width(w);
-        };
-
-        // 切换TOC目录展开收缩的相关操作.
-        const expandedClass = 'expanded';
-        let $tocAside = $('#toc-aside');
-        let $mainContent = $('#main-content');
-        $('#floating-toc-btn .btn-floating').click(function () {
-            if ($tocAside.hasClass(expandedClass)) {
-                $tocAside.removeClass(expandedClass).slideUp(500);
-                $mainContent.removeClass('l9');
-            } else {
-                $tocAside.addClass(expandedClass).slideDown(500);
-                $mainContent.addClass('l9');
-            }
-            fixPostCardWidth('artDetail', 'prenext-posts');
-        });
         
     });
 </script>
@@ -1617,11 +1554,6 @@ $(function () {
     </script>
 
 
-<script src="/assets/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"assets/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"log":false,"model":{"jsonPath":"/assets/assets/hijiki.model.json"},"display":{"position":"right","width":200,"height":350},"mobile":{"show":true},"react":{"opacity":1}});</script><script>
-            window.imageLazyLoadSetting = {
-                isSPA: false,
-                processImages: null,
-            };
-        </script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})});</script><script>!function(n){n.imageLazyLoadSetting.processImages=o;var i=n.imageLazyLoadSetting.isSPA,r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function o(){i&&(r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]")));for(var t,e,a=0;a<r.length;a++)t=r[a],0<=(e=t.getBoundingClientRect()).bottom&&0<=e.left&&e.top<=(n.innerHeight||document.documentElement.clientHeight)&&function(){var t,e,n,i,o=r[a];t=o,e=function(){r=r.filter(function(t){return o!==t})},n=new Image,i=t.getAttribute("data-original"),n.onload=function(){t.src=i,e&&e()},n.src=i}()}o(),n.addEventListener("scroll",function(){var t,e;t=o,e=n,clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(e)},500)})}(this);</script></body>
+<script src="/assets/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"assets/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"log":false,"model":{"jsonPath":"/assets/assets/hijiki.model.json"},"display":{"position":"right","width":200,"height":350},"mobile":{"show":true},"react":{"opacity":1}});</script></body>
 
 </html>

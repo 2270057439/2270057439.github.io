@@ -384,7 +384,7 @@ zsh是Bourne Shell(sh)的一个变种。Mac OS X 10.3之后默认的是Bourne Sh
     .toc-widget {
     width: 345px;
     padding-left: 20px;
-    background-color: rgb(255, 255, 255,0.7);
+    background-color: rgb(229, 229, 229,0);
     border-radius: 10px;
     box-shadow: 0 10px 35px 2px rgba(0, 0, 0, .15), 0 5px 15px rgba(0, 0, 0, .07), 0 2px 5px -5px rgba(0, 0, 0, .1) !important;
     }
@@ -502,7 +502,7 @@ zsh是Bourne Shell(sh)的一个变种。Mac OS X 10.3之后默认的是Bourne Sh
                 <h1 id="zsh配置文件"><a href="#zsh配置文件" class="headerlink" title="zsh配置文件"></a>zsh配置文件</h1><blockquote>
 <p>zsh是Bourne Shell(sh)的一个变种。Mac OS X 10.3之后默认的是Bourne Shell（bash/sh/zsh），之前为C Shell（csh/tcsh），通过zsh配合oh-my-zsh可以实现非常惊艳的效果。<br>zsh又被称为终极shell,可见其强大之处。</p>
 </blockquote>
-<p>附上我美化后的终端：<br><img src="https://pan-le.cn/medias/pebble/loading.gif" data-original="/medias/mac%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6/%E7%BB%88%E7%AB%AF.png" alt><br>想了解美化的具体过程可参考<a href="https://blog.csdn.net/sfhawx/article/details/49969321" title="iTerm2终端美化" target="_blank" rel="noopener">iTerm2终端美化</a></p>
+<p>附上我美化后的终端：<br><img src="/medias/mac%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6/%E7%BB%88%E7%AB%AF.png" alt><br>想了解美化的具体过程可参考<a href="https://blog.csdn.net/sfhawx/article/details/49969321" title="iTerm2终端美化" target="_blank" rel="noopener">iTerm2终端美化</a></p>
 <blockquote>
 <p>对于zsh我们主要关心的配置文件有  <code>zshenv</code> ， <code>zprofile</code> ， <code>zshrc</code> ， <code>zlogin</code> ， <code>zlogout</code>。</p>
 </blockquote>
@@ -510,14 +510,14 @@ zsh是Bourne Shell(sh)的一个变种。Mac OS X 10.3之后默认的是Bourne Sh
 <blockquote>
 <p>MAC OS 可通过 <code>shift + command + .</code> 来显示隐藏文件（.XXXX）。</p>
 </blockquote>
-<p><img src="https://pan-le.cn/medias/pebble/loading.gif" data-original="/medias/mac%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6/%E5%8F%AA%E6%9C%89%E4%B8%80%E4%B8%AA.png" alt><br>而通过实际的查看我们发现，我的目录中只有 <code>zshrc</code>一个文件，也就是说此时只加载<code>zshrc</code>。</p>
+<p><img src="/medias/mac%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6/%E5%8F%AA%E6%9C%89%E4%B8%80%E4%B8%AA.png" alt><br>而通过实际的查看我们发现，我的目录中只有 <code>zshrc</code>一个文件，也就是说此时只加载<code>zshrc</code>。</p>
 <h2 id="加载顺序"><a href="#加载顺序" class="headerlink" title="加载顺序"></a>加载顺序</h2><p>配置文件的位置我们知道了，那么如何确定他们的加载顺序呢，我们只需要在用户根目录home下的五个配置文件（没有的话自行创建）中分别加入一句话： </p>
 <pre class="line-numbers language-bash"><code class="language-bash"><span class="token keyword">echo</span> <span class="token string">'.XXXX'</span> <span class="token operator">>></span> /Users/YYYY/Desktop/1<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <p>将信息打印输出到桌面的 ’ <code>1</code> ‘文件中。</p>
 <blockquote>
 <p>其中：XXXX是配置文件的名称，YYYY为用户名。</p>
 </blockquote>
-<p>结果如下：<br><img src="https://pan-le.cn/medias/pebble/loading.gif" data-original="/medias/mac%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6/%E7%BB%93%E6%9E%9C.png" alt></p>
+<p>结果如下：<br><img src="/medias/mac%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6/%E7%BB%93%E6%9E%9C.png" alt></p>
 <p>由此可得加载顺序为：<code>.zshenv</code> → <code>.zprofile</code> → <code>.zshrc</code> → <code>.zlogin</code> → <code>.zlogout</code> 。</p>
 <h2 id="作用"><a href="#作用" class="headerlink" title="作用"></a>作用</h2><p>以下引用自网络。</p>
 <ul>
@@ -534,7 +534,7 @@ zsh是Bourne Shell(sh)的一个变种。Mac OS X 10.3之后默认的是Bourne Sh
 <h1 id="bash配置文件"><a href="#bash配置文件" class="headerlink" title="bash配置文件"></a>bash配置文件</h1><blockquote>
 <p>Mac OS X 10.3之后默认的shell 本质为Bourne Shell(sh)。自带的bash并不美观（<del>花里胡哨</del>），以下作为了解。</p>
 </blockquote>
-<p><img src="https://pan-le.cn/medias/pebble/loading.gif" data-original="/medias/mac%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6/bash.png" alt><br>     终端输入<code>chsh -s /bin/bash</code>来切换成bash，重启终端生效。</p>
+<p><img src="/medias/mac%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6/bash.png" alt><br>     终端输入<code>chsh -s /bin/bash</code>来切换成bash，重启终端生效。</p>
 <h2 id="运行模式"><a href="#运行模式" class="headerlink" title="运行模式"></a>运行模式</h2><p>bash这块复杂的多。<br>shell有常见的两种运行模式即<code>login shell</code>（登陆shell）和<code>non-login shell</code>（非登陆shell）。</p>
 <h3 id="定义如下："><a href="#定义如下：" class="headerlink" title="定义如下："></a>定义如下：</h3><ul>
 <li><code>login shell：</code>在取得bash时需要完整的登陆流程。什么时候取得bash呢？当然就是用户登陆的时候。需要输入账号和密码，此时取得的bash就是login shell。</li>
@@ -552,7 +552,7 @@ zsh是Bourne Shell(sh)的一个变种。Mac OS X 10.3之后默认的是Bourne Sh
 </ul>
 <ol>
 <li>su切换成root用户（<code>su root</code>）显然也是<code>non-login shell</code>，读取不到<code>etc/profile</code>，而作为root用户只读取到<code>~/.bashrc</code>显然是不行的，所以需要使用<code>su -</code>来进行切换，此时重新读取<code>etc/profile</code>（系统级）。</li>
-<li>而切换其他用户的时候，我们一般直接<code>su 用户名</code>，这也是不对的，切换到一般用户我们需要用<code>su -l 用户名</code>才能读取到<code>~/.bash_profile</code>（个人级）。<br><img src="https://pan-le.cn/medias/pebble/loading.gif" data-original="/medias/mac%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6/%E7%99%BB%E9%99%86%E4%B8%8E%E9%9D%9E%E7%99%BB%E9%99%86.png" alt><br>即：</li>
+<li>而切换其他用户的时候，我们一般直接<code>su 用户名</code>，这也是不对的，切换到一般用户我们需要用<code>su -l 用户名</code>才能读取到<code>~/.bash_profile</code>（个人级）。<br><img src="/medias/mac%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6/%E7%99%BB%E9%99%86%E4%B8%8E%E9%9D%9E%E7%99%BB%E9%99%86.png" alt><br>即：</li>
 <li>etc/profile：所有用户都能读取（通常不改动它）。</li>
 <li>.bash_profile：只能被登录用户读取。</li>
 <li>.bashrc：只能被非登录用户读取。</li>
@@ -561,7 +561,7 @@ zsh是Bourne Shell(sh)的一个变种。Mac OS X 10.3之后默认的是Bourne Sh
 <p>经过以上分析可知我们正常情况下使用<strong>iTerm2</strong>或者<strong>Terminal</strong>时使用的都是<strong>login shell</strong><br>所以mac一般使用的配置文件为<code>~/.bash_profile</code>，自己折腾通常也不会设置多用户切换着玩。</p>
 <h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1><ol>
 <li>有以上分析可以了解，使用Mac原始的bash时主要需要关心的配置文件是<code>~/.bash_profile</code>，而切换成zsh时主要需要关心的配置文件为<code>~/.zshrc</code>。<br>安装zsh后发现很多命令不能用了可以在<code>~/.zshrc</code>文件中添加<code>source ~/.bash_profile</code>使加载<code>~/.zshrc</code>时同时加载<code>~/.bash_profile</code>。</li>
-<li>配置文件的主要作用就是加载环境变量，有时候像搭载JIRA环境时需要用到不同版本的JDK，此时就可以安装多个JDK而后通过修改配置文件来实现切换。<br><img src="https://pan-le.cn/medias/pebble/loading.gif" data-original="/medias/mac%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6/%E5%88%87%E6%8D%A2JDK.png" alt></li>
+<li>配置文件的主要作用就是加载环境变量，有时候像搭载JIRA环境时需要用到不同版本的JDK，此时就可以安装多个JDK而后通过修改配置文件来实现切换。<br><img src="/medias/mac%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6/%E5%88%87%E6%8D%A2JDK.png" alt></li>
 </ol>
 <p>附：各种常见的shell</p>
 <ol>
@@ -756,28 +756,6 @@ zsh是Bourne Shell(sh)的一个变种。Mac OS X 10.3之后默认的是Bourne Sh
         </div>
     </div>
 
-    
-    <link rel="stylesheet" href="/libs/gitalk/gitalk.css">
-<link rel="stylesheet" href="/css/my-gitalk.css">
-
-<div class="card gitalk-card" data-aos="fade-up">
-    <div id="gitalk-container" class="card-content"></div>
-</div>
-
-<script src="/libs/gitalk/gitalk.min.js"></script>
-<script>
-    let gitalk = new Gitalk({
-        clientID: '35165437fa945323a3d7',
-        clientSecret: 'e170709a72ace390b060af8cbed88b11d9cf4d8d',
-        repo: 'wodepinglunqu',
-        owner: '2270057439',
-        admin: 2270057439,
-        id: '2020/11/08/pei-zhi-ni-de-zsh-yu-bash/',
-        distractionFreeMode: false  // Facebook-like distraction free mode
-    });
-
-    gitalk.render('gitalk-container');
-</script>
     
 
     
@@ -1147,7 +1125,7 @@ zsh是Bourne Shell(sh)的一个变种。Mac OS X 10.3之后默认的是Bourne Sh
 
         var selection = window.getSelection();
         // if the selection is short let's not annoy our users.
-        if (('' + selection).length < Number.parseInt('20')) {
+        if (('' + selection).length < Number.parseInt('200')) {
             return;
         }
 
@@ -1188,12 +1166,6 @@ zsh是Bourne Shell(sh)的一个变种。Mac OS X 10.3之后默认的是Bourne Sh
 
 <!-- TOC 悬浮按钮. -->
 
-<div id="floating-toc-btn" class="hide-on-med-and-down">
-    <a class="btn-floating btn-large bg-color">
-        <i class="fa fa-list"></i>
-    </a>
-</div>
-
 
 <script src="/libs/tocbot/tocbot.min.js"></script>
 <script>
@@ -1232,41 +1204,6 @@ zsh是Bourne Shell(sh)的一个变种。Mac OS X 10.3之后默认的是Bourne Sh
             }
         });
 
-        
-        /* 修复文章卡片 div 的宽度. */
-        let fixPostCardWidth = function (srcId, targetId) {
-            let srcDiv = $('#' + srcId);
-            if (srcDiv.length === 0) {
-                return;
-            }
-
-            let w = srcDiv.width();
-            if (w >= 450) {
-                w = w + 21;
-            } else if (w >= 350 && w < 450) {
-                w = w + 18;
-            } else if (w >= 300 && w < 350) {
-                w = w + 16;
-            } else {
-                w = w + 14;
-            }
-            $('#' + targetId).width(w);
-        };
-
-        // 切换TOC目录展开收缩的相关操作.
-        const expandedClass = 'expanded';
-        let $tocAside = $('#toc-aside');
-        let $mainContent = $('#main-content');
-        $('#floating-toc-btn .btn-floating').click(function () {
-            if ($tocAside.hasClass(expandedClass)) {
-                $tocAside.removeClass(expandedClass).slideUp(500);
-                $mainContent.removeClass('l9');
-            } else {
-                $tocAside.addClass(expandedClass).slideDown(500);
-                $mainContent.addClass('l9');
-            }
-            fixPostCardWidth('artDetail', 'prenext-posts');
-        });
         
     });
 </script>
@@ -1495,11 +1432,6 @@ $(function () {
     </script>
 
 
-<script src="/assets/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"assets/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"log":false,"model":{"jsonPath":"/assets/assets/hijiki.model.json"},"display":{"position":"right","width":200,"height":350},"mobile":{"show":true},"react":{"opacity":1}});</script><script>
-            window.imageLazyLoadSetting = {
-                isSPA: false,
-                processImages: null,
-            };
-        </script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})});</script><script>!function(n){n.imageLazyLoadSetting.processImages=o;var i=n.imageLazyLoadSetting.isSPA,r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function o(){i&&(r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]")));for(var t,e,a=0;a<r.length;a++)t=r[a],0<=(e=t.getBoundingClientRect()).bottom&&0<=e.left&&e.top<=(n.innerHeight||document.documentElement.clientHeight)&&function(){var t,e,n,i,o=r[a];t=o,e=function(){r=r.filter(function(t){return o!==t})},n=new Image,i=t.getAttribute("data-original"),n.onload=function(){t.src=i,e&&e()},n.src=i}()}o(),n.addEventListener("scroll",function(){var t,e;t=o,e=n,clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(e)},500)})}(this);</script></body>
+<script src="/assets/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"assets/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"log":false,"model":{"jsonPath":"/assets/assets/hijiki.model.json"},"display":{"position":"right","width":200,"height":350},"mobile":{"show":true},"react":{"opacity":1}});</script></body>
 
 </html>

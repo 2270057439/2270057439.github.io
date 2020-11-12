@@ -384,7 +384,7 @@
     .toc-widget {
     width: 345px;
     padding-left: 20px;
-    background-color: rgb(255, 255, 255,0.7);
+    background-color: rgb(229, 229, 229,0);
     border-radius: 10px;
     box-shadow: 0 10px 35px 2px rgba(0, 0, 0, .15), 0 5px 15px rgba(0, 0, 0, .07), 0 2px 5px -5px rgba(0, 0, 0, .1) !important;
     }
@@ -502,7 +502,7 @@
                 <h2 id="一-sqli-labs介绍："><a href="#一-sqli-labs介绍：" class="headerlink" title="一.sqli-labs介绍："></a>一.sqli-labs介绍：</h2><p>sqli-labs是由一个印度程序员开发的SQL注入实战平台，涵盖了报错注入、盲注、Update注入、Insert注入、Heather注入、二阶注入、绕过WAF，比较全面的一个注入平台：<a href="https://github.com/Audi-1/sqli-labs" title="项目地址" target="_blank" rel="noopener">项目地址</a></p>
 <h2 id="二-前置条件"><a href="#二-前置条件" class="headerlink" title="二.前置条件"></a>二.前置条件</h2><p>需要：<strong>「Apache/Nginx + PHP + Tomcat + java环境」</strong><br>对于win用户通过XAMPP（LAMP）配置可轻松搭建。而对于mac平台也有XAMPP，但界面过于丑陋且不够方便。作为一个“精致”的boy，此处使用Mxsrvs代替，当然使用MAMP也可以代替XAMPP，mac系统其实已经内置了Apache与PHP，这两个也可以不用安装。</p>
 <p>此处使用 <strong><a href="http://www.xsrvs.com/index.html" title="MxSrvs_1.2.1" target="_blank" rel="noopener">MxSrvs_1.2.1</a> + Nginx1.18.0 + PHP7.4.6 + Tomcat9.0.35 + JDK11</strong>作为演示。</p>
-<h2 id="三-安装"><a href="#三-安装" class="headerlink" title="三.安装"></a>三.安装</h2><h3 id="1-安装MxSrvs。"><a href="#1-安装MxSrvs。" class="headerlink" title="1.安装MxSrvs。"></a>1.安装MxSrvs。</h3><p><a href="http://www.xsrvs.com/index.html" title="MxSrvs" target="_blank" rel="noopener">MxSrvs</a> 是MacOS平台免费的PHP集成开发环境，界面简洁，功能强大。<br>按以下图示操作：<br><img src="https://pan-le.cn/medias/pebble/loading.gif" data-original="/medias/%E9%85%8D%E7%BD%AEsqli/%E5%AE%89%E8%A3%85.png" alt><br>切换版本后启动 Nginx1.18.0 和 PHP7.4.6，成功即完成安装。<br>MxSrvs只能运行在/Applications/MxSrvs 目录中，即相应的sqli-labs需要放到/Applications/MxSrvs/www目录下才能执行。<br><strong>配置Nginx：</strong><br><img src="https://pan-le.cn/medias/pebble/loading.gif" data-original="/medias/%E9%85%8D%E7%BD%AEsqli/%E9%85%8D%E7%BD%AE.png" alt><br>生成一个配置文件，对其修改：</p>
+<h2 id="三-安装"><a href="#三-安装" class="headerlink" title="三.安装"></a>三.安装</h2><h3 id="1-安装MxSrvs。"><a href="#1-安装MxSrvs。" class="headerlink" title="1.安装MxSrvs。"></a>1.安装MxSrvs。</h3><p><a href="http://www.xsrvs.com/index.html" title="MxSrvs" target="_blank" rel="noopener">MxSrvs</a> 是MacOS平台免费的PHP集成开发环境，界面简洁，功能强大。<br>按以下图示操作：<br><img src="/medias/%E9%85%8D%E7%BD%AEsqli/%E5%AE%89%E8%A3%85.png" alt><br>切换版本后启动 Nginx1.18.0 和 PHP7.4.6，成功即完成安装。<br>MxSrvs只能运行在/Applications/MxSrvs 目录中，即相应的sqli-labs需要放到/Applications/MxSrvs/www目录下才能执行。<br><strong>配置Nginx：</strong><br><img src="/medias/%E9%85%8D%E7%BD%AEsqli/%E9%85%8D%E7%BD%AE.png" alt><br>生成一个配置文件，对其修改：</p>
 <pre class="line-numbers language-bash"><code class="language-bash">server <span class="token punctuation">{</span>
     listen          80<span class="token punctuation">;</span>
     server_name     yxh.com<span class="token punctuation">;</span>
@@ -543,9 +543,9 @@
 <h3 id="2-下载sqli-labs"><a href="#2-下载sqli-labs" class="headerlink" title="2.下载sqli-labs"></a>2.下载sqli-labs</h3><p>PHP版本 &lt; 7:  <a href="https://github.com/Audi-1/sqli-labs" title="下载" target="_blank" rel="noopener">下载</a>官方版。<br>PHP版本 &gt; 7:  <a href="https://github.com/skyblueee/sqli-labs-php7" title="下载" target="_blank" rel="noopener">下载</a>修改版。<br>也可以使用GET：</p>
 <pre class="line-numbers language-bash"><code class="language-bash"><span class="token function">sudo</span> <span class="token function">apt-get</span> <span class="token function">install</span> <span class="token function">git</span>
 <span class="token function">sudo</span> <span class="token function">git</span> clone https://github.com/skyblueee/sqli-labs-php7 /var/www/html/sqli-labs<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
-<p>注：由于php在php5之后移除了mysql扩展（函数），而sqli-labs是基于php5以下版本的平台。所以下载<a href="https://github.com/Audi-1/sqli-labs" title="官方版" target="_blank" rel="noopener">官方版</a>后要使用mysqli扩展就需要手动修改：<br>  1.进入sqli-labs/sql-connections<br>  2.对内部所有文件进行以下修改：<br>  <img src="https://pan-le.cn/medias/pebble/loading.gif" data-original="/medias/%E9%85%8D%E7%BD%AEsqli/%E4%BF%AE%E6%94%B9php.png" alt></p>
+<p>注：由于php在php5之后移除了mysql扩展（函数），而sqli-labs是基于php5以下版本的平台。所以下载<a href="https://github.com/Audi-1/sqli-labs" title="官方版" target="_blank" rel="noopener">官方版</a>后要使用mysqli扩展就需要手动修改：<br>  1.进入sqli-labs/sql-connections<br>  2.对内部所有文件进行以下修改：<br>  <img src="/medias/%E9%85%8D%E7%BD%AEsqli/%E4%BF%AE%E6%94%B9php.png" alt></p>
 <h3 id="3-配置sqli-labs"><a href="#3-配置sqli-labs" class="headerlink" title="3.配置sqli-labs"></a>3.配置sqli-labs</h3><p>  1）.将sqli-labs文件夹放到MxSrvs的www目录下。<br>  2）.打开sqli-labs/sql-connections/db-creds.inc,修改$dbpass为你的数据库密码</p>
-<h3 id="4-启动sqli-labs"><a href="#4-启动sqli-labs" class="headerlink" title="4.启动sqli-labs"></a>4.启动sqli-labs</h3><p>  1）.确定mysql，php，Nginx都已经启动的前提下，浏览器输入：<a href="http://localhost:[http服务器端口]/sqli-labs。" target="_blank" rel="noopener">http://localhost:[http服务器端口]/sqli-labs。</a><br>  即可进入以下页面：<br>  <img src="https://pan-le.cn/medias/pebble/loading.gif" data-original="/medias/%E9%85%8D%E7%BD%AEsqli/%E6%AC%A2%E8%BF%8E.png" alt><br>  2）.点击 <em><em>Setup/reset Database for labs </em></em>后显示：<br>  <img src="https://pan-le.cn/medias/pebble/loading.gif" data-original="/medias/%E9%85%8D%E7%BD%AEsqli/%E6%88%90%E5%8A%9F.png" alt></p>
+<h3 id="4-启动sqli-labs"><a href="#4-启动sqli-labs" class="headerlink" title="4.启动sqli-labs"></a>4.启动sqli-labs</h3><p>  1）.确定mysql，php，Nginx都已经启动的前提下，浏览器输入：<a href="http://localhost:[http服务器端口]/sqli-labs。" target="_blank" rel="noopener">http://localhost:[http服务器端口]/sqli-labs。</a><br>  即可进入以下页面：<br>  <img src="/medias/%E9%85%8D%E7%BD%AEsqli/%E6%AC%A2%E8%BF%8E.png" alt><br>  2）.点击 <em><em>Setup/reset Database for labs </em></em>后显示：<br>  <img src="/medias/%E9%85%8D%E7%BD%AEsqli/%E6%88%90%E5%8A%9F.png" alt></p>
 <h2 id="四-修改mysql密码"><a href="#四-修改mysql密码" class="headerlink" title="四.修改mysql密码"></a>四.修改mysql密码</h2><p>MySQL和Redis所有版本的默认root密码均为空，想要修改mysql密码可以有以下几种方法：</p>
 <h3 id="1-使用mysql自带的mysqladmin（位于bin下）。"><a href="#1-使用mysql自带的mysqladmin（位于bin下）。" class="headerlink" title="1.使用mysql自带的mysqladmin（位于bin下）。"></a>1.使用mysql自带的mysqladmin（位于bin下）。</h3><pre class="line-numbers language-bash"><code class="language-bash">mysqladmin -u用户名 -p旧密码 password 新密码<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
@@ -733,28 +733,6 @@
         </div>
     </div>
 
-    
-    <link rel="stylesheet" href="/libs/gitalk/gitalk.css">
-<link rel="stylesheet" href="/css/my-gitalk.css">
-
-<div class="card gitalk-card" data-aos="fade-up">
-    <div id="gitalk-container" class="card-content"></div>
-</div>
-
-<script src="/libs/gitalk/gitalk.min.js"></script>
-<script>
-    let gitalk = new Gitalk({
-        clientID: '35165437fa945323a3d7',
-        clientSecret: 'e170709a72ace390b060af8cbed88b11d9cf4d8d',
-        repo: 'wodepinglunqu',
-        owner: '2270057439',
-        admin: 2270057439,
-        id: '2020/11/01/sqli-labs-ba-chang-bu-shu-mac/',
-        distractionFreeMode: false  // Facebook-like distraction free mode
-    });
-
-    gitalk.render('gitalk-container');
-</script>
     
 
     
@@ -1117,7 +1095,7 @@
 
         var selection = window.getSelection();
         // if the selection is short let's not annoy our users.
-        if (('' + selection).length < Number.parseInt('20')) {
+        if (('' + selection).length < Number.parseInt('200')) {
             return;
         }
 
@@ -1158,12 +1136,6 @@
 
 <!-- TOC 悬浮按钮. -->
 
-<div id="floating-toc-btn" class="hide-on-med-and-down">
-    <a class="btn-floating btn-large bg-color">
-        <i class="fa fa-list"></i>
-    </a>
-</div>
-
 
 <script src="/libs/tocbot/tocbot.min.js"></script>
 <script>
@@ -1202,41 +1174,6 @@
             }
         });
 
-        
-        /* 修复文章卡片 div 的宽度. */
-        let fixPostCardWidth = function (srcId, targetId) {
-            let srcDiv = $('#' + srcId);
-            if (srcDiv.length === 0) {
-                return;
-            }
-
-            let w = srcDiv.width();
-            if (w >= 450) {
-                w = w + 21;
-            } else if (w >= 350 && w < 450) {
-                w = w + 18;
-            } else if (w >= 300 && w < 350) {
-                w = w + 16;
-            } else {
-                w = w + 14;
-            }
-            $('#' + targetId).width(w);
-        };
-
-        // 切换TOC目录展开收缩的相关操作.
-        const expandedClass = 'expanded';
-        let $tocAside = $('#toc-aside');
-        let $mainContent = $('#main-content');
-        $('#floating-toc-btn .btn-floating').click(function () {
-            if ($tocAside.hasClass(expandedClass)) {
-                $tocAside.removeClass(expandedClass).slideUp(500);
-                $mainContent.removeClass('l9');
-            } else {
-                $tocAside.addClass(expandedClass).slideDown(500);
-                $mainContent.addClass('l9');
-            }
-            fixPostCardWidth('artDetail', 'prenext-posts');
-        });
         
     });
 </script>
@@ -1465,11 +1402,6 @@ $(function () {
     </script>
 
 
-<script src="/assets/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"assets/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"log":false,"model":{"jsonPath":"/assets/assets/hijiki.model.json"},"display":{"position":"right","width":200,"height":350},"mobile":{"show":true},"react":{"opacity":1}});</script><script>
-            window.imageLazyLoadSetting = {
-                isSPA: false,
-                processImages: null,
-            };
-        </script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})});</script><script>!function(n){n.imageLazyLoadSetting.processImages=o;var i=n.imageLazyLoadSetting.isSPA,r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function o(){i&&(r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]")));for(var t,e,a=0;a<r.length;a++)t=r[a],0<=(e=t.getBoundingClientRect()).bottom&&0<=e.left&&e.top<=(n.innerHeight||document.documentElement.clientHeight)&&function(){var t,e,n,i,o=r[a];t=o,e=function(){r=r.filter(function(t){return o!==t})},n=new Image,i=t.getAttribute("data-original"),n.onload=function(){t.src=i,e&&e()},n.src=i}()}o(),n.addEventListener("scroll",function(){var t,e;t=o,e=n,clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(e)},500)})}(this);</script></body>
+<script src="/assets/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"assets/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"log":false,"model":{"jsonPath":"/assets/assets/hijiki.model.json"},"display":{"position":"right","width":200,"height":350},"mobile":{"show":true},"react":{"opacity":1}});</script></body>
 
 </html>

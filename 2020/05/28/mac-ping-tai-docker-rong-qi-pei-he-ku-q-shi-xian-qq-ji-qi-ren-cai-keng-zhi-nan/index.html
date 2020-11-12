@@ -386,7 +386,7 @@ win系统的话此教程基本无用，这里只针对基于mac或者其他linux
     .toc-widget {
     width: 345px;
     padding-left: 20px;
-    background-color: rgb(255, 255, 255,0.7);
+    background-color: rgb(229, 229, 229,0);
     border-radius: 10px;
     box-shadow: 0 10px 35px 2px rgba(0, 0, 0, .15), 0 5px 15px rgba(0, 0, 0, .07), 0 2px 5px -5px rgba(0, 0, 0, .1) !important;
     }
@@ -810,28 +810,6 @@ For <span class="token function">more</span> examples and ideas, visit:
     </div>
 
     
-    <link rel="stylesheet" href="/libs/gitalk/gitalk.css">
-<link rel="stylesheet" href="/css/my-gitalk.css">
-
-<div class="card gitalk-card" data-aos="fade-up">
-    <div id="gitalk-container" class="card-content"></div>
-</div>
-
-<script src="/libs/gitalk/gitalk.min.js"></script>
-<script>
-    let gitalk = new Gitalk({
-        clientID: '35165437fa945323a3d7',
-        clientSecret: 'e170709a72ace390b060af8cbed88b11d9cf4d8d',
-        repo: 'wodepinglunqu',
-        owner: '2270057439',
-        admin: 2270057439,
-        id: '2020/05/28/mac-ping-tai-docker-rong-qi-pei-he-ku-q-shi-xian-qq-ji-qi-ren-cai-keng-zhi-nan/',
-        distractionFreeMode: false  // Facebook-like distraction free mode
-    });
-
-    gitalk.render('gitalk-container');
-</script>
-    
 
     
 
@@ -1222,7 +1200,7 @@ For <span class="token function">more</span> examples and ideas, visit:
 
         var selection = window.getSelection();
         // if the selection is short let's not annoy our users.
-        if (('' + selection).length < Number.parseInt('20')) {
+        if (('' + selection).length < Number.parseInt('200')) {
             return;
         }
 
@@ -1263,12 +1241,6 @@ For <span class="token function">more</span> examples and ideas, visit:
 
 <!-- TOC 悬浮按钮. -->
 
-<div id="floating-toc-btn" class="hide-on-med-and-down">
-    <a class="btn-floating btn-large bg-color">
-        <i class="fa fa-list"></i>
-    </a>
-</div>
-
 
 <script src="/libs/tocbot/tocbot.min.js"></script>
 <script>
@@ -1307,41 +1279,6 @@ For <span class="token function">more</span> examples and ideas, visit:
             }
         });
 
-        
-        /* 修复文章卡片 div 的宽度. */
-        let fixPostCardWidth = function (srcId, targetId) {
-            let srcDiv = $('#' + srcId);
-            if (srcDiv.length === 0) {
-                return;
-            }
-
-            let w = srcDiv.width();
-            if (w >= 450) {
-                w = w + 21;
-            } else if (w >= 350 && w < 450) {
-                w = w + 18;
-            } else if (w >= 300 && w < 350) {
-                w = w + 16;
-            } else {
-                w = w + 14;
-            }
-            $('#' + targetId).width(w);
-        };
-
-        // 切换TOC目录展开收缩的相关操作.
-        const expandedClass = 'expanded';
-        let $tocAside = $('#toc-aside');
-        let $mainContent = $('#main-content');
-        $('#floating-toc-btn .btn-floating').click(function () {
-            if ($tocAside.hasClass(expandedClass)) {
-                $tocAside.removeClass(expandedClass).slideUp(500);
-                $mainContent.removeClass('l9');
-            } else {
-                $tocAside.addClass(expandedClass).slideDown(500);
-                $mainContent.addClass('l9');
-            }
-            fixPostCardWidth('artDetail', 'prenext-posts');
-        });
         
     });
 </script>
@@ -1570,11 +1507,6 @@ $(function () {
     </script>
 
 
-<script src="/assets/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"assets/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"log":false,"model":{"jsonPath":"/assets/assets/hijiki.model.json"},"display":{"position":"right","width":200,"height":350},"mobile":{"show":true},"react":{"opacity":1}});</script><script>
-            window.imageLazyLoadSetting = {
-                isSPA: false,
-                processImages: null,
-            };
-        </script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})});</script><script>!function(n){n.imageLazyLoadSetting.processImages=o;var i=n.imageLazyLoadSetting.isSPA,r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function o(){i&&(r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]")));for(var t,e,a=0;a<r.length;a++)t=r[a],0<=(e=t.getBoundingClientRect()).bottom&&0<=e.left&&e.top<=(n.innerHeight||document.documentElement.clientHeight)&&function(){var t,e,n,i,o=r[a];t=o,e=function(){r=r.filter(function(t){return o!==t})},n=new Image,i=t.getAttribute("data-original"),n.onload=function(){t.src=i,e&&e()},n.src=i}()}o(),n.addEventListener("scroll",function(){var t,e;t=o,e=n,clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(e)},500)})}(this);</script></body>
+<script src="/assets/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"assets/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"log":false,"model":{"jsonPath":"/assets/assets/hijiki.model.json"},"display":{"position":"right","width":200,"height":350},"mobile":{"show":true},"react":{"opacity":1}});</script></body>
 
 </html>

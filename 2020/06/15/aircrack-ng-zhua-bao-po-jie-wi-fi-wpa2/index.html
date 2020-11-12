@@ -387,7 +387,7 @@ wi-fi加密历史
     .toc-widget {
     width: 345px;
     padding-left: 20px;
-    background-color: rgb(255, 255, 255,0.7);
+    background-color: rgb(229, 229, 229,0);
     border-radius: 10px;
     box-shadow: 0 10px 35px 2px rgba(0, 0, 0, .15), 0 5px 15px rgba(0, 0, 0, .07), 0 2px 5px -5px rgba(0, 0, 0, .1) !important;
     }
@@ -533,7 +533,7 @@ wi-fi加密历史
 <pre class="line-numbers language-bash"><code class="language-bash"><span class="token function">sudo</span> port <span class="token function">install</span> aircrack-ng//安装Aircrack-ng<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <p><strong>2.建立软链接，方便使用</strong></p>
 <pre class="line-numbers language-bash"><code class="language-bash"><span class="token function">sudo</span> <span class="token function">ln</span> -s /System/Library/PrivateFrameworks/Apple80211.framework/Versions/Current/Resources/airport /usr/local/bin/airport<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<p><strong>3. 执行’ifconfig’查看网卡名字</strong><br><img src="https://pan-le.cn/medias/pebble/loading.gif" data-original="/medias/pebble/ifconfig.png" alt><br><strong>4. 直接执行’airport -s’，出现wifi信息</strong><br><img src="https://pan-le.cn/medias/pebble/loading.gif" data-original="/medias/pebble/wifi.png" alt></p>
+<p><strong>3. 执行’ifconfig’查看网卡名字</strong><br><img src="/medias/pebble/ifconfig.png" alt><br><strong>4. 直接执行’airport -s’，出现wifi信息</strong><br><img src="/medias/pebble/wifi.png" alt></p>
 <blockquote>
 <p>其中SSID ： wifi 名。CHANNEL 是频道。RSSI ：信号强度（绝对值越小信号越强）。</p>
 </blockquote>
@@ -542,9 +542,9 @@ wi-fi加密历史
 <li>终端输入<pre class="line-numbers language-bash"><code class="language-bash"><span class="token function">sudo</span> airport en0 sniff 1  //en0为网卡，1为频道。<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 </li>
 </ol>
-<p><img src="https://pan-le.cn/medias/pebble/loading.gif" data-original="/medias/pebble/zhuabao.png" alt></p>
+<p><img src="/medias/pebble/zhuabao.png" alt></p>
 <ol start="2">
-<li>监听模式下wifi图标呈现<br><img src="https://pan-le.cn/medias/pebble/loading.gif" data-original="/medias/pebble/wifitu.png" alt><blockquote>
+<li>监听模式下wifi图标呈现<br><img src="/medias/pebble/wifitu.png" alt><blockquote>
 <p>最好监听久一些（提高抓包成功概率）</p>
 </blockquote>
 </li>
@@ -552,7 +552,7 @@ wi-fi加密历史
 <p><strong>6. 得到包</strong></p>
 <ol>
 <li>终端输入：’control ＋ c’，终止程序（退出抓包）。</li>
-<li>进入终端提示的路径中得到’cap’文件（包）。<br><img src="https://pan-le.cn/medias/pebble/loading.gif" data-original="/medias/pebble/cap.png" alt></li>
+<li>进入终端提示的路径中得到’cap’文件（包）。<br><img src="/medias/pebble/cap.png" alt></li>
 </ol>
 <p><strong>6. 准备字典</strong></p>
 <ol>
@@ -561,15 +561,15 @@ wi-fi加密历史
 </blockquote>
 </li>
 </ol>
-<p><img src="https://pan-le.cn/medias/pebble/loading.gif" data-original="/medias/pebble/zidian.png" alt></p>
+<p><img src="/medias/pebble/zidian.png" alt></p>
 <p><strong>6. 准备破解</strong></p>
 <ol>
-<li>将密码’字典文件’与’cap’文件放入同一个文件夹（比如我的’pass’）。<br><img src="https://pan-le.cn/medias/pebble/loading.gif" data-original="/medias/pebble/pass.png" alt></li>
+<li>将密码’字典文件’与’cap’文件放入同一个文件夹（比如我的’pass’）。<br><img src="/medias/pebble/pass.png" alt></li>
 <li>终端切换到pass。</li>
 <li>查看抓包情况<pre class="line-numbers language-bash"><code class="language-bash">aircrack-ng -w 字典文件.txt airportSniffrl9O0O.cap<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 </li>
 </ol>
-<p><img src="https://pan-le.cn/medias/pebble/loading.gif" data-original="/medias/pebble/qingkuang.png" alt><br><strong>7. 开始破解</strong></p>
+<p><img src="/medias/pebble/qingkuang.png" alt><br><strong>7. 开始破解</strong></p>
 <ol>
 <li>终端输入’command ＋ f’搜索’1 handshake’(成功握手)并记录行号。</li>
 <li>输入行号即可开始破解。</li>
@@ -759,28 +759,6 @@ wi-fi加密历史
         </div>
     </div>
 
-    
-    <link rel="stylesheet" href="/libs/gitalk/gitalk.css">
-<link rel="stylesheet" href="/css/my-gitalk.css">
-
-<div class="card gitalk-card" data-aos="fade-up">
-    <div id="gitalk-container" class="card-content"></div>
-</div>
-
-<script src="/libs/gitalk/gitalk.min.js"></script>
-<script>
-    let gitalk = new Gitalk({
-        clientID: '35165437fa945323a3d7',
-        clientSecret: 'e170709a72ace390b060af8cbed88b11d9cf4d8d',
-        repo: 'wodepinglunqu',
-        owner: '2270057439',
-        admin: 2270057439,
-        id: '2020/06/15/aircrack-ng-zhua-bao-po-jie-wi-fi-wpa2/',
-        distractionFreeMode: false  // Facebook-like distraction free mode
-    });
-
-    gitalk.render('gitalk-container');
-</script>
     
 
     
@@ -1150,7 +1128,7 @@ wi-fi加密历史
 
         var selection = window.getSelection();
         // if the selection is short let's not annoy our users.
-        if (('' + selection).length < Number.parseInt('20')) {
+        if (('' + selection).length < Number.parseInt('200')) {
             return;
         }
 
@@ -1191,12 +1169,6 @@ wi-fi加密历史
 
 <!-- TOC 悬浮按钮. -->
 
-<div id="floating-toc-btn" class="hide-on-med-and-down">
-    <a class="btn-floating btn-large bg-color">
-        <i class="fa fa-list"></i>
-    </a>
-</div>
-
 
 <script src="/libs/tocbot/tocbot.min.js"></script>
 <script>
@@ -1235,41 +1207,6 @@ wi-fi加密历史
             }
         });
 
-        
-        /* 修复文章卡片 div 的宽度. */
-        let fixPostCardWidth = function (srcId, targetId) {
-            let srcDiv = $('#' + srcId);
-            if (srcDiv.length === 0) {
-                return;
-            }
-
-            let w = srcDiv.width();
-            if (w >= 450) {
-                w = w + 21;
-            } else if (w >= 350 && w < 450) {
-                w = w + 18;
-            } else if (w >= 300 && w < 350) {
-                w = w + 16;
-            } else {
-                w = w + 14;
-            }
-            $('#' + targetId).width(w);
-        };
-
-        // 切换TOC目录展开收缩的相关操作.
-        const expandedClass = 'expanded';
-        let $tocAside = $('#toc-aside');
-        let $mainContent = $('#main-content');
-        $('#floating-toc-btn .btn-floating').click(function () {
-            if ($tocAside.hasClass(expandedClass)) {
-                $tocAside.removeClass(expandedClass).slideUp(500);
-                $mainContent.removeClass('l9');
-            } else {
-                $tocAside.addClass(expandedClass).slideDown(500);
-                $mainContent.addClass('l9');
-            }
-            fixPostCardWidth('artDetail', 'prenext-posts');
-        });
         
     });
 </script>
@@ -1498,11 +1435,6 @@ $(function () {
     </script>
 
 
-<script src="/assets/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"assets/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"log":false,"model":{"jsonPath":"/assets/assets/hijiki.model.json"},"display":{"position":"right","width":200,"height":350},"mobile":{"show":true},"react":{"opacity":1}});</script><script>
-            window.imageLazyLoadSetting = {
-                isSPA: false,
-                processImages: null,
-            };
-        </script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})});</script><script>!function(n){n.imageLazyLoadSetting.processImages=o;var i=n.imageLazyLoadSetting.isSPA,r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function o(){i&&(r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]")));for(var t,e,a=0;a<r.length;a++)t=r[a],0<=(e=t.getBoundingClientRect()).bottom&&0<=e.left&&e.top<=(n.innerHeight||document.documentElement.clientHeight)&&function(){var t,e,n,i,o=r[a];t=o,e=function(){r=r.filter(function(t){return o!==t})},n=new Image,i=t.getAttribute("data-original"),n.onload=function(){t.src=i,e&&e()},n.src=i}()}o(),n.addEventListener("scroll",function(){var t,e;t=o,e=n,clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(e)},500)})}(this);</script></body>
+<script src="/assets/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"assets/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"log":false,"model":{"jsonPath":"/assets/assets/hijiki.model.json"},"display":{"position":"right","width":200,"height":350},"mobile":{"show":true},"react":{"opacity":1}});</script></body>
 
 </html>

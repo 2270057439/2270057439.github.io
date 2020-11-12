@@ -383,7 +383,7 @@
     .toc-widget {
     width: 345px;
     padding-left: 20px;
-    background-color: rgb(255, 255, 255,0.7);
+    background-color: rgb(229, 229, 229,0);
     border-radius: 10px;
     box-shadow: 0 10px 35px 2px rgba(0, 0, 0, .15), 0 5px 15px rgba(0, 0, 0, .07), 0 2px 5px -5px rgba(0, 0, 0, .1) !important;
     }
@@ -518,15 +518,15 @@
 <ul>
 <li><p>1.下载jira<br><a href="https://www.atlassian.com/software/jira/free" title="jira官网" target="_blank" rel="noopener">jira官网</a>下  载服务器版jira压缩文件并解压到/usr/local/（此处需挂梯子）。</p>
 </li>
-<li><p>2.mysql中创建一个jiradb数据库，字符集选择utf8mb4，排序规则选择utf8mb4_danish_ci。<br>否则后期报错：<br><img src="https://pan-le.cn/medias/pebble/loading.gif" data-original="/medias/%E9%85%8D%E7%BD%AEtestlink/%E6%8A%A5%E9%94%99.png" alt><br>社区的解决办法：<br><img src="https://pan-le.cn/medias/pebble/loading.gif" data-original="/medias/%E9%85%8D%E7%BD%AEtestlink/%E8%A7%A3%E5%86%B3.png" alt></p>
+<li><p>2.mysql中创建一个jiradb数据库，字符集选择utf8mb4，排序规则选择utf8mb4_danish_ci。<br>否则后期报错：<br><img src="/medias/%E9%85%8D%E7%BD%AEtestlink/%E6%8A%A5%E9%94%99.png" alt><br>社区的解决办法：<br><img src="/medias/%E9%85%8D%E7%BD%AEtestlink/%E8%A7%A3%E5%86%B3.png" alt></p>
 </li>
-<li><p>3.设置JIRA Home Directory：<br>打开终端Terminal，进入JIRA 的bin 输入./config.sh。<br><img src="https://pan-le.cn/medias/pebble/loading.gif" data-original="/medias/%E9%85%8D%E7%BD%AEtestlink/%E9%85%8D%E7%BD%AE2.png" alt><br>此处放置位置自由选择，我放在了桌面。</p>
+<li><p>3.设置JIRA Home Directory：<br>打开终端Terminal，进入JIRA 的bin 输入./config.sh。<br><img src="/medias/%E9%85%8D%E7%BD%AEtestlink/%E9%85%8D%E7%BD%AE2.png" alt><br>此处放置位置自由选择，我放在了桌面。</p>
 </li>
-<li><p>4.设置MySQL驱动及破解jira：<br>下载jira破解文件<a href="https://pan.baidu.com/s/1ggtAR0v" title="密码：p4gh" target="_blank" rel="noopener">密码：p4gh</a>：atlassian-extras-3.2.jar<br>前往 <a href="https://dev.mysql.com/downloads/" title="传送门" target="_blank" rel="noopener">传送门</a>下载对应mysql版本的mysql数据库的驱动软件包：mysql-connector-java-X.X.XX-bin.jar<br>把两个文件复制到/usr/local/atlassian-jira-software-8.4.1-standalone/atlassian-jira/WEB-INF/lib目录下。其中atlassian-extras-3.2.jar是用来替换原来的atlassian-extras-3.2.jar文件，用作破解jira系统。<br><img src="https://pan-le.cn/medias/pebble/loading.gif" data-original="/medias/%E9%85%8D%E7%BD%AEtestlink/%E7%A0%B4%E8%A7%A3.png" alt></p>
+<li><p>4.设置MySQL驱动及破解jira：<br>下载jira破解文件<a href="https://pan.baidu.com/s/1ggtAR0v" title="密码：p4gh" target="_blank" rel="noopener">密码：p4gh</a>：atlassian-extras-3.2.jar<br>前往 <a href="https://dev.mysql.com/downloads/" title="传送门" target="_blank" rel="noopener">传送门</a>下载对应mysql版本的mysql数据库的驱动软件包：mysql-connector-java-X.X.XX-bin.jar<br>把两个文件复制到/usr/local/atlassian-jira-software-8.4.1-standalone/atlassian-jira/WEB-INF/lib目录下。其中atlassian-extras-3.2.jar是用来替换原来的atlassian-extras-3.2.jar文件，用作破解jira系统。<br><img src="/medias/%E9%85%8D%E7%BD%AEtestlink/%E7%A0%B4%E8%A7%A3.png" alt></p>
 </li>
-<li><p>5.设置关联的数据库，填写相关信息并测试是否连接成功。<br><img src="https://pan-le.cn/medias/pebble/loading.gif" data-original="/medias/%E9%85%8D%E7%BD%AEtestlink/%E8%BF%9E%E6%8E%A5.png" alt></p>
+<li><p>5.设置关联的数据库，填写相关信息并测试是否连接成功。<br><img src="/medias/%E9%85%8D%E7%BD%AEtestlink/%E8%BF%9E%E6%8E%A5.png" alt></p>
 </li>
-<li><p>6.启动<br>执行jira根目录bin文件夹下的shutdown.sh，再运行start-jira.sh<br>浏览器输入 <a href="http://localhost:8080（jira默认使用jira端口，8080端口其他应用需先关闭）" target="_blank" rel="noopener">http://localhost:8080（jira默认使用jira端口，8080端口其他应用需先关闭）</a><br><img src="https://pan-le.cn/medias/pebble/loading.gif" data-original="/medias/%E9%85%8D%E7%BD%AEtestlink/%E7%99%BB%E9%99%86.png" alt></p>
+<li><p>6.启动<br>执行jira根目录bin文件夹下的shutdown.sh，再运行start-jira.sh<br>浏览器输入 <a href="http://localhost:8080（jira默认使用jira端口，8080端口其他应用需先关闭）" target="_blank" rel="noopener">http://localhost:8080（jira默认使用jira端口，8080端口其他应用需先关闭）</a><br><img src="/medias/%E9%85%8D%E7%BD%AEtestlink/%E7%99%BB%E9%99%86.png" alt></p>
 <p>填入许可证： </p>
 <pre class="line-numbers language-bash"><code class="language-bash">AAABbQ0ODAoPeNp9UUlvgkAUvvMrSHppD0MQC6jJJDUwSTG4RKhJk16m+NRpEPDNYOu/LwpN3Y9v+
 7b3EK9KfVCmuunqltVr2T2rq3t+rFtmy9GWCJCt8qIANEKRQCaBzYUSeUbZKGbTyTSImDYq15+A4
@@ -724,28 +724,6 @@ tKNxEGjT56zGsM/S/JUpw<span class="token operator">==</span>X02ht<span aria-hidde
         </div>
     </div>
 
-    
-    <link rel="stylesheet" href="/libs/gitalk/gitalk.css">
-<link rel="stylesheet" href="/css/my-gitalk.css">
-
-<div class="card gitalk-card" data-aos="fade-up">
-    <div id="gitalk-container" class="card-content"></div>
-</div>
-
-<script src="/libs/gitalk/gitalk.min.js"></script>
-<script>
-    let gitalk = new Gitalk({
-        clientID: '35165437fa945323a3d7',
-        clientSecret: 'e170709a72ace390b060af8cbed88b11d9cf4d8d',
-        repo: 'wodepinglunqu',
-        owner: '2270057439',
-        admin: 2270057439,
-        id: '2020/11/01/testlink-jira-ce-shi-huan-jing-da-jian/',
-        distractionFreeMode: false  // Facebook-like distraction free mode
-    });
-
-    gitalk.render('gitalk-container');
-</script>
     
 
     
@@ -1115,7 +1093,7 @@ tKNxEGjT56zGsM/S/JUpw<span class="token operator">==</span>X02ht<span aria-hidde
 
         var selection = window.getSelection();
         // if the selection is short let's not annoy our users.
-        if (('' + selection).length < Number.parseInt('20')) {
+        if (('' + selection).length < Number.parseInt('200')) {
             return;
         }
 
@@ -1156,12 +1134,6 @@ tKNxEGjT56zGsM/S/JUpw<span class="token operator">==</span>X02ht<span aria-hidde
 
 <!-- TOC 悬浮按钮. -->
 
-<div id="floating-toc-btn" class="hide-on-med-and-down">
-    <a class="btn-floating btn-large bg-color">
-        <i class="fa fa-list"></i>
-    </a>
-</div>
-
 
 <script src="/libs/tocbot/tocbot.min.js"></script>
 <script>
@@ -1200,41 +1172,6 @@ tKNxEGjT56zGsM/S/JUpw<span class="token operator">==</span>X02ht<span aria-hidde
             }
         });
 
-        
-        /* 修复文章卡片 div 的宽度. */
-        let fixPostCardWidth = function (srcId, targetId) {
-            let srcDiv = $('#' + srcId);
-            if (srcDiv.length === 0) {
-                return;
-            }
-
-            let w = srcDiv.width();
-            if (w >= 450) {
-                w = w + 21;
-            } else if (w >= 350 && w < 450) {
-                w = w + 18;
-            } else if (w >= 300 && w < 350) {
-                w = w + 16;
-            } else {
-                w = w + 14;
-            }
-            $('#' + targetId).width(w);
-        };
-
-        // 切换TOC目录展开收缩的相关操作.
-        const expandedClass = 'expanded';
-        let $tocAside = $('#toc-aside');
-        let $mainContent = $('#main-content');
-        $('#floating-toc-btn .btn-floating').click(function () {
-            if ($tocAside.hasClass(expandedClass)) {
-                $tocAside.removeClass(expandedClass).slideUp(500);
-                $mainContent.removeClass('l9');
-            } else {
-                $tocAside.addClass(expandedClass).slideDown(500);
-                $mainContent.addClass('l9');
-            }
-            fixPostCardWidth('artDetail', 'prenext-posts');
-        });
         
     });
 </script>
@@ -1463,11 +1400,6 @@ $(function () {
     </script>
 
 
-<script src="/assets/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"assets/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"log":false,"model":{"jsonPath":"/assets/assets/hijiki.model.json"},"display":{"position":"right","width":200,"height":350},"mobile":{"show":true},"react":{"opacity":1}});</script><script>
-            window.imageLazyLoadSetting = {
-                isSPA: false,
-                processImages: null,
-            };
-        </script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})});</script><script>!function(n){n.imageLazyLoadSetting.processImages=o;var i=n.imageLazyLoadSetting.isSPA,r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function o(){i&&(r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]")));for(var t,e,a=0;a<r.length;a++)t=r[a],0<=(e=t.getBoundingClientRect()).bottom&&0<=e.left&&e.top<=(n.innerHeight||document.documentElement.clientHeight)&&function(){var t,e,n,i,o=r[a];t=o,e=function(){r=r.filter(function(t){return o!==t})},n=new Image,i=t.getAttribute("data-original"),n.onload=function(){t.src=i,e&&e()},n.src=i}()}o(),n.addEventListener("scroll",function(){var t,e;t=o,e=n,clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(e)},500)})}(this);</script></body>
+<script src="/assets/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"assets/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"log":false,"model":{"jsonPath":"/assets/assets/hijiki.model.json"},"display":{"position":"right","width":200,"height":350},"mobile":{"show":true},"react":{"opacity":1}});</script></body>
 
 </html>

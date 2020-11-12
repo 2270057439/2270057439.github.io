@@ -384,7 +384,7 @@
     .toc-widget {
     width: 345px;
     padding-left: 20px;
-    background-color: rgb(255, 255, 255,0.7);
+    background-color: rgb(229, 229, 229,0);
     border-radius: 10px;
     box-shadow: 0 10px 35px 2px rgba(0, 0, 0, .15), 0 5px 15px rgba(0, 0, 0, .07), 0 2px 5px -5px rgba(0, 0, 0, .1) !important;
     }
@@ -499,7 +499,7 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="软件设置"><a href="#软件设置" class="headerlink" title="软件设置"></a>软件设置</h1><p>主要设置颜色，窗口和字体。<br><img src="https://pan-le.cn/medias/pebble/loading.gif" data-original="/medias/iTerm2/1.png" alt><br><img src="https://pan-le.cn/medias/pebble/loading.gif" data-original="/medias/iTerm2/2.png" alt><br><img src="https://pan-le.cn/medias/pebble/loading.gif" data-original="/medias/iTerm2/3.png" alt></p>
+                <h1 id="软件设置"><a href="#软件设置" class="headerlink" title="软件设置"></a>软件设置</h1><p>主要设置颜色，窗口和字体。<br><img src="/medias/iTerm2/1.png" alt><br><img src="/medias/iTerm2/2.png" alt><br><img src="/medias/iTerm2/3.png" alt></p>
 <h1 id="安装Homebrew"><a href="#安装Homebrew" class="headerlink" title="安装Homebrew"></a>安装Homebrew</h1><h2 id="安装（挂梯子）"><a href="#安装（挂梯子）" class="headerlink" title="安装（挂梯子）"></a>安装（挂梯子）</h2><pre class="line-numbers language-bash"><code class="language-bash">/usr/bin/ruby -e <span class="token string">"<span class="token variable"><span class="token variable">$(</span>curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install<span class="token variable">)</span></span>"</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <h2 id="提权"><a href="#提权" class="headerlink" title="提权"></a>提权</h2><pre class="line-numbers language-bash"><code class="language-bash"><span class="token function">sudo</span> <span class="token function">chown</span> -R <span class="token variable"><span class="token variable">$(</span><span class="token function">whoami</span><span class="token variable">)</span></span> /usr/local/*<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <h2 id="换源："><a href="#换源：" class="headerlink" title="换源："></a>换源：</h2><h3 id="brew换源"><a href="#brew换源" class="headerlink" title="brew换源"></a>brew换源</h3><pre class="line-numbers language-bash"><code class="language-bash">// 1.替换brew.git:
@@ -531,7 +531,7 @@ $ <span class="token function">source</span> ~/.bash_profile
 
 // 4.应用生效:
 $ brew update<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<h1 id="安装常用软件"><a href="#安装常用软件" class="headerlink" title="安装常用软件"></a>安装常用软件</h1><h2 id="Hexo博客相关"><a href="#Hexo博客相关" class="headerlink" title="Hexo博客相关"></a>Hexo博客相关</h2><h3 id="安装get"><a href="#安装get" class="headerlink" title="安装get"></a>安装get</h3><p><code>brew install git</code><br>报错：<br>使用git出现<br>missing xcrun at: /Library/Developer/CommandLineTools/usr/bin/xcrun，即找不到xcrun文件。<br>这是因为没安装xcode命令行工具。<br>终端输入：xcode-select –install<br><img src="https://pan-le.cn/medias/pebble/loading.gif" data-original="/medias/iTerm2/xcode.png" alt></p>
+<h1 id="安装常用软件"><a href="#安装常用软件" class="headerlink" title="安装常用软件"></a>安装常用软件</h1><h2 id="Hexo博客相关"><a href="#Hexo博客相关" class="headerlink" title="Hexo博客相关"></a>Hexo博客相关</h2><h3 id="安装get"><a href="#安装get" class="headerlink" title="安装get"></a>安装get</h3><p><code>brew install git</code><br>报错：<br>使用git出现<br>missing xcrun at: /Library/Developer/CommandLineTools/usr/bin/xcrun，即找不到xcrun文件。<br>这是因为没安装xcode命令行工具。<br>终端输入：xcode-select –install<br><img src="/medias/iTerm2/xcode.png" alt></p>
 <h3 id="安装nvm"><a href="#安装nvm" class="headerlink" title="安装nvm"></a>安装nvm</h3><blockquote>
 <p>node和npm版本管理工具</p>
 </blockquote>
@@ -568,7 +568,7 @@ nvm use <span class="token operator">&lt;</span>version<span class="token operat
 
 <span class="token comment" spellcheck="true"># 显示当前的版本</span>
 nvm current<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<p>其中node版本不能过高（实测V14以上报错）否则：<br><img src="https://pan-le.cn/medias/pebble/loading.gif" data-original="/medias/iTerm2/%E6%8A%A5%E9%94%99.png" alt><br>解决办法：降低node版本（小于v12.14.0实测可行）</p>
+<p>其中node版本不能过高（实测V14以上报错）否则：<br><img src="/medias/iTerm2/%E6%8A%A5%E9%94%99.png" alt><br>解决办法：降低node版本（小于v12.14.0实测可行）</p>
 <pre class="line-numbers language-bash"><code class="language-bash"><span class="token comment" spellcheck="true">## 列出所有版本node</span>
 nvm ls-remote
 <span class="token comment" spellcheck="true">## 安装指定版本</span>
@@ -624,7 +624,7 @@ pip <span class="token function">install</span> pillow<span aria-hidden="true" c
 <span class="token comment" spellcheck="true">## 或者</span>
     sh -c <span class="token string">"<span class="token variable"><span class="token variable">$(</span>curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh<span class="token variable">)</span></span>"</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <ul>
-<li>了解on-my-zsh目录结构<br><img src="https://pan-le.cn/medias/pebble/loading.gif" data-original="/medias/iTerm2/tree.png" alt></li>
+<li>了解on-my-zsh目录结构<br><img src="/medias/iTerm2/tree.png" alt></li>
 </ul>
 <blockquote>
 <p>lib 提供核心功能脚本库<br>tools 提供安装、升级等功能的快捷工具<br>plugins 自带插件的存在放位置<br>templates 自带模板的存在放位置<br>themes 自带主题文件的存在放位置<br>custom 个性化配置目录，自安装的插件和主题可放这里（.zsh）</p>
@@ -690,7 +690,7 @@ ssh-keygen -t rsa -P <span class="token string">''</span> -f ~/.ssh/id_rsa
 </li>
 </ul>
 <h4 id="4-启动"><a href="#4-启动" class="headerlink" title="4.启动"></a>4.启动</h4><ul>
-<li>进入/usr/local/Cellar/hadoop/XXX/bin：<br> 执行<code>hdfs namenode -format</code>初始化hdfs文件系统<br><img src="https://pan-le.cn/medias/pebble/loading.gif" data-original="/medias/iTerm2/hdfs.png" alt></li>
+<li>进入/usr/local/Cellar/hadoop/XXX/bin：<br> 执行<code>hdfs namenode -format</code>初始化hdfs文件系统<br><img src="/medias/iTerm2/hdfs.png" alt></li>
 <li>修改配置文件<code>~/.zshrc</code>:</li>
 </ul>
 <pre><code>        # hadoop
@@ -698,7 +698,7 @@ ssh-keygen -t rsa -P <span class="token string">''</span> -f ~/.ssh/id_rsa
 </code></pre><ol>
 <li>启动NameNode和datanode: <code>start-dfs.sh</code>。成功可访问：<a href="http://localhost:9870" target="_blank" rel="noopener">http://localhost:9870</a></li>
 <li>启动 ResourceManager 和 NodeManager:<code>start-yarn.sh</code>。成功可访问: <a href="http://localhost:8088" target="_blank" rel="noopener">http://localhost:8088</a></li>
-<li>jps查看系统java进程：<br><img src="https://pan-le.cn/medias/pebble/loading.gif" data-original="/medias/iTerm2/jps.png" alt><br>显示这五个表示安装正常。</li>
+<li>jps查看系统java进程：<br><img src="/medias/iTerm2/jps.png" alt><br>显示这五个表示安装正常。</li>
 <li>或者直接 start-all.sh/stop-all.sh 一键启动/一键停止</li>
 </ol>
 <ul>
@@ -904,28 +904,6 @@ ettercap -C  图形界面<span aria-hidden="true" class="line-numbers-rows"><spa
         </div>
     </div>
 
-    
-    <link rel="stylesheet" href="/libs/gitalk/gitalk.css">
-<link rel="stylesheet" href="/css/my-gitalk.css">
-
-<div class="card gitalk-card" data-aos="fade-up">
-    <div id="gitalk-container" class="card-content"></div>
-</div>
-
-<script src="/libs/gitalk/gitalk.min.js"></script>
-<script>
-    let gitalk = new Gitalk({
-        clientID: '35165437fa945323a3d7',
-        clientSecret: 'e170709a72ace390b060af8cbed88b11d9cf4d8d',
-        repo: 'wodepinglunqu',
-        owner: '2270057439',
-        admin: 2270057439,
-        id: '2020/11/08/iterm2-zhong-duan-pei-zhi-ji-mei-hua/',
-        distractionFreeMode: false  // Facebook-like distraction free mode
-    });
-
-    gitalk.render('gitalk-container');
-</script>
     
 
     
@@ -1297,7 +1275,7 @@ ettercap -C  图形界面<span aria-hidden="true" class="line-numbers-rows"><spa
 
         var selection = window.getSelection();
         // if the selection is short let's not annoy our users.
-        if (('' + selection).length < Number.parseInt('20')) {
+        if (('' + selection).length < Number.parseInt('200')) {
             return;
         }
 
@@ -1338,12 +1316,6 @@ ettercap -C  图形界面<span aria-hidden="true" class="line-numbers-rows"><spa
 
 <!-- TOC 悬浮按钮. -->
 
-<div id="floating-toc-btn" class="hide-on-med-and-down">
-    <a class="btn-floating btn-large bg-color">
-        <i class="fa fa-list"></i>
-    </a>
-</div>
-
 
 <script src="/libs/tocbot/tocbot.min.js"></script>
 <script>
@@ -1382,41 +1354,6 @@ ettercap -C  图形界面<span aria-hidden="true" class="line-numbers-rows"><spa
             }
         });
 
-        
-        /* 修复文章卡片 div 的宽度. */
-        let fixPostCardWidth = function (srcId, targetId) {
-            let srcDiv = $('#' + srcId);
-            if (srcDiv.length === 0) {
-                return;
-            }
-
-            let w = srcDiv.width();
-            if (w >= 450) {
-                w = w + 21;
-            } else if (w >= 350 && w < 450) {
-                w = w + 18;
-            } else if (w >= 300 && w < 350) {
-                w = w + 16;
-            } else {
-                w = w + 14;
-            }
-            $('#' + targetId).width(w);
-        };
-
-        // 切换TOC目录展开收缩的相关操作.
-        const expandedClass = 'expanded';
-        let $tocAside = $('#toc-aside');
-        let $mainContent = $('#main-content');
-        $('#floating-toc-btn .btn-floating').click(function () {
-            if ($tocAside.hasClass(expandedClass)) {
-                $tocAside.removeClass(expandedClass).slideUp(500);
-                $mainContent.removeClass('l9');
-            } else {
-                $tocAside.addClass(expandedClass).slideDown(500);
-                $mainContent.addClass('l9');
-            }
-            fixPostCardWidth('artDetail', 'prenext-posts');
-        });
         
     });
 </script>
@@ -1645,11 +1582,6 @@ $(function () {
     </script>
 
 
-<script src="/assets/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"assets/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"log":false,"model":{"jsonPath":"/assets/assets/hijiki.model.json"},"display":{"position":"right","width":200,"height":350},"mobile":{"show":true},"react":{"opacity":1}});</script><script>
-            window.imageLazyLoadSetting = {
-                isSPA: false,
-                processImages: null,
-            };
-        </script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})});</script><script>!function(n){n.imageLazyLoadSetting.processImages=o;var i=n.imageLazyLoadSetting.isSPA,r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function o(){i&&(r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]")));for(var t,e,a=0;a<r.length;a++)t=r[a],0<=(e=t.getBoundingClientRect()).bottom&&0<=e.left&&e.top<=(n.innerHeight||document.documentElement.clientHeight)&&function(){var t,e,n,i,o=r[a];t=o,e=function(){r=r.filter(function(t){return o!==t})},n=new Image,i=t.getAttribute("data-original"),n.onload=function(){t.src=i,e&&e()},n.src=i}()}o(),n.addEventListener("scroll",function(){var t,e;t=o,e=n,clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(e)},500)})}(this);</script></body>
+<script src="/assets/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"assets/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"log":false,"model":{"jsonPath":"/assets/assets/hijiki.model.json"},"display":{"position":"right","width":200,"height":350},"mobile":{"show":true},"react":{"opacity":1}});</script></body>
 
 </html>
