@@ -635,19 +635,15 @@ pip <span class="token function">install</span> pillow<span aria-hidden="true" c
 </ol>
 </li>
 </ul>
-<h3 id="安装hadoop"><a href="#安装hadoop" class="headerlink" title="安装hadoop"></a>安装hadoop</h3><p> <code>brew install hadoop</code></p>
-<h4 id="1-配置ssh免密登录"><a href="#1-配置ssh免密登录" class="headerlink" title="1.配置ssh免密登录"></a>1.配置ssh免密登录</h4><p> 在系统偏好设置–&gt;共享–&gt;远程登录 勾选所有用户就以使用ssh。</p>
+<h3 id="配置hadoop-hadoop2-7-1-hbase1-4-3"><a href="#配置hadoop-hadoop2-7-1-hbase1-4-3" class="headerlink" title="配置hadoop(hadoop2.7.1 + hbase1.4.3)"></a>配置hadoop(hadoop2.7.1 + hbase1.4.3)</h3><h4 id="1-配置ssh免密登录"><a href="#1-配置ssh免密登录" class="headerlink" title="1.配置ssh免密登录"></a>1.配置ssh免密登录</h4><p> 在系统偏好设置–&gt;共享–&gt;远程登录 勾选所有用户就以使用ssh。</p>
 <pre class="line-numbers language-bash"><code class="language-bash"><span class="token comment" spellcheck="true">## 设置密钥</span>
 ssh-keygen -t rsa -P <span class="token string">''</span> -f ~/.ssh/id_rsa
 <span class="token function">cat</span> ~/.ssh/id_rsa.pub <span class="token operator">>></span> ~/.ssh/authorized_keys
 <span class="token function">chmod</span> 0600 ~/.ssh/authorized_keys
 <span class="token comment" spellcheck="true">## 测试</span>
 <span class="token function">ssh</span> localhost<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<h4 id="2-hadoop单机安装"><a href="#2-hadoop单机安装" class="headerlink" title="2.hadoop单机安装"></a>2.hadoop单机安装</h4><p>前提有JDK环境（Hadoop 2.7 以及后续版本需要 Java 7 以上）</p>
-<pre class="line-numbers language-bash"><code class="language-bash">brew <span class="token function">install</span> hadoop<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<p>下载完存放在：<code>/usr/local/Cellar/hadoop</code><br>测试:</p>
-<pre class="line-numbers language-bash"><code class="language-bash"> hadoop<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<p>至此单机模式就安装好了。（没有使用hdfs，而是直接用本地文件系统）</p>
+<h4 id="2-hadoop单机安装"><a href="#2-hadoop单机安装" class="headerlink" title="2.hadoop单机安装"></a>2.hadoop单机安装</h4><p><a href="https://archive.apache.org/dist/hadoop/common/hadoop-2.7.1/?C=N;O=D" target="_blank" rel="noopener">hadoop历史版本下载</a>。<br>下载<strong>hadoop2.7.1</strong>版本重命名存放在：<code>/usr/local/Cellar/hadoop</code>中。<br>修改配置文件</p>
+<p>测试:<br>至此单机模式就安装好了。（没有使用hdfs，而是直接用本地文件系统）</p>
 <h4 id="3-伪分布式配置"><a href="#3-伪分布式配置" class="headerlink" title="3.伪分布式配置"></a>3.伪分布式配置</h4><p>配置文件位于 <code>/usr/local/Cellar/hadoop/XXXX/libexec/etc/hadoop</code>下的配置文件。</p>
 <ul>
 <li><p>hadoop-env.sh<br>加入<code>export JAVA_HOME = [java的home路径]</code><br>其中java的home路径可通过<code>/usr/libexec/java_home</code>查看。</p>
@@ -1181,40 +1177,45 @@ ettercap -C  图形界面<span aria-hidden="true" class="line-numbers-rows"><spa
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fa fa-dot-circle-o"></i>&nbsp;本篇
-            </div>
+                <i class="fa fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2020/11/08/iterm2-zhong-duan-pei-zhi-ji-mei-hua/">
+                <a href="/2020/11/17/javaweb-jdbc/">
                     <div class="card-image">
                         
-                        <img src="/medias/特征图/iterm2.jpg" class="responsive-img" alt="iTerm2终端配置及美化">
+                        <img src="/medias/JDBC/JDBC.jpeg" class="responsive-img" alt="JavaWeb-JDBC">
                         
-                        <span class="card-title">iTerm2终端配置及美化</span>
+                        <span class="card-title">JavaWeb-JDBC</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            总结一次从零开始的iTerm2配置过程。
+                            转载自java老师所给笔记
                         
                     </div>
                     <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="fa fa-clock-o fa-fw icon-date"></i>2020-11-08
-                            </span>
+                        <span class="publish-date">
+                            <i class="fa fa-clock-o fa-fw icon-date"></i>2020-11-17
+                        </span>
                         <span class="publish-author">
+                            
+                            <i class="fa fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/笔记/" class="post-category" target="_blank">
+                                    笔记
+                                </a>
+                            
                             
                         </span>
                     </div>
                 </div>
-
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/折腾/" target="_blank">
-                        <span class="chip bg-color">折腾</span>
+                    <a href="/tags/java/" target="_blank">
+                        <span class="chip bg-color">java</span>
                     </a>
                     
                 </div>
@@ -1389,7 +1390,7 @@ ettercap -C  图形界面<span aria-hidden="true" class="line-numbers-rows"><spa
            
             
             &nbsp;<i class="fa fa-area-chart"></i>&nbsp;码了那么多字:&nbsp;
-            <span class="white-color">9.1k</span>
+            <span class="white-color">10.7k</span>
             
 
             <br>

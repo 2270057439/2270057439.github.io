@@ -2,6 +2,20 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://pan-le.cn/2020/11/17/javaweb-jdbc/</loc>
+    
+    <lastmod>2020-11-17T01:13:16.017Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://pan-le.cn/2020/11/08/iterm2-zhong-duan-pei-zhi-ji-mei-hua/</loc>
+    
+    <lastmod>2020-11-13T14:14:39.925Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://pan-le.cn/2020/05/28/termux-cao-zuo-hui-zong/</loc>
     
     <lastmod>2020-11-12T11:42:56.520Z</lastmod>
@@ -54,13 +68,6 @@
     <loc>https://pan-le.cn/2020/11/01/sqli-labs-ba-chang-bu-shu-mac/</loc>
     
     <lastmod>2020-11-12T11:25:58.722Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://pan-le.cn/2020/11/08/iterm2-zhong-duan-pei-zhi-ji-mei-hua/</loc>
-    
-    <lastmod>2020-11-12T11:20:23.477Z</lastmod>
     
   </url>
   
