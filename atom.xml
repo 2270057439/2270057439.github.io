@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://pan-le.cn/"/>
-  <updated>2020-11-18T04:41:31.616Z</updated>
+  <updated>2020-11-26T12:45:04.452Z</updated>
   <id>https://pan-le.cn/</id>
   
   <author>
@@ -17,11 +17,35 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>msf复现案例</title>
+    <link href="https://pan-le.cn/2020/11/26/msf-fu-xian-an-li/"/>
+    <id>https://pan-le.cn/2020/11/26/msf-fu-xian-an-li/</id>
+    <published>2020-11-26T11:42:13.000Z</published>
+    <updated>2020-11-26T12:45:04.452Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;安卓渗透&quot;&gt;&lt;a href=&quot;#安卓渗透&quot; class=&quot;headerlink&quot; title=&quot;安卓渗透&quot;&gt;&lt;/a&gt;安卓渗透&lt;/h1&gt;&lt;p&gt;环境:&lt;br&gt;Mac OS Mojave10.14.6(192.168.0.102):
+        
+      
+    
+    </summary>
+    
+    
+      <category term="折腾" scheme="https://pan-le.cn/tags/%E6%8A%98%E8%85%BE/"/>
+    
+  </entry>
+  
+  <entry>
     <title>JavaWeb-JNDI分层</title>
     <link href="https://pan-le.cn/2020/11/18/javaweb-jndi-fen-ceng/"/>
     <id>https://pan-le.cn/2020/11/18/javaweb-jndi-fen-ceng/</id>
     <published>2020-11-18T04:37:06.000Z</published>
-    <updated>2020-11-18T04:41:31.616Z</updated>
+    <updated>2020-11-18T04:45:41.922Z</updated>
     
     <summary type="html">
     

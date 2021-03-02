@@ -491,14 +491,14 @@ public class XxxSingleton{
                 
                 <div class="info-break-policy">
                     <i class="fa fa-file-word-o fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    697
+                    793
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="fa fa-clock-o fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    2 分
+                    3 分
                 </div>
                 
                 
@@ -558,9 +558,9 @@ public class XxxSingleton{
     return instance;
   }
 }<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<h3 id="3-懒汉模式和饿汉模式的比较"><a href="#3-懒汉模式和饿汉模式的比较" class="headerlink" title="3. 懒汉模式和饿汉模式的比较"></a>3. 懒汉模式和饿汉模式的比较</h3><p><img src="JavaWeb-JNDI%E5%88%86%E5%B1%82/singleton.png" alt="singleton"></p>
+<h3 id="3-懒汉模式和饿汉模式的比较"><a href="#3-懒汉模式和饿汉模式的比较" class="headerlink" title="3. 懒汉模式和饿汉模式的比较"></a>3. 懒汉模式和饿汉模式的比较</h3><p><img src="/medias/JavaWeb-JNDI%E5%88%86%E5%B1%82/singleton.png" alt="singleton"></p>
 <hr>
-<h2 id="二、使用-JNDI-连接数据库"><a href="#二、使用-JNDI-连接数据库" class="headerlink" title="二、使用 JNDI 连接数据库"></a>二、使用 JNDI 连接数据库</h2><h3 id="1-连接池工作原理"><a href="#1-连接池工作原理" class="headerlink" title="1. 连接池工作原理"></a>1. 连接池工作原理</h3><p><strong>连接池是由容器提供的，用来管理池中连接对象</strong><br><img src="JavaWeb-JNDI%E5%88%86%E5%B1%82/connPool.png" alt="pool"></p>
+<h2 id="二、使用-JNDI-连接数据库"><a href="#二、使用-JNDI-连接数据库" class="headerlink" title="二、使用 JNDI 连接数据库"></a>二、使用 JNDI 连接数据库</h2><h3 id="1-连接池工作原理"><a href="#1-连接池工作原理" class="headerlink" title="1. 连接池工作原理"></a>1. 连接池工作原理</h3><p><strong>连接池是由容器提供的，用来管理池中连接对象</strong><br><img src="/medias/JavaWeb-JNDI%E5%88%86%E5%B1%82/connPool.png" alt="pool"></p>
 <h3 id="2-数据源（DataSource）"><a href="#2-数据源（DataSource）" class="headerlink" title="2. 数据源（DataSource）"></a>2. 数据源（DataSource）</h3><p><code>javax.sql.DataSource</code> 接口 <strong>负责建立与数据库的连接</strong> 由 <code>Tomcat</code> 提供，<strong>将连接保存在连接池</strong> 中。</p>
 <h3 id="3-JNDI"><a href="#3-JNDI" class="headerlink" title="3. JNDI"></a>3. JNDI</h3><p><strong>JNDI(Java Naming and Directory Interface)</strong> : 是 Java 提供服务的一种方式，它将一个字符串(Name) 和 一个资源对象绑定在一起，使我们可以通过字符串获取资源对象。</p>
 <h4 id="1-gt-使用方式"><a href="#1-gt-使用方式" class="headerlink" title="1&gt; 使用方式"></a>1&gt; 使用方式</h4><ol>
@@ -572,55 +572,60 @@ public class XxxSingleton{
 Context ctx = new InitialContext();
 String logo = (String)ctx.lookup("java:comp/env/tjndi");
 %>
-<h1><%=logo %></h1><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+< h1><%=logo %>< /h1>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 </li>
 </ol>
-<h4 id="2-gt-连接池配置"><a href="#2-gt-连接池配置" class="headerlink" title="2&gt; 连接池配置"></a>2&gt; 连接池配置</h4><ol>
-<li><p>加包：在 <code>tomcat/lib</code> 添加 jdbc 包</p>
-</li>
-<li><p>在 <code>conf/context.xml</code> 中配置</p>
-<pre class="line-numbers language-xml"><code class="language-xml"> <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>Resource</span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>jdbc/news<span class="token punctuation">"</span></span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>javax.sql.DataSource<span class="token punctuation">"</span></span> <span class="token attr-name">auth</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>Container<span class="token punctuation">"</span></span>
- <span class="token attr-name">username</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>root<span class="token punctuation">"</span></span> <span class="token attr-name">password</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>123<span class="token punctuation">"</span></span> <span class="token attr-name">driverClassName</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>com.mysql.cj.jdbc.Driver<span class="token punctuation">"</span></span>
- <span class="token attr-name">url</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>jdbc:mysql://localhost:3306/news?useUnicode<span class="token punctuation">=</span>true&amp;amp;characterEncoding<span class="token punctuation">=</span>utf-8&amp;amp;serverTimezone<span class="token punctuation">=</span>GMT<span class="token punctuation">"</span></span>
- <span class="token attr-name">maxActive</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>100<span class="token punctuation">"</span></span> <span class="token attr-name">maxIdle</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>30<span class="token punctuation">"</span></span> <span class="token attr-name">maxWait</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>10000<span class="token punctuation">"</span></span>    <span class="token punctuation">/></span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
-</li>
-<li><p>获取连接</p>
-<pre class="line-numbers language-java{.line-numbers}"><code class="language-java{.line-numbers}"> <%
-   Context ctx = new InitialContext();
-   DataSource ds = (DataSource)ctx.lookup("java:comp/env/jdbc/news");
-   Connection conn = ds.getConnection();
-   PreparedStatement pstm = conn.prepareStatement("select count(0) from user");
-   ResultSet rs = pstm.executeQuery();
-   int r = 0;
-   if(rs.next()){
-     r = rs.getInt(1);
-   }
-   rs.close();
-   pstm.close();
-   conn.close();
- %>
- <h1>人数：<%=r %></h1><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-</li>
-</ol>
-<h3 id="3-JNDIDao"><a href="#3-JNDIDao" class="headerlink" title="3. JNDIDao"></a>3. JNDIDao</h3><pre class="line-numbers language-java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">JndiDao</span> <span class="token punctuation">{</span>
-    <span class="token comment" spellcheck="true">// 获取连接</span>
-    <span class="token keyword">public</span> <span class="token keyword">static</span>    Connection    <span class="token function">getConn</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
-        Connection conn <span class="token operator">=</span> null<span class="token punctuation">;</span>
-        <span class="token keyword">try</span> <span class="token punctuation">{</span>
-            Context ctx <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">InitialContext</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-            DataSource ds <span class="token operator">=</span> <span class="token punctuation">(</span>DataSource<span class="token punctuation">)</span> ctx<span class="token punctuation">.</span><span class="token function">lookup</span><span class="token punctuation">(</span><span class="token string">"java:comp/env/jdbc/news"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-            conn <span class="token operator">=</span> ds<span class="token punctuation">.</span><span class="token function">getConnection</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-        <span class="token punctuation">}</span> <span class="token keyword">catch</span> <span class="token punctuation">(</span><span class="token class-name">NamingException</span> e<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-            e<span class="token punctuation">.</span><span class="token function">printStackTrace</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-        <span class="token punctuation">}</span> <span class="token keyword">catch</span> <span class="token punctuation">(</span><span class="token class-name">SQLException</span> e<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-            e<span class="token punctuation">.</span><span class="token function">printStackTrace</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-        <span class="token punctuation">}</span>
-        <span class="token keyword">return</span> conn<span class="token punctuation">;</span>
-    <span class="token punctuation">}</span>
-  <span class="token comment" spellcheck="true">// 其他</span>
-<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<h2 id="二、三层架构"><a href="#二、三层架构" class="headerlink" title="二、三层架构"></a>二、三层架构</h2><h3 id="1-什么是三层架构"><a href="#1-什么是三层架构" class="headerlink" title="1. 什么是三层架构"></a>1. 什么是三层架构</h3><h4 id="三层的划分"><a href="#三层的划分" class="headerlink" title="三层的划分"></a>三层的划分</h4><p><img src="JavaWeb-JNDI%E5%88%86%E5%B1%82/layer3.png" alt="layer3"></p>
-<h4 id="层之间的关系"><a href="#层之间的关系" class="headerlink" title="层之间的关系"></a>层之间的关系</h4><p><img src="JavaWeb-JNDI%E5%88%86%E5%B1%82/layerRelation.png" alt="layerRelation"></p>
+<pre><code>
+#### 2&gt; 连接池配置
+1. 加包：在 `tomcat/lib` 添加 jdbc 包
+2. 在 `conf/context.xml` 中配置
+    ```xml
+    &lt;Resource name=&quot;jdbc/news&quot; type=&quot;javax.sql.DataSource&quot; auth=&quot;Container&quot;
+    username=&quot;root&quot; password=&quot;123&quot; driverClassName=&quot;com.mysql.cj.jdbc.Driver&quot;
+    url=&quot;jdbc:mysql://localhost:3306/news?useUnicode=true&amp;amp;characterEncoding=utf-8&amp;amp;serverTimezone=GMT&quot;
+    maxActive=&quot;100&quot; maxIdle=&quot;30&quot; maxWait=&quot;10000&quot;    /&gt;
+    ```
+
+3. 获取连接
+    ```java{.line-numbers}
+    &lt;%
+      Context ctx = new InitialContext();
+      DataSource ds = (DataSource)ctx.lookup(&quot;java:comp/env/jdbc/news&quot;);
+      Connection conn = ds.getConnection();
+      PreparedStatement pstm = conn.prepareStatement(&quot;select count(0) from user&quot;);
+      ResultSet rs = pstm.executeQuery();
+      int r = 0;
+      if(rs.next()){
+        r = rs.getInt(1);
+      }
+      rs.close();
+      pstm.close();
+      conn.close();
+    %&gt;
+    &lt; h1&gt;人数：&lt;%=r %&gt;&lt; /h1&gt;
+    ```
+
+### 3. JNDIDao
+```java
+public class JndiDao {
+    // 获取连接
+    public static    Connection    getConn(){
+        Connection conn = null;
+        try {
+            Context ctx = new InitialContext();
+            DataSource ds = (DataSource) ctx.lookup(&quot;java:comp/env/jdbc/news&quot;);
+            conn = ds.getConnection();
+        } catch (NamingException e) {
+            e.printStackTrace();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return conn;
+    }
+  // 其他
+}</code></pre><h2 id="二、三层架构"><a href="#二、三层架构" class="headerlink" title="二、三层架构"></a>二、三层架构</h2><h3 id="1-什么是三层架构"><a href="#1-什么是三层架构" class="headerlink" title="1. 什么是三层架构"></a>1. 什么是三层架构</h3><h4 id="三层的划分"><a href="#三层的划分" class="headerlink" title="三层的划分"></a>三层的划分</h4><p><img src="/medias/JavaWeb-JNDI%E5%88%86%E5%B1%82/layer3.png" alt="layer3"></p>
+<h4 id="层之间的关系"><a href="#层之间的关系" class="headerlink" title="层之间的关系"></a>层之间的关系</h4><p><img src="/medias/JavaWeb-JNDI%E5%88%86%E5%B1%82/layerRelation.png" alt="layerRelation"></p>
 <h3 id="2-分层原则"><a href="#2-分层原则" class="headerlink" title="2. 分层原则"></a>2. 分层原则</h3><ul>
 <li>上层依赖其下层，依赖关系不跨层 <ul>
 <li>表示层不能直接访问数据访问层</li>
@@ -1129,47 +1134,38 @@ String logo = (String)ctx.lookup("java:comp/env/tjndi");
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fa fa-dot-circle-o"></i>&nbsp;本篇
-            </div>
+                <i class="fa fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2020/11/18/javaweb-jndi-fen-ceng/">
+                <a href="/2020/11/26/msf-fu-xian-an-li/">
                     <div class="card-image">
                         
-                        <img src="/medias/JDBC/JDBC.jpeg" class="responsive-img" alt="JavaWeb-JNDI分层">
+                        <img src="/medias/特征图/iterm2.jpg" class="responsive-img" alt="msf复现案例">
                         
-                        <span class="card-title">JavaWeb-JNDI分层</span>
+                        <span class="card-title">msf复现案例</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            转载自java老师所给笔记
+                            总结几次msf框架下的攻击案例
                         
                     </div>
                     <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="fa fa-clock-o fa-fw icon-date"></i>2020-11-18
-                            </span>
+                        <span class="publish-date">
+                            <i class="fa fa-clock-o fa-fw icon-date"></i>2020-11-26
+                        </span>
                         <span class="publish-author">
-                            
-                            <i class="fa fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/categories/笔记/" class="post-category" target="_blank">
-                                    笔记
-                                </a>
-                            
                             
                         </span>
                     </div>
                 </div>
-
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/java/" target="_blank">
-                        <span class="chip bg-color">java</span>
+                    <a href="/tags/折腾/" target="_blank">
+                        <span class="chip bg-color">折腾</span>
                     </a>
                     
                 </div>
@@ -1351,7 +1347,7 @@ String logo = (String)ctx.lookup("java:comp/env/tjndi");
            
             
             &nbsp;<i class="fa fa-area-chart"></i>&nbsp;码了那么多字:&nbsp;
-            <span class="white-color">11.2k</span>
+            <span class="white-color">12.2k</span>
             
 
             <br>

