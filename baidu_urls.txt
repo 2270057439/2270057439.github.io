@@ -1,11 +1,9 @@
 https://pan-le.cn/2020/11/26/msf-fu-xian-an-li/
-https://pan-le.cn/2020/11/18/javaweb-jndi-fen-ceng/
 https://pan-le.cn/2020/11/17/javaweb-jdbc/
 https://pan-le.cn/2020/11/08/iterm2-zhong-duan-pei-zhi-ji-mei-hua/
 https://pan-le.cn/2020/11/08/pei-zhi-ni-de-zsh-yu-bash/
 https://pan-le.cn/2020/11/01/testlink-jira-ce-shi-huan-jing-da-jian/
 https://pan-le.cn/2020/11/01/sqli-labs-ba-chang-bu-shu-mac/
-https://pan-le.cn/2020/09/25/a-li-yun-ubuntu-18-04-da-jian-nextcloud-si-you-wang-pan/
 https://pan-le.cn/2020/06/15/aircrack-ng-zhua-bao-po-jie-wi-fi-wpa2/
 https://pan-le.cn/2020/06/03/java-duo-xian-cheng-ji-zhi/
 https://pan-le.cn/2020/06/02/ruan-jian-pei-zhi/

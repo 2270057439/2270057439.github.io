@@ -23,31 +23,6 @@
     
     
     <entry>
-      <title>JavaWeb-JNDI分层</title>
-      <link href="/2020/11/18/javaweb-jndi-fen-ceng/"/>
-      <url>/2020/11/18/javaweb-jndi-fen-ceng/</url>
-      
-        <content type="html"><![CDATA[<h1 id="相关技术"><a href="#相关技术" class="headerlink" title="相关技术"></a>相关技术</h1><h2 id="零、现有代码的问题"><a href="#零、现有代码的问题" class="headerlink" title="零、现有代码的问题"></a>零、现有代码的问题</h2><p>根本问题：数据访问的代码、业务逻辑代码、页面显示的代码混在一起。</p><h2 id="一、单例模式"><a href="#一、单例模式" class="headerlink" title="一、单例模式"></a>一、单例模式</h2><h3 id="1-饿汉模式"><a href="#1-饿汉模式" class="headerlink" title="1. 饿汉模式"></a>1. 饿汉模式</h3><p>在类加载的时候，就完成初始化</p><h4 id="特点"><a href="#特点" class="headerlink" title="特点"></a>特点</h4><ul><li>线程安全</li><li>不具备延迟加载特性</li></ul><pre class="line-numbers language-java{.line-numbers}"><code class="language-java{.line-numbers}">public class XxxSingleton{  private static XxxSingleton instance;  private XxxSingleton(){  }  static{    instance = new XxxSingleton();  }  public static XxxSingleton getInstance(){    return instance;  }}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><h3 id="2-懒汉模式"><a href="#2-懒汉模式" class="headerlink" title="2. 懒汉模式"></a>2. 懒汉模式</h3><h4 id="特点-1"><a href="#特点-1" class="headerlink" title="特点"></a>特点</h4><p>在类加载时不创建实例，采用延迟加载的方式，在运行调用时创建实例。</p><ul><li>线程不安全，需使用 synchronized 解决线程安全问题。</li><li>延迟加载（lazy loading）</li></ul><pre class="line-numbers language-java{.line-numbers}"><code class="language-java{.line-numbers}">public class XxxSingleton{  private static XxxSingleton instance;  private XxxSingleton(){  }  public  static XxxSingleton getInstance(){    if(instance == null){      synchronized(XxxSingleton.class){        if(instance == null){          instance = new XxxSingleton();        }      }    }    return instance;  }}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><h3 id="3-懒汉模式和饿汉模式的比较"><a href="#3-懒汉模式和饿汉模式的比较" class="headerlink" title="3. 懒汉模式和饿汉模式的比较"></a>3. 懒汉模式和饿汉模式的比较</h3><p><img src="/medias/JavaWeb-JNDI%E5%88%86%E5%B1%82/singleton.png" alt="singleton"></p><hr><h2 id="二、使用-JNDI-连接数据库"><a href="#二、使用-JNDI-连接数据库" class="headerlink" title="二、使用 JNDI 连接数据库"></a>二、使用 JNDI 连接数据库</h2><h3 id="1-连接池工作原理"><a href="#1-连接池工作原理" class="headerlink" title="1. 连接池工作原理"></a>1. 连接池工作原理</h3><p><strong>连接池是由容器提供的，用来管理池中连接对象</strong><br><img src="/medias/JavaWeb-JNDI%E5%88%86%E5%B1%82/connPool.png" alt="pool"></p><h3 id="2-数据源（DataSource）"><a href="#2-数据源（DataSource）" class="headerlink" title="2. 数据源（DataSource）"></a>2. 数据源（DataSource）</h3><p><code>javax.sql.DataSource</code> 接口 <strong>负责建立与数据库的连接</strong> 由 <code>Tomcat</code> 提供，<strong>将连接保存在连接池</strong> 中。</p><h3 id="3-JNDI"><a href="#3-JNDI" class="headerlink" title="3. JNDI"></a>3. JNDI</h3><p><strong>JNDI(Java Naming and Directory Interface)</strong> : 是 Java 提供服务的一种方式，它将一个字符串(Name) 和 一个资源对象绑定在一起，使我们可以通过字符串获取资源对象。</p><h4 id="1-gt-使用方式"><a href="#1-gt-使用方式" class="headerlink" title="1&gt; 使用方式"></a>1&gt; 使用方式</h4><ol><li><p>在 <code>tomcat/conf/context.xml</code> 配置资源</p><pre class="line-numbers language-xml"><code class="language-xml"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>Environment</span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>tjndi<span class="token punctuation">"</span></span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>Hello, JNDI<span class="token punctuation">"</span></span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>java.lang.String<span class="token punctuation">"</span></span> <span class="token punctuation">/></span></span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li><li><p>使用 <code>Context</code> 查找资源</p><pre class="line-numbers language-java{.line-numbers}"><code class="language-java{.line-numbers}"><%Context ctx = new InitialContext();String logo = (String)ctx.lookup("java:comp/env/tjndi");%>< h1><%=logo %>< /h1><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre></li></ol><pre><code>#### 2&gt; 连接池配置1. 加包：在 `tomcat/lib` 添加 jdbc 包2. 在 `conf/context.xml` 中配置    ```xml    &lt;Resource name=&quot;jdbc/news&quot; type=&quot;javax.sql.DataSource&quot; auth=&quot;Container&quot;    username=&quot;root&quot; password=&quot;123&quot; driverClassName=&quot;com.mysql.cj.jdbc.Driver&quot;    url=&quot;jdbc:mysql://localhost:3306/news?useUnicode=true&amp;amp;characterEncoding=utf-8&amp;amp;serverTimezone=GMT&quot;    maxActive=&quot;100&quot; maxIdle=&quot;30&quot; maxWait=&quot;10000&quot;    /&gt;    ```3. 获取连接    ```java{.line-numbers}    &lt;%      Context ctx = new InitialContext();      DataSource ds = (DataSource)ctx.lookup(&quot;java:comp/env/jdbc/news&quot;);      Connection conn = ds.getConnection();      PreparedStatement pstm = conn.prepareStatement(&quot;select count(0) from user&quot;);      ResultSet rs = pstm.executeQuery();      int r = 0;      if(rs.next()){        r = rs.getInt(1);      }      rs.close();      pstm.close();      conn.close();    %&gt;    &lt; h1&gt;人数：&lt;%=r %&gt;&lt; /h1&gt;    ```### 3. JNDIDao```javapublic class JndiDao {    // 获取连接    public static    Connection    getConn(){        Connection conn = null;        try {            Context ctx = new InitialContext();            DataSource ds = (DataSource) ctx.lookup(&quot;java:comp/env/jdbc/news&quot;);            conn = ds.getConnection();        } catch (NamingException e) {            e.printStackTrace();        } catch (SQLException e) {            e.printStackTrace();        }        return conn;    }  // 其他}</code></pre><h2 id="二、三层架构"><a href="#二、三层架构" class="headerlink" title="二、三层架构"></a>二、三层架构</h2><h3 id="1-什么是三层架构"><a href="#1-什么是三层架构" class="headerlink" title="1. 什么是三层架构"></a>1. 什么是三层架构</h3><h4 id="三层的划分"><a href="#三层的划分" class="headerlink" title="三层的划分"></a>三层的划分</h4><p><img src="/medias/JavaWeb-JNDI%E5%88%86%E5%B1%82/layer3.png" alt="layer3"></p><h4 id="层之间的关系"><a href="#层之间的关系" class="headerlink" title="层之间的关系"></a>层之间的关系</h4><p><img src="/medias/JavaWeb-JNDI%E5%88%86%E5%B1%82/layerRelation.png" alt="layerRelation"></p><h3 id="2-分层原则"><a href="#2-分层原则" class="headerlink" title="2. 分层原则"></a>2. 分层原则</h3><ul><li>上层依赖其下层，依赖关系不跨层 <ul><li>表示层不能直接访问数据访问层</li></ul></li><li>上层调用下层的结果，取决于下层的实现<ul><li>下一层不能调用上一层 </li></ul></li><li>下一层不依赖上一层<ul><li>上层的改变不会影响下一层</li><li>下层的改变会影响上一层得到的结果</li></ul></li><li>在上一层中不能出现下一层的概念 <ul><li>分工明确，各司其职</li></ul></li></ul><h2 id="三、EL-表达式"><a href="#三、EL-表达式" class="headerlink" title="三、EL 表达式"></a>三、EL 表达式</h2><h3 id="1-语法"><a href="#1-语法" class="headerlink" title="1. 语法"></a>1. 语法</h3><ol><li><code>${key.value}</code></li><li><code>${key[&quot;value&quot;]}</code></li></ol><h3 id="2-作用域"><a href="#2-作用域" class="headerlink" title="2. 作用域"></a>2. 作用域</h3><ol><li>pageScope</li><li>requestScope</li><li>sessionScope</li><li>applicationScope</li><li>不写时，按照 1-4 顺序查找</li></ol><h2 id="四、JSTL"><a href="#四、JSTL" class="headerlink" title="四、JSTL"></a>四、JSTL</h2><h3 id="1-使用步骤："><a href="#1-使用步骤：" class="headerlink" title="1. 使用步骤："></a>1. 使用步骤：</h3><ol start="0"><li><p>加包。<code>standard.jar</code> 和 <code>jstl.jar</code></p></li><li><p>导入标签库：</p><pre class="line-numbers language-java"><code class="language-java"> <span class="token operator">&lt;</span><span class="token operator">%</span><span class="token annotation punctuation">@taglib</span> uri<span class="token operator">=</span><span class="token string">"url"</span> prefix<span class="token operator">=</span><span class="token string">"c"</span> <span class="token operator">%</span><span class="token operator">></span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li><li><p>引用标签</p><pre class="line-numbers language-java"><code class="language-java"> <span class="token operator">&lt;</span>c<span class="token operator">:</span>forEach <span class="token operator">></span> <span class="token operator">&lt;</span><span class="token operator">/</span>c<span class="token operator">:</span>forEach<span class="token operator">></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre></li></ol><h3 id="2-常用标签"><a href="#2-常用标签" class="headerlink" title="2. 常用标签"></a>2. 常用标签</h3><ol><li><code>c:forEach</code></li><li><code>c:if</code></li><li><code>fmt:formatDate</code></li></ol>]]></content>
-      
-      
-      <categories>
-          
-          <category> 笔记 </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> java </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>JavaWeb-JDBC</title>
       <link href="/2020/11/17/javaweb-jdbc/"/>
       <url>/2020/11/17/javaweb-jdbc/</url>
@@ -143,19 +118,6 @@
             <tag> 折腾 </tag>
             
         </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>阿里云Ubuntu 18.04搭建nextcloud私有网盘</title>
-      <link href="/2020/09/25/a-li-yun-ubuntu-18-04-da-jian-nextcloud-si-you-wang-pan/"/>
-      <url>/2020/09/25/a-li-yun-ubuntu-18-04-da-jian-nextcloud-si-you-wang-pan/</url>
-      
-        <content type="html"><![CDATA[<p>awdawdawd<br>aw<br>daw<br>d<br>awd</p>]]></content>
-      
-      
       
     </entry>
     
