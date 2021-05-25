@@ -41,32 +41,6 @@
   </entry>
   
   <entry>
-    <title>JavaWeb-JDBC</title>
-    <link href="https://pan-le.cn/2020/11/17/javaweb-jdbc/"/>
-    <id>https://pan-le.cn/2020/11/17/javaweb-jdbc/</id>
-    <published>2020-11-17T01:01:01.000Z</published>
-    <updated>2020-11-17T01:15:50.000Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h1 id=&quot;第十一部分-JDBC&quot;&gt;&lt;a href=&quot;#第十一部分-JDBC&quot; class=&quot;headerlink&quot; title=&quot;第十一部分 JDBC&quot;&gt;&lt;/a&gt;第十一部分 JDBC&lt;/h1&gt;&lt;h2 id=&quot;一、JDBC-的工作原理&quot;&gt;&lt;a
-        
-      
-    
-    </summary>
-    
-      <category term="笔记" scheme="https://pan-le.cn/categories/%E7%AC%94%E8%AE%B0/"/>
-    
-    
-      <category term="java" scheme="https://pan-le.cn/tags/java/"/>
-    
-  </entry>
-  
-  <entry>
     <title>iTerm2终端配置及美化</title>
     <link href="https://pan-le.cn/2020/11/08/iterm2-zhong-duan-pei-zhi-ji-mei-hua/"/>
     <id>https://pan-le.cn/2020/11/08/iterm2-zhong-duan-pei-zhi-ji-mei-hua/</id>
@@ -190,37 +164,11 @@
   </entry>
   
   <entry>
-    <title>java多线程机制</title>
-    <link href="https://pan-le.cn/2020/06/03/java-duo-xian-cheng-ji-zhi/"/>
-    <id>https://pan-le.cn/2020/06/03/java-duo-xian-cheng-ji-zhi/</id>
-    <published>2020-06-02T23:41:35.000Z</published>
-    <updated>2020-11-12T11:26:35.000Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h1 id=&quot;第十二部分：多线程&quot;&gt;&lt;a href=&quot;#第十二部分：多线程&quot; class=&quot;headerlink&quot; title=&quot;第十二部分：多线程&quot;&gt;&lt;/a&gt;第十二部分：多线程&lt;/h1&gt;&lt;h2 id=&quot;一、进程与线程&quot;&gt;&lt;a href=&quot;#一、进程与线程&quot;
-        
-      
-    
-    </summary>
-    
-      <category term="笔记" scheme="https://pan-le.cn/categories/%E7%AC%94%E8%AE%B0/"/>
-    
-    
-      <category term="java" scheme="https://pan-le.cn/tags/java/"/>
-    
-  </entry>
-  
-  <entry>
     <title>软件配置</title>
     <link href="https://pan-le.cn/2020/06/02/ruan-jian-pei-zhi/"/>
     <id>https://pan-le.cn/2020/06/02/ruan-jian-pei-zhi/</id>
     <published>2020-06-02T01:46:19.000Z</published>
-    <updated>2021-04-18T10:17:59.092Z</updated>
+    <updated>2021-05-25T14:33:42.041Z</updated>
     
     <summary type="html">
     
@@ -232,7 +180,7 @@
 &lt;p&gt;记录一下现有软件。&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;&lt;img src=&quot;/medias/%E8%BD%AF%E4%BB%B6/1.png&quot; alt&gt;&lt;/p&gt;
-&lt;h2 id=&quot;Sublime-Text配置中文&quot;&gt;&lt;a
+&lt;p&gt;&lt;img
         
       
     
